@@ -1,7 +1,7 @@
 const { createCommitOnBranch, getExpectedHeadOid } = require('./github');
 const wordpress = require('./wordpress');
 
-const handler = async (event, context) => {
+const handler = async (event, _context) => {
   if (event.httpMethod !== 'POST') {
     return {
       statusCode: 405,
@@ -24,10 +24,32 @@ const handler = async (event, context) => {
     additions,
   };
 
-  await createCommitOnBranch(fileChanges, expectedHeadOid);
+  const res = await createCommitOnBranch(fileChanges, expectedHeadOid);
+
+  if (res.errors || !res.data) {
+    console.error('Creating commit failed!');
+    console.error(res.errors);
+
+    return {
+      statusCode: 500,
+      body: 'Internal Server Error',
+    };
+  }
+
+  const {
+    data: {
+      createCommitOnBranch: {
+        commit: { oid },
+      },
+    },
+  } = res;
+
+  console.log('Successfully created new commit hash:', oid);
 
   return {
     statusCode: 204,
     body: null,
   };
 };
+
+exports.handler = handler;

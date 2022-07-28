@@ -8,13 +8,17 @@ const GITHUB_API_ENDPOINT = 'https://api.github.com/graphql';
 
 const MUTATION = graphql`
   mutation createCommitOnBranch($input: CreateCommitOnBranchInput!) {
-    createCommitOnBranch(input: $input)
+    createCommitOnBranch(input: $input) {
+      commit {
+        oid
+      }
+    }
   }
 `;
 
 const DEFAULT_INPUT = {
   branch: {
-    nameWithOwner: new URL(pkg.repository).pathname
+    repositoryNameWithOwner: new URL(pkg.repository).pathname
       .replace(/^\//, '')
       .replace(/\/$/, ''),
     branchName: 'main',
@@ -39,7 +43,7 @@ module.exports = async (fileChanges, expectedHeadOid) => {
     query: MUTATION,
   };
 
-  await got(GITHUB_API_ENDPOINT, {
+  return got(GITHUB_API_ENDPOINT, {
     method: 'POST',
     headers: {
       authorization: `bearer ${GITHUB_API_TOKEN}`,
@@ -47,13 +51,8 @@ module.exports = async (fileChanges, expectedHeadOid) => {
     },
     body: body.toString(),
     responseType: 'json',
-  })
-    .then((res) => {
-      console.log('Request to Github succeeded!');
-      console.log(res.body);
-    })
-    .catch((e) => {
-      console.error('Request to Github FAILED!');
-      console.error(e);
-    });
+  }).catch((e) => {
+    console.error('Request to Github FAILED!');
+    console.error(e);
+  });
 };
