@@ -1,0 +1,27 @@
+{
+  "name": "sascha.vorchdorf.media",
+  "version": "1.0.0",
+  "color": "#34623F",
+  "description": "An Eleventy blog powered by a Wordpress backend.",
+  "language": "de-AT",
+  "homepage": "https://sascha.vorchdorf.media",
+  "repository": "https://github.com/vorchdorf-dot-media/sascha.vorchdorf.media",
+  "author": {
+    "name": "Sascha Zarhuber",
+    "email": "sascha.zarhuber@gmail.com",
+    "url": "https://sascha.work"
+  },
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "prebuild": "rm -rf dist",
+    "build": "eleventy",
+    "dev": "eleventy --serve"
+  },
+  "dependencies": {
+    "@11ty/eleventy": "^2.0.0-canary.13",
+    "@11ty/eleventy-plugin-rss": "^1.2.0",
+    "got": "^11",
+    "graphql": "^16.5.0"
+  }
+}

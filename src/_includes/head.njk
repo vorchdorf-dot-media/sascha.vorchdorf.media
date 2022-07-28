@@ -1,0 +1,7 @@
+<title>
+  {% if title %}
+    {{ title }} | {{ manifest.short_name }}
+  {% else %}
+    {{ manifest.name }}
+  {% endif %}
+</title>

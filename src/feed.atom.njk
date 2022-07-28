@@ -1,0 +1,30 @@
+---
+layout: false
+permalink: feed.xml
+---
+
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:base="{{ package.homepage }}">
+  <title>{{ package.name }}</title>
+  <subtitle>{{ package.description }}</subtitle>
+  <link href="{{ permalink | url | absoluteUrl(package.homepage) }}" rel="self"/>
+  <link href="{{ package.homepage }}"/>
+  <updated>{{ posts | getLatestDate | dateToRfc3339 }}</updated>
+  <id>{{ package.homepage }}</id>
+  <author>
+    <name>{{ package.author.name }}</name>
+    <email>{{ package.author.email }}</email>
+  </author>
+  {% if posts %}
+    {%- for post in posts | reverse %}
+      {%- set absolutePostUrl = post.link | url | absoluteUrl(package.homepage) %}
+      <entry>
+        <title>{{ post.title.rendered }}</title>
+        <link href="{{ absolutePostUrl }}"/>
+        <updated>{{ post.date | parseDate | dateToRfc3339 }}</updated>
+        <id>{{ absolutePostUrl }}</id>
+        <content xml:lang="{{ package.language }}" type="html">{{ post.content.rendered | htmlToAbsoluteUrls(absolutePostUrl) | safe }}</content>
+      </entry>
+    {%- endfor %}
+  {% endif %}
+</feed>

@@ -1,0 +1,32 @@
+---
+layout: false
+permalink: feed.json
+---
+
+{
+  "version": "https://jsonfeed.org/version/1.1",
+  "title": "{{ package.name }}",
+  "language": "{{ package.language }}",
+  "home_page_url": "{{ package.homepage }}",
+  "feed_url": "{{ permalink | url | absoluteUrl(package.homepage) }}",
+  "description": "{{ package.description }}",
+  "author": {
+    "name": "{{ package.author.name }}",
+    "url": "{{ package.author.url }}"
+  },
+  "items": [
+    {% if posts %}
+      {%- for post in posts | reverse %}
+        {%- set absolutePostUrl = post.link | url | absoluteUrl(package.homepage) %}
+        {
+          "id": "{{ absolutePostUrl }}",
+          "url": "{{ absolutePostUrl }}",
+          "title": "{{ post.title.rendered }}",
+          "content_html": {% if post.content.rendered %}{{ post.content.rendered | htmlToAbsoluteUrls(absolutePostUrl) | dump | safe }}{% else %}""{% endif %},
+          "date_published": "{{ post.date | parseDate | dateToRfc3339 }}"
+        }
+        {% if not loop.last %},{% endif %}
+      {%- endfor %}
+    {% endif %}
+  ]
+}

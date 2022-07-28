@@ -1,0 +1,10 @@
+[dev]
+framework = "#static"
+command = "eleventy --quiet --watch"
+
+[build]
+command = "eleventy"
+publish = "dist/"
+
+[functions]
+directory = "netlify/functions/"
