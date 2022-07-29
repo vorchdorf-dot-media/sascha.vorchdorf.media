@@ -4,12 +4,14 @@ const fetchPosts = require('./fetchPosts');
 const fetchTags = require('./fetchTags');
 
 module.exports = async () => {
-  const [authors, categories, posts, tags] = await Promise.all([
+  const data = await Promise.all([
     fetchAuthors(),
     fetchCategories(),
     fetchPosts(),
     fetchTags(),
   ]);
+
+  const [authors, categories, posts, tags] = data.map((src) => `${JSON.stringify(src)}\n`);
 
   return [
     {
