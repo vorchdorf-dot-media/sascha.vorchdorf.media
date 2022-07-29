@@ -22,6 +22,9 @@
     "@11ty/eleventy": "^2.0.0-canary.13",
     "@11ty/eleventy-plugin-rss": "^1.2.0",
     "got": "^11",
-    "graphql": "^16.5.0"
+    "graphql-tag": "^2.12.6"
+  },
+  "devDependencies": {
+    "typescript": "^4.7.4"
   }
 }

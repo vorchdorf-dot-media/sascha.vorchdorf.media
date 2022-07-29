@@ -1,9 +1,9 @@
-const fetchAuthors = require('./fetchAuthors');
-const fetchCategories = require('./fetchCategories');
-const fetchPosts = require('./fetchPosts');
-const fetchTags = require('./fetchTags');
+import fetchAuthors from './fetchAuthors';
+import fetchCategories from './fetchCategories';
+import fetchPosts from './fetchPosts';
+import fetchTags from './fetchTags';
 
-module.exports = async () => {
+export default async () => {
   const data = await Promise.all([
     fetchAuthors(),
     fetchCategories(),
@@ -11,7 +11,9 @@ module.exports = async () => {
     fetchTags(),
   ]);
 
-  const [authors, categories, posts, tags] = data.map((src) => `${JSON.stringify(src)}\n`);
+  const [authors, categories, posts, tags] = data.map(
+    (src) => `${JSON.stringify(src)}\n`,
+  );
 
   return [
     {

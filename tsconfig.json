@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "allowJs": false,
+    "allowSyntheticDefaultImports": true,
+    "alwaysStrict": true,
+    "declaration": false,
+    "esModuleInterop": true,
+    "lib": ["DOM", "ES6"],
+    "module": "CommonJS",
+    "moduleResolution": "Node",
+    "resolveJsonModule": true,
+    "rootDir": ".",
+    "target": "ES6"
+  },
+  "exclude": ["node_modules"],
+  "include": ["**/*.ts"]
+}

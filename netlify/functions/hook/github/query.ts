@@ -1,12 +1,12 @@
-const { default: got } = require('got/dist/source');
-const { graphql } = require('graphql');
+import got from 'got';
+import gql from 'graphql-tag';
 
-const pkg = require('../../../../package.json');
+import pkg from '../../../../package.json';
 
 const GITHUB_API_TOKEN = process.env.GITHUB_API_TOKEN;
 const GITHUB_API_ENDPOINT = 'https://api.github.com/graphql';
 
-const QUERY = graphql`
+const QUERY = gql`
   query repository($name: String!, $owner: String!) {
     repository(name: $name, owner: $owner) {
       ref(qualifiedName: "main") {
@@ -18,7 +18,20 @@ const QUERY = graphql`
   }
 `;
 
-module.exports = async () => {
+export type ExpectedHeadOidResponse = {
+  data: null | {
+    repository: {
+      ref: {
+        target: {
+          oid: string;
+        };
+      };
+    };
+  };
+  errors?: unknown[];
+};
+
+export default async () => {
   const [owner, name] = new URL(pkg.repository).pathname
     .replace(/^\//, '')
     .replace(/\/$/, '')
@@ -32,7 +45,7 @@ module.exports = async () => {
     },
   };
 
-  const res = await got(GITHUB_API_ENDPOINT, {
+  const res = await got<ExpectedHeadOidResponse>(GITHUB_API_ENDPOINT, {
     method: 'POST',
     headers: {
       authorization: `bearer ${GITHUB_API_TOKEN}`,
@@ -43,7 +56,9 @@ module.exports = async () => {
   });
 
   if (res.body.errors || !res.body.data) {
-    throw new Error(body.errors ?? 'Request fetching last commit ID failed!');
+    throw new Error(
+      (res.body.errors as any) ?? 'Request fetching last commit ID failed!',
+    );
   }
 
   const {

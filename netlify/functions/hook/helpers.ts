@@ -1,4 +1,8 @@
-const filterObject = (obj, filter = [], isBlacklist = true) => {
+export const filterObject = (
+  obj: Record<string, any>,
+  filter: string[] = [],
+  isBlacklist = true,
+) => {
   const arr = Object.entries(obj);
   const set = new Set(filter);
 
@@ -7,8 +11,4 @@ const filterObject = (obj, filter = [], isBlacklist = true) => {
   );
 
   return Object.fromEntries(filtered);
-};
-
-module.exports = {
-  filterObject,
 };

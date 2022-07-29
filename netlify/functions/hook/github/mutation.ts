@@ -1,12 +1,12 @@
-const got = require('got');
-const graphql = require('graphql');
+import got from 'got';
+import gql from 'graphql-tag';
 
-const pkg = require('../../../../package.json');
+import pkg from '../../../../package.json';
 
 const GITHUB_API_TOKEN = process.env.GITHUB_API_TOKEN;
 const GITHUB_API_ENDPOINT = 'https://api.github.com/graphql';
 
-const MUTATION = graphql`
+const MUTATION = gql`
   mutation createCommitOnBranch($input: CreateCommitOnBranchInput!) {
     createCommitOnBranch(input: $input) {
       commit {
@@ -29,7 +29,21 @@ const DEFAULT_INPUT = {
   },
 };
 
-module.exports = async (fileChanges, expectedHeadOid) => {
+export type CreateCommitOnBranchResponse = {
+  data: null | {
+    createCommitOnBranch: {
+      commit: {
+        oid: string;
+      };
+    };
+  };
+  errors?: unknown[];
+};
+
+export default async (
+  fileChanges: { additions: { path: string; contents: string }[] },
+  expectedHeadOid: string,
+) => {
   const input = {
     ...DEFAULT_INPUT,
     expectedHeadOid,
@@ -43,7 +57,7 @@ module.exports = async (fileChanges, expectedHeadOid) => {
     query: MUTATION,
   };
 
-  return got(GITHUB_API_ENDPOINT, {
+  return got<CreateCommitOnBranchResponse>(GITHUB_API_ENDPOINT, {
     method: 'POST',
     headers: {
       authorization: `bearer ${GITHUB_API_TOKEN}`,

@@ -1,7 +1,7 @@
-const { createCommitOnBranch, getExpectedHeadOid } = require('./github');
-const wordpress = require('./wordpress');
+import { createCommitOnBranch, getExpectedHeadOid } from './github';
+import wordpress from './wordpress';
 
-const handler = async (event, _context) => {
+export const handler = async (event, _context) => {
   if (event.httpMethod !== 'POST') {
     return {
       statusCode: 405,
@@ -26,7 +26,7 @@ const handler = async (event, _context) => {
 
   const res = await createCommitOnBranch(fileChanges, expectedHeadOid);
 
-  if (res.errors || !res.data) {
+  if (res.body.errors || !res.body.data) {
     console.error('Creating commit failed!');
     console.error(res.errors);
 
@@ -37,9 +37,11 @@ const handler = async (event, _context) => {
   }
 
   const {
-    data: {
-      createCommitOnBranch: {
-        commit: { oid },
+    body: {
+      data: {
+        createCommitOnBranch: {
+          commit: { oid },
+        },
       },
     },
   } = res;
@@ -51,5 +53,3 @@ const handler = async (event, _context) => {
     body: null,
   };
 };
-
-exports.handler = handler;
