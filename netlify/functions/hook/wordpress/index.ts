@@ -3,7 +3,7 @@ import fetchCategories from './fetchCategories';
 import fetchPosts from './fetchPosts';
 import fetchTags from './fetchTags';
 
-export default async () => {
+export const fetchData = async () => {
   const data = await Promise.all([
     fetchAuthors(),
     fetchCategories(),
@@ -12,25 +12,33 @@ export default async () => {
   ]);
 
   const [authors, categories, posts, tags] = data.map(
-    (src) => `${JSON.stringify(src)}\n`,
+    (src) => `${JSON.stringify(src, null, 2)}\n`,
   );
 
   return [
     {
       path: 'src/_data/authors.json',
-      contents: Buffer.from(authors).toString('base64'),
+      contents: authors,
     },
     {
       path: 'src/_data/categories.json',
-      contents: Buffer.from(categories).toString('base64'),
+      contents: categories,
     },
     {
       path: 'src/_data/posts.json',
-      contents: Buffer.from(posts).toString('base64'),
+      contents: posts,
     },
     {
       path: 'src/_data/tags.json',
-      contents: Buffer.from(tags).toString('base64'),
+      contents: tags,
     },
   ];
 };
+
+export default async () =>
+  fetchData().then((data) =>
+    data.map(({ contents, path }) => ({
+      path,
+      contents: Buffer.from(contents).toString('base64'),
+    })),
+  );
