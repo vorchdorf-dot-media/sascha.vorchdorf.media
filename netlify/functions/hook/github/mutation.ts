@@ -65,8 +65,5 @@ export default async (
     },
     body: body.toString(),
     responseType: 'json',
-  }).catch((e) => {
-    console.error('Request to Github FAILED!');
-    console.error(e);
   });
 };

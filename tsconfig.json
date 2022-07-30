@@ -12,6 +12,6 @@
     "rootDir": ".",
     "target": "ES6"
   },
-  "exclude": ["node_modules"],
+  "exclude": ["dist", "**/*.test.ts", "**/*.d.ts"],
   "include": ["**/*.ts"]
 }

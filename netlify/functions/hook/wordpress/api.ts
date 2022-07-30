@@ -2,6 +2,10 @@ import got from 'got';
 
 const REST_API = process.env.REST_API;
 
+if (!REST_API) {
+  throw new Error('No REST_API environment variable set!');
+}
+
 const searchParams = new URLSearchParams({
   order: 'asc',
   per_page: '100',

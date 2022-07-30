@@ -1,7 +1,9 @@
+import type { Handler } from 'aws-lambda';
+
 import { createCommitOnBranch, getExpectedHeadOid } from './github';
 import wordpress from './wordpress';
 
-export const handler = async (event, _context) => {
+export const handler: Handler = async (event, _context) => {
   if (event.httpMethod !== 'POST') {
     return {
       statusCode: 405,
@@ -14,42 +16,52 @@ export const handler = async (event, _context) => {
 
   // TODO: add authorization header check!
 
-  const additions = await wordpress();
-  console.log('Successfully fetched contents from Wordpress REST API...');
+  try {
+    const additions = await wordpress();
+    console.log('Successfully fetched contents from Wordpress REST API...');
 
-  const expectedHeadOid = await getExpectedHeadOid();
-  console.log('Last HEAD commit hash was:', expectedHeadOid);
+    const expectedHeadOid = await getExpectedHeadOid();
+    console.log('Last HEAD commit hash was:', expectedHeadOid);
 
-  const fileChanges = {
-    additions,
-  };
+    const fileChanges = {
+      additions,
+    };
 
-  const res = await createCommitOnBranch(fileChanges, expectedHeadOid);
+    const res = await createCommitOnBranch(fileChanges, expectedHeadOid);
 
-  if (res.body.errors || !res.body.data) {
-    console.error('Creating commit failed!');
-    console.error(res.errors);
+    if (res.body.errors || !res.body.data) {
+      console.error('Creating commit failed!');
+      console.error(res.body.errors);
+
+      return {
+        statusCode: 500,
+        body: 'Internal Server Error',
+      };
+    }
+
+    const {
+      body: {
+        data: {
+          createCommitOnBranch: {
+            commit: { oid },
+          },
+        },
+      },
+    } = res;
+
+    console.log('Successfully created new commit hash:', oid);
+
+    return {
+      statusCode: 204,
+      body: null,
+    };
+  } catch (e) {
+    console.error('Failed to update Github repository!');
+    console.error(e);
 
     return {
       statusCode: 500,
       body: 'Internal Server Error',
     };
   }
-
-  const {
-    body: {
-      data: {
-        createCommitOnBranch: {
-          commit: { oid },
-        },
-      },
-    },
-  } = res;
-
-  console.log('Successfully created new commit hash:', oid);
-
-  return {
-    statusCode: 204,
-    body: null,
-  };
 };
