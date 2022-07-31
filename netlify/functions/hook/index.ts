@@ -1,4 +1,4 @@
-import type { Handler } from 'aws-lambda';
+import type { Handler } from '@netlify/functions';
 
 import { createCommitOnBranch, getExpectedHeadOid } from './github';
 import wordpress from './wordpress';
