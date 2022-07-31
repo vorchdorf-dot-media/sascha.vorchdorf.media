@@ -10,6 +10,7 @@
     "moduleResolution": "Node",
     "resolveJsonModule": true,
     "rootDir": ".",
+    "skipLibCheck": true,
     "target": "ES6"
   },
   "exclude": ["dist", "**/*.test.ts", "**/*.d.ts"],

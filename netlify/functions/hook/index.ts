@@ -53,7 +53,7 @@ export const handler: Handler = async (event, _context) => {
 
     return {
       statusCode: 204,
-      body: null,
+      body: '',
     };
   } catch (e) {
     console.error('Failed to update Github repository!');
