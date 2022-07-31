@@ -19,8 +19,9 @@ jobs:
           echo "COMMIT_SHA=($SHORT_SHA)" >> $GITHUB_ENV
 
       - name: Set up Node.js
-        run: |
-          nvm install
+        uses: actions/setup-node@v3
+        with:
+          node-version-file: '.tool-versions'
 
       - name: Cache node_modules
         uses: actions/cache@v2
