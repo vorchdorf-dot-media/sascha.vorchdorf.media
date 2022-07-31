@@ -9,7 +9,7 @@ on:
 jobs:
   deploy:
     name: Deploy
-    runs_on: ubuntu-latest
+    runs-on: ubuntu-latest
 
     env:
       PROD: ${{ github.ref == 'refs/heads/main' && github.event_name == 'push' }}
