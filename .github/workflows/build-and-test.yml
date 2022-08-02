@@ -42,21 +42,21 @@ jobs:
       - name: Build
         run: yarn build
 
-      # - name: Create website screenshots (light mode)
-      #   uses: saschazar21/actions/packages/localhost-screenshot@main
-      #   with:
-      #     devices: iPad, iPhone 11, Desktop
-      #     dist: dist
+      - name: Create website screenshots (light mode)
+        uses: saschazar21/actions/packages/localhost-screenshot@main
+        with:
+          devices: iPad, iPad Pro, iPhone 13, Pixel 5, Desktop
+          dist: dist
 
-      # - name: Create website screenshots (dark mode)
-      #   uses: saschazar21/actions/packages/localhost-screenshot@main
-      #   with:
-      #     dark: true
-      #     devices: iPad, iPhone 11, Desktop
-      #     dist: dist
+      - name: Create website screenshots (dark mode)
+        uses: saschazar21/actions/packages/localhost-screenshot@main
+        with:
+          dark: true
+          devices: iPad, iPad Pro, iPhone 13, Pixel 5, Desktop
+          dist: dist
 
-      # - name: Upload screenshots
-      #   uses: actions/upload-artifact@v2
-      #   with:
-      #     name: screenshots
-      #     path: /home/runner/work/_temp/_github_home/**.png
+      - name: Upload screenshots
+        uses: actions/upload-artifact@v2
+        with:
+          name: screenshots
+          path: /home/runner/work/_temp/_github_home/**.png
