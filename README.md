@@ -62,7 +62,7 @@ To trigger a new deployment, the `/wp/hook` endpoint needs to be called using a 
 
 Any WordPress plugin, which is capable of sending a POST request (preferably with Basic authentication) whenever contents have changed should do. Something like this one: [WP Webhooks](https://wp-webhooks.com/).
 
-Or, if periodical updates instead of updates based on content changes are preferred, something like [Netlify's Scheduled Functions](https://docs.netlify.com/netlify-labs/experimental-features/scheduled-functions/) might do the trick.
+Or, if periodical updates are preferred over updates based on content changes, something like [Netlify's Scheduled Functions](https://docs.netlify.com/netlify-labs/experimental-features/scheduled-functions/) might do the trick.
 
 ## License
 
