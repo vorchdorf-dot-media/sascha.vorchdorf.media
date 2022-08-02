@@ -4,12 +4,20 @@ import fetchPosts from './fetchPosts';
 import fetchTags from './fetchTags';
 
 export const fetchData = async () => {
+  const sources = ['authors', 'categories', 'posts', 'tags'];
+
+  console.log('Starting to fetch contents from Wordpress REST API...');
+
   const data = await Promise.all([
     fetchAuthors(),
     fetchCategories(),
     fetchPosts(),
     fetchTags(),
   ]);
+
+  data.forEach((src, i) =>
+    console.info(`Fetched ${src?.length ?? 0} entries for ${sources[i]}.`),
+  );
 
   const [authors, categories, posts, tags] = data.map(
     (src) => `${JSON.stringify(src, null, 2)}\n`,

@@ -8,3 +8,9 @@ publish = "dist/"
 
 [functions]
 directory = "netlify/functions/"
+
+[[redirects]]
+from = "/wp/hook"
+to = "/.netlify/functions/hook"
+status = 200
+force = true

@@ -1,6 +1,7 @@
 import type { Handler } from '@netlify/functions';
 
 import { createCommitOnBranch, getExpectedHeadOid } from './github';
+import { checkAuth, HTTPError } from './helpers';
 import wordpress from './wordpress';
 
 export const handler: Handler = async (event, _context) => {
@@ -14,11 +15,32 @@ export const handler: Handler = async (event, _context) => {
     };
   }
 
-  // TODO: add authorization header check!
+  try {
+    checkAuth(event);
+  } catch (e) {
+    console.error(e);
+
+    if (e instanceof HTTPError) {
+      return {
+        statusCode: e.status,
+        headers: e.headers,
+        body: e.message,
+      };
+    }
+
+    return {
+      statusCode: 500,
+      body: 'Internal Server Error',
+    };
+  }
 
   try {
     const additions = await wordpress();
     console.log('Successfully fetched contents from Wordpress REST API...');
+
+    if (!process.env.GITHUB_API_TOKEN) {
+      throw new Error('GITHUB_API_TOKEN environment variable is not set!');
+    }
 
     const expectedHeadOid = await getExpectedHeadOid();
     console.log('Last HEAD commit hash was:', expectedHeadOid);
