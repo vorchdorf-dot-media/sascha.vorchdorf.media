@@ -1,10 +1,14 @@
 import type { HandlerEvent } from '@netlify/functions';
 
 export class HTTPError extends Error implements Error {
-  private _headers: Record<string, string> = {};
+  private _headers: Record<string, string>;
   private _status: number;
 
-  constructor(message: string, status = 500, headers?: Record<string, string>) {
+  constructor(
+    message: string,
+    status = 500,
+    headers: Record<string, string> = {},
+  ) {
     super(message);
 
     this._status = status;
@@ -41,7 +45,7 @@ export const checkAuth = (event: HandlerEvent) => {
 
   const matches = BASIC_AUTH_REGEXP.exec(auth);
 
-  if (!matches?.groups.auth) {
+  if (!matches?.groups?.auth) {
     throw new HTTPError('Unauthorized', 401, {
       'WWW-Authenticate':
         'Basic realm="Trigger Github commit hook", charset="UTF-8"',

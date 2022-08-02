@@ -3,7 +3,7 @@
   <strong>An Eleventy blog boilerplate powered by a WordPress backend.</strong>
   <br />
   <br />
-  <a href="actions/workflows/deploy-to-netlify.yml"><img alt="GitHub Actions: Deploy to Netlify workflow" src="actions/workflows/deploy-to-netlify.yml/badge.svg" /></a> <a href="actions/workflows/build-and-test.yml"><img alt="GitHub Actions: Test workflow" src="actions/workflows/build-and-test.yml/badge.svg" /></a> <img alt="License" src="https://img.shields.io/github/license/saschazar21/eleventy-wordpress" />
+  <a href="https://github.com/saschazar21/eleventy-wordpress/actions/workflows/deploy-to-netlify.yml"><img alt="GitHub Actions: Deploy to Netlify workflow" src="actions/workflows/deploy-to-netlify.yml/badge.svg" /></a> <a href="https://github.com/saschazar21/eleventy-wordpress/actions/workflows/build-and-test.yml"><img alt="GitHub Actions: Test workflow" src="https://github.com/saschazar21/eleventy-wordpress/actions/workflows/build-and-test.yml/badge.svg" /></a> <img alt="License" src="https://img.shields.io/github/license/saschazar21/eleventy-wordpress" />
   <br />
   <br />
   <br />
