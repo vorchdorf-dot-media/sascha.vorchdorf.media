@@ -1,0 +1,25 @@
+---
+pagination:
+  data: posts
+  size: 10
+  generatePageOnEmptyData: true
+
+permalink: /posts/{% if pagination.pageNumber %}{{ pagination.pageNumber + 1 }}/{% endif %}
+title: Posts
+---
+
+{% if pagination.items.length %}
+
+  {% for post in pagination.items %}
+    <article>
+      <h2>{{ post.title.rendered }}</h2>
+
+      {{ post.content.rendered | safe }}
+    </article>
+  {% endfor %}
+
+{% else %}
+
+<p>No posts available...</p>
+
+{% endif %}

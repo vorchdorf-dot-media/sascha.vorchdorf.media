@@ -1,0 +1,25 @@
+---
+permalink:
+  stories: /stories/:page
+
+title: Stories
+---
+
+{% set currentPage = eleventy.serverless.path.page %}
+{% set totalPages = stories.totalPages %}
+
+{% if stories.items.length %}
+
+  {% for story in stories.items %}
+    <article>
+    <h2>{{ story.title.rendered }}</h2>
+
+    {{ story.excerpt.rendered | safe }}
+    </article>
+  {% endfor %}
+
+{% else %}
+
+<p>No stories yet. Please check back again soon</p>
+
+{% endif %}

@@ -1,0 +1,10 @@
+---
+pagination:
+  alias: post
+  data: posts
+  size: 1
+
+permalink: /post/{{ post.date | dateStringToUTC | year }}/{{ post.date | dateStringToUTC | month }}/{{ post.slug }}/
+---
+
+{{ post.content.rendered | safe }}

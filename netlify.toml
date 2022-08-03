@@ -10,7 +10,8 @@ publish = "dist/"
 directory = "netlify/functions/"
 
 [[redirects]]
-from = "/wp/hook"
-to = "/.netlify/functions/hook"
+from = "/stories/:page"
+to = "/.netlify/functions/stories"
 status = 200
 force = true
+_generated_by_eleventy_serverless = "stories"
