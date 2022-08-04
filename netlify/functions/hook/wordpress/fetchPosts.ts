@@ -19,6 +19,7 @@ const WHITELIST = [
 ];
 
 export type Attachment = {
+  alt: string;
   caption: string;
   height: number;
   id: number;
