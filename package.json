@@ -1,11 +1,13 @@
 {
-  "name": "eleventy-wordpress",
+  "name": "sascha.offline",
   "version": "1.0.0",
-  "description": "An Eleventy blog boilerplate powered by a WordPress backend.",
-  "repository": "https://github.com/saschazar21/eleventy-wordpress",
+  "color": "#34623F",
+  "short_name": "Sascha offline",
+  "description": "Sascha ist offline. Ein Blog über Ereignisse, wo kein Computer dabei ist.",
+  "repository": "https://github.com/vorchdorf-dot-media/sascha.vorchdorf.media",
   "author": {
     "name": "Sascha Zarhuber",
-    "email": "sascha.zarhuber@gmail.com",
+    "email": "saschazar21@yahoo.de",
     "url": "https://sascha.work"
   },
   "license": "MIT",

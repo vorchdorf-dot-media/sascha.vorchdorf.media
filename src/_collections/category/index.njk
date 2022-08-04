@@ -1,0 +1,25 @@
+---js
+{
+  pagination: {
+    alias: 'category',
+    data: 'categories',
+    size: 1,
+    before(data) {
+      return data.filter(({ count }) => !!count)
+    }
+  }
+}
+---
+
+{% if category.description %}
+<p>{{ category.description}}</p>
+{% endif %}
+
+<section>
+<h2>Posts categorized under <strong>{{ category.name }}</strong>:</h2>
+
+{% for post in categoryPosts %}
+{% include 'preview.njk' %}
+{% endfor %}
+
+</section>

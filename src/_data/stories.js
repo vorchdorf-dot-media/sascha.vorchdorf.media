@@ -28,8 +28,6 @@ const fetchStories = async (eleventyConfig) => {
     searchParams.append('page', page);
     endpoint.search = searchParams.toString();
 
-    console.log(endpoint.toString());
-
     const { body, headers } = await got(endpoint, {
       method: 'GET',
       responseType: 'json',

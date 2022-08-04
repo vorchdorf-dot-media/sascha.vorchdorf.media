@@ -48,6 +48,7 @@ export type Post = {
   id: number;
   date: string;
   modified: string;
+  permalink: string;
   slug: string;
   status: string;
   type: string;
@@ -80,9 +81,16 @@ export default async (): Promise<Post[]> =>
         content_sanitized?: { rendered: string; plaintext: string };
       } = filterObject(post, WHITELIST, false);
 
+      const created = new Date(`${post.date}Z`);
+      const year = created.getFullYear().toString();
+      const month = (created.getMonth() + 1).toString().padStart(2, '0');
+
       return {
         ...rest,
+        date: post.date + 'Z',
+        modified: post.modified + 'Z',
         content: content_sanitized ?? content,
+        permalink: `/${year}/${month}/${post.slug}`,
       };
     }),
   );

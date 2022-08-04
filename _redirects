@@ -1,2 +1,4 @@
-/wp/hook  /.netlify/functions/hook  200!
-/stories  /stories/1                301!
+/                   /blog/page/1              200!
+/wp/hook            /.netlify/functions/hook  200!
+/posts/page/:page   /blog/page/:page          301!
+/stories            /stories/page/1           301!

@@ -1,8 +1,8 @@
 const pkg = require('../../package.json');
 
 module.exports = {
-  name: 'Eleventy x Wordpress',
-  short_name: 'Eleventy',
+  name: 'Sascha ist offline.',
+  short_name: pkg.short_name,
   start_url: '.',
   display: 'standalone',
   background_color: '#F2FBE0',

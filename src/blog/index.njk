@@ -4,7 +4,7 @@ pagination:
   size: 10
   generatePageOnEmptyData: true
 
-permalink: /posts/{% if pagination.pageNumber %}{{ pagination.pageNumber + 1 }}/{% endif %}
+permalink: /blog/page/{{ pagination.pageNumber + 1 }}/
 title: Posts
 ---
 

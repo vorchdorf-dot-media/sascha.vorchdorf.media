@@ -10,7 +10,7 @@ publish = "dist/"
 directory = "netlify/functions/"
 
 [[redirects]]
-from = "/stories/:page"
+from = "/stories/page/:page"
 to = "/.netlify/functions/stories"
 status = 200
 force = true

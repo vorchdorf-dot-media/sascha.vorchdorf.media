@@ -26,6 +26,7 @@ module.exports = {
     );
   },
   parseDate: (date) => new Date(Date.parse(dateStringToUTC(date))),
-  year: (date) => new Date(date).getFullYear(),
-  month: (date) => (new Date(date).getMonth() + 1).toString().padStart(2, '0'),
+  category: (posts, id) =>
+    posts.filter((post) => post.categories.indexOf(id) >= 0),
+  tag: (posts, id) => posts.filter((post) => post.tags.indexOf(id) >= 0),
 };
