@@ -1,6 +1,7 @@
 const collections = require('./_11ty/collections');
 const filters = require('./_11ty/filters');
 const plugins = require('./_11ty/plugins');
+const transforms = require('./_11ty/transforms');
 
 module.exports = (config) => {
   const copyOptions = {
@@ -21,6 +22,10 @@ module.exports = (config) => {
 
   Object.keys(filters).forEach((filter) =>
     config.addFilter(filter, filters[filter]),
+  );
+
+  Object.keys(transforms).forEach((transform) =>
+    config.addTransform(transform, transforms[transform]),
   );
 
   return {

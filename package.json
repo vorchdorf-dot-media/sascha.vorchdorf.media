@@ -5,6 +5,7 @@
   "short_name": "Sascha offline",
   "description": "Sascha ist offline. Ein Blog über Ereignisse, wo kein Computer dabei ist.",
   "repository": "https://github.com/vorchdorf-dot-media/sascha.vorchdorf.media",
+  "homepage": "https://sascha.vorchdorf.media",
   "author": {
     "name": "Sascha Zarhuber",
     "email": "saschazar21@yahoo.de",
@@ -21,8 +22,12 @@
   "dependencies": {
     "@11ty/eleventy": "^2.0.0-canary.13",
     "@11ty/eleventy-plugin-rss": "^1.2.0",
+    "dayjs": "^1.11.4",
+    "eleventy-plugin-helmet": "^0.2.2",
     "got": "^11",
-    "graphql-tag": "^2.12.6"
+    "graphql-tag": "^2.12.6",
+    "posthtml": "^0.16.6",
+    "posthtml-minifier": "^0.1.0"
   },
   "devDependencies": {
     "@netlify/functions": "^1.0.0",
