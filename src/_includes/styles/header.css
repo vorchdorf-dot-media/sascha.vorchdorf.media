@@ -1,0 +1,9 @@
+@media screen and (min-width: 768px) {
+  header {
+    text-align: right;
+  }
+
+  nav ul {
+    justify-content: flex-end;
+  }
+}

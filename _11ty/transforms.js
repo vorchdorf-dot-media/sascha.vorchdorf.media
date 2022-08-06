@@ -17,7 +17,7 @@ module.exports = {
           minifyCSS: true,
           minifyJS: true,
           removeEmptyElements: true,
-          removeOptionalTags: true,
+          // removeOptionalTags: true,
         }),
       )
       .process(content)

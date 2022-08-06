@@ -1,0 +1,17 @@
+<style data-helmet>
+  {% include 'styles/header.css' %}
+</style>
+
+<header>
+  {% if nav.length %}
+    <nav>
+      <ul class="list-horizontal">
+        {% for item in nav %}
+            <li><a href="{{ item.url | absoluteUrl }}">{{ item.title }}</a></li>
+        {% endfor %}
+      </ul>
+    </nav>
+  {% endif %}
+
+  {% include 'author.njk' %}
+</header>

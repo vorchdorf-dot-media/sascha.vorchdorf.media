@@ -1,0 +1,13 @@
+{% set author = pkg.author %}
+
+<style data-helmet>
+  {% include 'styles/author.css' %}
+</style>
+
+<div class="author">
+  {% gravatar author.email, author.name %}
+  <div>
+    <h3>{{ author.name }}</h3>
+    <span>{{ pkg.description }}</span>
+  </div>
+</div>

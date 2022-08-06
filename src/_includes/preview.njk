@@ -1,31 +1,47 @@
 
 {% set categories %}
-  {% for id in post.categories %}
-    {% for category in categories %}
-      {% if category.id == id %}
-        <a href="{{ '/category/' + category.slug | absoluteUrl }}">{{ category.name }}</a>
-      {% endif %}
-    {% endfor %}
-    {% if not loop.last %},{% endif %}
-  {% endfor %}
+{% if post.categories.length %}
+    <ul class="list-horizontal">
+      {% for id in post.categories %}
+        {% for category in categories %}
+          {% if category.id == id %}
+            <li><a href="{{ '/category/' + category.slug | absoluteUrl }}">{{ category.name }}</a></li>
+          {% endif %}
+        {% endfor %}
+      {% endfor %}
+    </ul>
+  {% endif %}
 {% endset %}
 
 {% set tags %}
-  {% for id in post.tags %}
-    {% for tag in tags %}
-      {% if tag.id == id %}
-        <a href="{{ '/tag/' + tag.slug | absoluteUrl }}">{{ tag.name }}</a>
-      {% endif %}
-    {% endfor %}
-    {% if not loop.last %},{% endif %}
-  {% endfor %}
+  {% if post.tags.length %}
+    <ul class="list-horizontal">
+      {% for id in post.tags %}
+        {% for tag in tags %}
+          {% if tag.id == id %}
+            <li><a class="text-small" href="{{ '/tag/' + tag.slug | absoluteUrl }}">#{{ tag.name }}</a></li>
+          {% endif %}
+        {% endfor %}
+      {% endfor %}
+    </ul>
+  {% endif %}
 {% endset %}
 
-<article>
+<style data-helmet>
+  {% include 'styles/preview.css' %}
+</style>
+
+<article class="preview">
+  <div class="meta">
+    <span>
+      <span class="date">{{ post.date | dateStringFormatted }}</span>
+      {% if post.date != post.modified %}<small class="muted">, zuletzt geändert am {{ post.modified | dateStringFormatted }}</small>{% endif %}
+    </span>
+    {% if post.categories.length %}{{ categories | safe }}{% endif %}
+  </div>
   <h2>{{ post.title.rendered }}</h2>
-  <span>Zuletzt ge&auml;ndert am {{ post.modified | dateStringFormatted }}</span>,
-  {% if post.categories.length %}<span>kategorisiert unter: {{ categories | safe }}</span>{% endif %}<br />
-  {% if post.tags.length %}<span>Markiert als: {{ tags | safe }}</span>{% endif %}
 
   {{ post.excerpt.rendered | safe }}
+
+  {% if post.tags.length %}{{ tags | safe }}{% endif %}
 </article>

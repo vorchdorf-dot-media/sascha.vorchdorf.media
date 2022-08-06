@@ -1,6 +1,7 @@
 const collections = require('./_11ty/collections');
 const filters = require('./_11ty/filters');
 const plugins = require('./_11ty/plugins');
+const shortcodes = require('./_11ty/shortcodes');
 const transforms = require('./_11ty/transforms');
 
 module.exports = (config) => {
@@ -22,6 +23,10 @@ module.exports = (config) => {
 
   Object.keys(filters).forEach((filter) =>
     config.addFilter(filter, filters[filter]),
+  );
+
+  Object.keys(shortcodes).forEach((shortcode) =>
+    config.addAsyncShortcode(shortcode, shortcodes[shortcode]),
   );
 
   Object.keys(transforms).forEach((transform) =>

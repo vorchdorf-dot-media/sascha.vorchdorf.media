@@ -11,7 +11,7 @@ module.exports = {
     return dayjs(date).format('DD. MM. YYYY');
   },
   gravatar: (email, size = 256, fallback = 'robohash') => {
-    const hash = createHash('md5').update(email).hex();
+    const hash = createHash('md5').update(email).digest('hex');
 
     return new URL(
       `/avatar/${hash}?size=${size}&d=${fallback}`,

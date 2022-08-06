@@ -1,0 +1,25 @@
+.author {
+  display: flex;
+  gap: var(--space-m);
+  font-size: var(--font-size-s);
+}
+
+.author img {
+  border-radius: 9999px;
+  border: var(--border-width, 2px) solid var(--border-color, var(--color-text));
+}
+
+.author h3 {
+  margin: 0;
+  font-size: var(--font-size-h5);
+}
+
+@media screen and (min-width: 768px) {
+  .author {
+    font-size: var(--font-size);
+  }
+
+  .author h3 {
+    font-size: var(--font-size-h4);
+  }
+}

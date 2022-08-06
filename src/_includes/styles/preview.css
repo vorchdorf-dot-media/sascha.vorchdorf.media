@@ -1,0 +1,27 @@
+.preview {
+}
+
+.preview h2 {
+  margin-top: var(--space-m);
+}
+
+.preview .date {
+  font-weight: 400;
+  font-variation-settings: 'wght' 400;
+}
+
+.meta {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: var(--space-s);
+  font-size: var(--font-size-s);
+}
+
+@media screen and (min-width: 768px) {
+  .meta {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: var(--space-l);
+    font-size: var(--font-size);
+  }
+}
