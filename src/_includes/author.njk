@@ -4,10 +4,7 @@
   {% include 'styles/author.css' %}
 </style>
 
-<div class="author">
+<aside class="author">
   {% gravatar author.email, author.name %}
-  <div>
-    <h3>{{ author.name }}</h3>
-    <span>{{ pkg.description }}</span>
-  </div>
-</div>
+  <small>{{ pkg.description }}</small>
+</aside>

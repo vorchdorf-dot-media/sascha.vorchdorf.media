@@ -12,9 +12,9 @@ title: Stories
 
   {% for story in stories.items %}
     <article>
-    <h2>{{ story.title.rendered }}</h2>
+      <h2>{{ story.title.rendered }}</h2>
 
-    {{ story.excerpt.rendered | safe }}
+      {{ story.excerpt.rendered | safe }}
     </article>
   {% endfor %}
 

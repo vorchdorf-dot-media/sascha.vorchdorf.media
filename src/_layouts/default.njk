@@ -6,11 +6,15 @@ layout: base.njk
   {% include 'styles/default.css' %}
 </style>
 
-<div class="container">
-  {% include 'header.njk' %}
+{% include 'header.njk' %}
 
+<div id="content">
   <main>
     <h1>{{ title }}</h1>
     {{ content | safe }}
   </main>
+
+  {% include 'author.njk' %}
 </div>
+
+{% include 'footer.njk' %}

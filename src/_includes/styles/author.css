@@ -1,7 +1,11 @@
 .author {
   display: flex;
+  align-items: center;
   gap: var(--space-m);
-  font-size: var(--font-size-s);
+}
+
+.author picture {
+  display: inline-flex;
 }
 
 .author img {
@@ -9,17 +13,13 @@
   border: var(--border-width, 2px) solid var(--border-color, var(--color-text));
 }
 
-.author h3 {
-  margin: 0;
-  font-size: var(--font-size-h5);
-}
-
 @media screen and (min-width: 768px) {
   .author {
-    font-size: var(--font-size);
+    flex-direction: column;
+    text-align: center;
   }
 
-  .author h3 {
-    font-size: var(--font-size-h4);
+  .author picture {
+    align-self: center;
   }
 }
