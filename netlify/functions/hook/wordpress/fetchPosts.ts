@@ -12,6 +12,7 @@ const WHITELIST = [
   'excerpt',
   'content',
   'content_sanitized',
+  'featured_media',
   'attachments',
   'author',
   'categories',
@@ -53,6 +54,7 @@ export type Post = {
   slug: string;
   status: string;
   type: string;
+  featured_media: number;
   title: {
     rendered: string;
   };

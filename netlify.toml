@@ -10,6 +10,13 @@ publish = "dist/"
 directory = "netlify/functions/"
 
 [[redirects]]
+from = "/stories"
+to = "/.netlify/functions/stories"
+status = 200
+force = true
+_generated_by_eleventy_serverless = "stories"
+
+[[redirects]]
 from = "/stories/page/:page"
 to = "/.netlify/functions/stories"
 status = 200

@@ -1,47 +1,51 @@
-
-{% set categories %}
-{% if post.categories.length %}
-    <ul class="list-horizontal">
-      {% for id in post.categories %}
-        {% for category in categories %}
-          {% if category.id == id %}
-            <li><a href="{{ '/category/' + category.slug | absoluteUrl }}">{{ category.name }}</a></li>
+{% macro generateList(name, list, dictionary, link) %}
+  {% if list.length %}
+    <ul class="list-horizontal {{ name }}">
+      {% for id in list %}
+        {% for item in dictionary %}
+          {% if item.id == id %}
+            <li><a class="pill" href="{{ link + '/' + item.slug | absoluteUrl }}">{{ item.name }}</a></li>
           {% endif %}
         {% endfor %}
       {% endfor %}
     </ul>
   {% endif %}
-{% endset %}
+{% endmacro %}
 
-{% set tags %}
-  {% if post.tags.length %}
-    <ul class="list-horizontal">
-      {% for id in post.tags %}
-        {% for tag in tags %}
-          {% if tag.id == id %}
-            <li><a class="text-small" href="{{ '/tag/' + tag.slug | absoluteUrl }}">#{{ tag.name }}</a></li>
-          {% endif %}
-        {% endfor %}
-      {% endfor %}
-    </ul>
+{% set categories = generateList('categories', post.categories, categories, '/category') %}
+{% set tags = generateList('tags', post.tags, tags, '/tag') %}
+{% set permalink = '/post' + post.permalink | absoluteUrl %}
+
+{% setAsync "featured_image" %}
+  {% if post.featured_media %}
+    {% for attachment in post.attachments %}
+      {% if attachment.id == post.featured_media %}
+        {% image attachment.source, attachment.alt or attachment.caption, [160, 320, 640], '(min-width: 1440px) 160px, 320px' %}
+      {% endif %}
+    {% endfor %}
   {% endif %}
-{% endset %}
+{% endsetAsync %}
 
 <style data-helmet>
   {% include 'styles/preview.css' %}
 </style>
 
 <article class="preview">
-  <div class="meta">
-    <span>
-      <span class="date">{{ post.date | dateStringFormatted }}</span>
-      {% if post.date != post.modified %}<small class="muted">, zuletzt geändert am {{ post.modified | dateStringFormatted }}</small>{% endif %}
-    </span>
-    {% if post.categories.length %}{{ categories | safe }}{% endif %}
-  </div>
-  <h2>{{ post.title.rendered }}</h2>
+
+  {{ featured_image | safe }}
+  
+  {% if post.categories.length %}{{ categories | safe }}{% endif %}
+  <span class="date">
+    <time datetime="{{ post.date }}">{{ post.date | dateStringFormatted }}</time>
+    {% if post.date != post.modified %}<small class="muted">,<br />zuletzt geändert am <time datetime="{{ post.modified}}">{{ post.modified | dateStringFormatted }}</time></span>{% endif %}
+  </span>
+  <h2>
+    <a data-cover href="{{ permalink }}">{{ post.title.rendered }}</a>
+  </h2>
 
   {{ post.excerpt.rendered | safe }}
+
+  <a href="{{ permalink }}">Den gesamten Eintrag anzeigen</a>
 
   {% if post.tags.length %}{{ tags | safe }}{% endif %}
 </article>

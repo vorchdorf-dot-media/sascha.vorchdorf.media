@@ -1,7 +1,7 @@
 ---js
 {
   pagination: {
-    alias: 'tag',
+    alias: 'item',
     data: 'tags',
     size: 1,
     before(data) {
@@ -11,14 +11,4 @@
 }
 ---
 
-{% if tag.description.length %}
-<p>{{ tag.description }}</p>
-{% endif %}
-
-<section>
-  <h2>Posts tagged with <strong>{{ tag.name }}</strong></h2>
-
-  {% for post in tagPosts %}
-{% include 'preview.njk' %}
-  {% endfor %}
-</section>
+{% include 'pagination_single.njk' %}

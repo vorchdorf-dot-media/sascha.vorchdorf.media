@@ -32,7 +32,7 @@ const generateImageHTML = async (
 
   const html = Image.generateHTML(metadata, attributes);
 
-  const $ = cheerio.load(html);
+  const $ = cheerio.load(html, null, false);
 
   $('img').attr('height', height).attr('width', width);
 

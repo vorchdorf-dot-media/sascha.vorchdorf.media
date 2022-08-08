@@ -12,7 +12,7 @@ module.exports = {
       .use(eleventyHelmet)
       .use(
         minifier({
-          collapseInlineTagWhitespace: true,
+          collapseInlineTagWhitespace: false,
           collapseWhitespace: true,
           minifyCSS: true,
           minifyJS: true,

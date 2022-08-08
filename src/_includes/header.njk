@@ -2,14 +2,22 @@
   {% include 'styles/header.css' %}
 </style>
 
-<header>
-  {% if nav.length %}
-    <nav>
-      <ul class="list-horizontal">
-        {% for item in nav %}
-            <li><a href="{{ item.url | absoluteUrl }}">{{ item.title }}</a></li>
-        {% endfor %}
-      </ul>
-    </nav>
-  {% endif %}
+<header class="full-bleed">
+  <div class="container">
+    {% if nav.length %}
+      <nav>
+        <ul class="list-horizontal">
+          {% for item in nav %}
+              <li>
+                <a
+                  {% if page.url == item.url %}aria-current="page"{% endif %}
+                  href="{{ item.url | absoluteUrl }}">
+                  {{ item.title }}
+                </a>
+              </li>
+          {% endfor %}
+        </ul>
+      </nav>
+    {% endif %}
+  </div>
 </header>

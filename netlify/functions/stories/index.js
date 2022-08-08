@@ -5,8 +5,13 @@ const { EleventyServerless } = require('@11ty/eleventy');
 require('./eleventy-bundler-modules.js');
 
 async function handler(event) {
+  // custom logic for first stories page path
+  const rawUrl = /page\/\d+$/i.test(event.rawUrl)
+    ? event.rawUrl
+    : `${event.rawUrl}/page/1`;
+
   let elev = new EleventyServerless('stories', {
-    path: new URL(event.rawUrl).pathname,
+    path: new URL(rawUrl).pathname,
     query: event.multiValueQueryStringParameters || event.queryStringParameters,
     functionsDir: 'netlify/functions',
   });

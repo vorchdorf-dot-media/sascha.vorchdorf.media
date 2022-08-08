@@ -1,0 +1,15 @@
+<div class="information container">
+  {% if item.description.length %}
+    <p>{{ item.description }}</p>
+  {% endif %}
+  <span>{% if item.count > 1 %}{{ item.count }} Einträge sind{% else %}Ein Eintrag ist{% endif %} unter dieser Kategorie gelistet.</span>
+  <a href="{{ showAll | absoluteUrl }}">Alle Kategorien anzeigen</a>
+</div>
+
+{% if relatedPosts.length %}
+  {% asyncEach post in relatedPosts %}
+
+    {% include 'preview.njk' %}
+
+  {% endeach %}
+{% endif %}

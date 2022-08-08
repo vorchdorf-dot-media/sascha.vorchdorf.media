@@ -1,5 +1,6 @@
 :root {
-  --color-bg: hsl(205, 87%, 94%);
+  --color-bg: hsl(205, 27%, 94%);
+  --color-bg-muted: hsl(205, 27%, 87%);
   --color-text: hsl(40, 7%, 8%);
   --color-text-muted: hsl(40, 3%, 29%);
   --color-bg-dark: hsl(40, 100%, 67%);
@@ -11,6 +12,22 @@
   --space-l: 1rem;
   --space-xl: 1.5rem;
   --space-xxl: 2rem;
+
+  --border-radius-s: 4px;
+  --border-radius-m: 6px;
+
+  --border-width: 2px;
+
+  --container-width: 1280px;
+  --content-width: 1440px;
+
+  --duration: 300ms;
+}
+
+@media (prefers-reduced-motion) {
+  :root {
+    --duration: 0;
+  }
 }
 
 body {
@@ -20,4 +37,29 @@ body {
   background-color: var(--color-bg);
   color: var(--color-text);
   box-sizing: border-box;
+}
+
+picture {
+  display: inline-flex;
+}
+
+::selection {
+  background-color: var(--color-bg-dark);
+}
+
+:focus {
+  outline: var(--border-width) dashed var(--color, var(--color-primary));
+  outline-offset: var(--border-width);
+}
+
+.container {
+  padding: var(--space-l);
+  margin-left: auto;
+  margin-right: auto;
+  max-width: var(--container-width);
+}
+
+.full-bleed {
+  margin-left: calc(50% - 50vw);
+  width: 100vw;
 }

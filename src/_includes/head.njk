@@ -1,6 +1,6 @@
 <title>
   {% if title %}
-    {{ title }} | {{ manifest.short_name }}
+    {{ title }} | {{ manifest.name }}
   {% else %}
     {{ manifest.name }}
   {% endif %}
@@ -11,7 +11,7 @@
 <link rel="canonical" href="{{ page.url | absoluteUrl }}" />
 <meta name="author" content="{{ pkg.author.name }}" />
 <meta name="description" content="{{ tldr or manifest.description }}" />
-<meta name="generator" content="Eleventy {{ pkg.dependencies['@11ty/eleventy'] | replace('^', '') }}" />
+<meta name="generator" content="{{ eleventy.generator }}" />
 {% if pkg.private %}<meta name="robots" content="noindex, nofollow" />{% endif %}
 <link rel="icon" type="image/png" href="/img/favicon-32.png" sizes="32x32" />
 <link rel="icon" type="image/png" href="/img/favicon-16.png" sizes="16x16" />

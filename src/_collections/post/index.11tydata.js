@@ -10,5 +10,13 @@ module.exports = {
     }) => {
       return title;
     },
+    tldr: ({
+      post: {
+        excerpt: { rendered: excerpt },
+      },
+      tldr,
+    }) => {
+      return tldr || excerpt.replace(/(<([^>]+)>)/gi, '');
+    },
   },
 };

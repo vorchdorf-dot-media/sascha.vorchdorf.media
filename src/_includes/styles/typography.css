@@ -70,6 +70,7 @@ h5 {
   font-family: var(--font-serif);
   font-weight: 700;
   line-height: 1.3;
+  color: inherit;
 }
 
 h1 {
@@ -85,7 +86,8 @@ h3 {
   font-size: var(--font-size-h3);
 }
 
-h4 {
+h4,
+.super {
   font-size: var(--font-size-h4);
 }
 
@@ -94,13 +96,24 @@ h5 {
 }
 
 small,
-.text_small {
+.text-small {
   font-size: var(--font-size-s);
+}
+
+a,
+a:hover,
+a:focus,
+a:visited {
+  color: var(--link-color, var(--color-primary));
 }
 
 strong {
   font-weight: 700;
   font-variation-settings: 'wght' 700;
+}
+
+time {
+  font-family: var(--font-serif);
 }
 
 p {
@@ -109,6 +122,29 @@ p {
 
 .muted {
   color: var(--color-text-muted);
+}
+
+.pill.pill {
+  --pill-bg-color: inherit;
+  --pill-font-size: var(--font-size-s);
+  --link-color: var(--pill-color, var(--color-text-muted));
+
+  border-radius: var(--border-radius-s);
+  border: var(--border-width) solid var(--pill-color, var(--color-text-muted));
+  padding: var(--space-s) var(--space-m);
+  background-color: var(--pill-bg-color);
+  font-size: var(--pill-font-size);
+  font-weight: 400;
+  font-variation-settings: 'wght' 400;
+}
+
+.pill.pill:hover,
+.pill.pill:focus {
+  --link-color: var(--pill-color, var(--color-bg-muted));
+
+  background-color: var(--pill-bg-color, var(--color-text-muted));
+  text-decoration: none;
+  outline: none;
 }
 
 @media screen and (min-width: 768px) {

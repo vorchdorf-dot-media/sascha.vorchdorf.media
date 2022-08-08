@@ -1,13 +1,14 @@
 module.exports = {
   eleventyComputed: {
-    permalink: ({ category }) => {
-      return `/category/${category.slug}/`;
+    permalink: ({ item }) => {
+      return `/category/${item.slug}/`;
     },
-    categoryPosts: ({ category: { id }, posts }) => {
+    relatedPosts: ({ item: { id }, posts }) => {
       return posts.filter(({ categories }) => categories.indexOf(id) >= 0);
     },
-    title: ({ category }) => {
-      return category.name;
+    showAll: '/categories',
+    title: ({ item }) => {
+      return `Kategorie: \"${item.name}\"`;
     },
   },
 };

@@ -3,16 +3,15 @@ pagination:
   data: posts
   size: 10
   generatePageOnEmptyData: true
-
-permalink: /blog/page/{{ pagination.pageNumber + 1 }}/
-title: Posts
 ---
 
 {% if pagination.items.length %}
 
-  {% for post in pagination.items %}
+  {% asyncEach post in pagination.items %}
+
     {% include 'preview.njk' %}
-  {% endfor %}
+
+  {% endeach %}
 
 {% else %}
 
