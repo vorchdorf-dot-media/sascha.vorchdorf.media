@@ -25,7 +25,7 @@
     Times New Roman, Droid Serif, Times, Source Serif Pro, serif,
     Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
 
-  --font-base: 18px;
+  --font-base: 16px;
   --font-size-h1: 1.802rem;
   --font-size-h2: 1.602rem;
   --font-size-h3: 1.424rem;
@@ -76,6 +76,7 @@ h5 {
 h1 {
   margin-top: 0;
   font-size: var(--font-size-h1);
+  text-align: center;
 }
 
 h2 {
@@ -104,6 +105,7 @@ a,
 a:hover,
 a:focus,
 a:visited {
+  position: relative;
   color: var(--link-color, var(--color-primary));
 }
 
@@ -124,27 +126,39 @@ p {
   color: var(--color-text-muted);
 }
 
-.pill.pill {
-  --pill-bg-color: inherit;
-  --pill-font-size: var(--font-size-s);
-  --link-color: var(--pill-color, var(--color-text-muted));
-
-  border-radius: var(--border-radius-s);
-  border: var(--border-width) solid var(--pill-color, var(--color-text-muted));
-  padding: var(--space-s) var(--space-m);
-  background-color: var(--pill-bg-color);
-  font-size: var(--pill-font-size);
-  font-weight: 400;
-  font-variation-settings: 'wght' 400;
+.categories {
+  --color: var(--color-secondary);
+  font-size: var(--font-size-s);
+  text-transform: uppercase;
+  letter-spacing: var(--ls-extended);
 }
 
-.pill.pill:hover,
-.pill.pill:focus {
-  --link-color: var(--pill-color, var(--color-bg-muted));
+.tags {
+  --border-radius-s: 9999px;
+  --color: var(--color-text-muted);
+  font-size: var(--font-size-s);
+}
 
-  background-color: var(--pill-bg-color, var(--color-text-muted));
+.categories a,
+.tags a {
+  border-radius: var(--border-radius-s);
+  border: var(--border-width-s) solid var(--color);
+  padding: var(--space-s) var(--space-m);
+  color: var(--color);
+}
+
+.categories a:hover,
+.categories a:focus,
+.tags a:hover,
+.tags a:focus {
   text-decoration: none;
-  outline: none;
+  background-color: var(--color);
+  color: var(--color-bg-muted);
+}
+
+.tags a::before {
+  content: '#';
+  user-select: none;
 }
 
 @media screen and (min-width: 768px) {
@@ -155,5 +169,9 @@ p {
     --font-size-h4: 1.44rem;
     --font-size-h5: 1.2rem;
     --font-size-s: 0.833rem;
+  }
+
+  .categories {
+    font-size: var(--font-size);
   }
 }

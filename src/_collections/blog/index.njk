@@ -6,12 +6,19 @@ pagination:
 ---
 
 {% if pagination.items.length %}
+  <style data-helmet="articles">
+    {% include 'styles/articles.css' %}
+  </style>
 
-  {% asyncEach post in pagination.items %}
+  <div class="articles">
 
-    {% include 'preview.njk' %}
+    {% asyncEach post in pagination.items %}
 
-  {% endeach %}
+      {% include 'preview.njk' %}
+
+    {% endeach %}
+
+  </div>
 
 {% else %}
 

@@ -5,7 +5,7 @@ module.exports = [
   },
   {
     url: '/blog/',
-    title: 'Blog',
+    title: 'Beiträge',
   },
   { url: '/stories/', title: 'Stories' },
 ];

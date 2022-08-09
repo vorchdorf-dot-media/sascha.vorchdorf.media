@@ -4,7 +4,7 @@
       {% for id in list %}
         {% for item in dictionary %}
           {% if item.id == id %}
-            <li><a class="pill" href="{{ link + '/' + item.slug | absoluteUrl }}">{{ item.name }}</a></li>
+            <li><a href="{{ link + '/' + item.slug | absoluteUrl }}">{{ item.name }}</a></li>
           {% endif %}
         {% endfor %}
       {% endfor %}
@@ -26,26 +26,33 @@
   {% endif %}
 {% endsetAsync %}
 
-<style data-helmet>
+<style data-helmet="preview">
   {% include 'styles/preview.css' %}
 </style>
 
-<article class="preview">
+{% if post.featured_media %}
+  <style data-helmet="preview_image">
+    {% include 'styles/preview_image.css' %}
+  </style>
+{% endif %}
+
+<article class="preview container"{% if post.featured_media %} data-theme="dark" data-has-image{% else %}{% endif %}>
 
   {{ featured_image | safe }}
+
+  {# {% if post.categories.length %}{{ categories | safe }}{% endif %} #}
   
-  {% if post.categories.length %}{{ categories | safe }}{% endif %}
-  <span class="date">
-    <time datetime="{{ post.date }}">{{ post.date | dateStringFormatted }}</time>
-    {% if post.date != post.modified %}<small class="muted">,<br />zuletzt geändert am <time datetime="{{ post.modified}}">{{ post.modified | dateStringFormatted }}</time></span>{% endif %}
-  </span>
   <h2>
     <a data-cover href="{{ permalink }}">{{ post.title.rendered }}</a>
   </h2>
 
   {{ post.excerpt.rendered | safe }}
 
-  <a href="{{ permalink }}">Den gesamten Eintrag anzeigen</a>
+  {# {% if post.tags.length %}{{ tags | safe }}{% endif %}
+  <span class="date">
+    <time datetime="{{ post.date }}">{{ post.date | dateStringFormatted }}</time>
+    {% if post.date != post.modified %}<small class="muted">&#x2022; zuletzt geändert am <time datetime="{{ post.modified}}">{{ post.modified | dateStringFormatted }}</time></span>{% endif %}
+  </span> #}
 
-  {% if post.tags.length %}{{ tags | safe }}{% endif %}
+   <a class="read-more" href="{{ permalink }}">Den gesamten Beitrag lesen</a>
 </article>

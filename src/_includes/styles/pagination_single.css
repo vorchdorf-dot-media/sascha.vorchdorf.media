@@ -1,0 +1,16 @@
+.meta {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-s);
+  padding-bottom: var(--space-xl);
+  margin-bottom: var(--space-xxl);
+  border-bottom: var(--border-width) solid var(--color-bg-muted);
+}
+
+@media screen and (min-width: 768px) {
+  .meta {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}

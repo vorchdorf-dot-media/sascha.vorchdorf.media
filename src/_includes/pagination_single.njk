@@ -1,4 +1,8 @@
-<div class="information container">
+<style data-helmet="pagination_single">
+  {% include 'styles/pagination_single.css' %}
+</style>
+
+<div class="meta container">
   {% if item.description.length %}
     <p>{{ item.description }}</p>
   {% endif %}
@@ -7,9 +11,15 @@
 </div>
 
 {% if relatedPosts.length %}
-  {% asyncEach post in relatedPosts %}
+  <style data-helmet="articles">
+    {% include 'styles/articles.css' %}
+  </style>
 
-    {% include 'preview.njk' %}
+  <div class="articles">
+    {% asyncEach post in relatedPosts %}
 
-  {% endeach %}
+      {% include 'preview.njk' %}
+
+    {% endeach %}
+  </div>
 {% endif %}

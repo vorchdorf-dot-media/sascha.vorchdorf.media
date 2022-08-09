@@ -5,57 +5,20 @@ body {
   min-height: 100vh;
 }
 
-main {
-  flex: 1 0 70%;
-  height: 100%;
-  max-height: 100%;
-}
-
-.information {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-s);
-  padding-bottom: var(--space-xl);
-  margin-bottom: var(--space-xxl);
-  border-bottom: var(--border-width) solid var(--color-bg-muted);
-}
-
-.categories .pill {
-  --pill-bg-color: var(--color-bg-dark);
-  --pill-color: var(--color-text-muted);
-
-  text-transform: uppercase;
-  letter-spacing: var(--ls-extended);
-}
-
-.categories .pill:hover,
-.categories .pill:focus {
-  --pill-bg-color: var(--color-text-muted);
-  --pill-color: var(--color-bg-dark);
-
-  border-color: var(--pill-bg-color);
-}
-
 #content {
   flex: 1 0 auto;
   display: flex;
   align-items: flex-start;
   align-self: stretch;
+  justify-content: flex-end;
   flex-direction: column-reverse;
-  gap: var(--space-l);
+  gap: var(--space-xxl);
   width: 100%;
   max-width: var(--content-width);
 }
 
 @media screen and (min-width: 768px) {
-  .information {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-
   #content {
     flex-direction: row-reverse;
-    gap: var(--space-xxl);
   }
 }

@@ -1,0 +1,47 @@
+.preview[data-theme='dark'] {
+  color: var(--color-text);
+}
+
+.preview[data-theme='dark']::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-dark);
+  z-index: -2;
+}
+
+.preview picture,
+.preview img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.preview img {
+  object-fit: cover;
+  object-position: center;
+  filter: blur(2px) brightness(1.25) opacity(0.25);
+  z-index: -2;
+}
+
+.preview picture::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  /* background: linear-gradient(to bottom, transparent 0%, var(--color-dark) 90%); */
+  z-index: -1;
+}

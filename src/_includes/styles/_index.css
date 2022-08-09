@@ -1,27 +1,52 @@
-:root {
-  --color-bg: hsl(205, 27%, 94%);
-  --color-bg-muted: hsl(205, 27%, 87%);
-  --color-text: hsl(40, 7%, 8%);
-  --color-text-muted: hsl(40, 3%, 29%);
-  --color-bg-dark: hsl(40, 100%, 67%);
-  --color-primary: hsl(168, 37%, 33%);
-  --color-secondary: hsl(356, 100%, 53%);
+:root,
+[data-theme='light'] {
+  --color-dark: hsl(195, 60%, 4%);
+
+  --color-bg: hsl(208, 71%, 98%);
+  --color-bg-muted: hsl(208, 71%, 93%);
+  --color-text: hsl(195, 56%, 16%);
+  --color-text-muted: hsl(195, 37%, 34%);
+  --color-primary: hsl(2, 60%, 46%);
+  --color-secondary: hsl(305, 25%, 42%);
 
   --space-s: 0.25rem;
   --space-m: 0.5rem;
   --space-l: 1rem;
-  --space-xl: 1.5rem;
-  --space-xxl: 2rem;
+  --space-xl: 1.75rem;
+  --space-xxl: 3rem;
 
   --border-radius-s: 4px;
   --border-radius-m: 6px;
 
+  --border-width-s: 1px;
   --border-width: 2px;
 
+  --author-width: 320px;
+  --articles-width: 800px;
   --container-width: 1280px;
   --content-width: 1440px;
 
   --duration: 300ms;
+}
+
+[data-theme='dark'] {
+  --color-text: hsl(208, 71%, 98%);
+  --color-text-muted: hsl(208, 71%, 83%);
+  --color-bg: hsl(195, 56%, 16%);
+  --color-bg-muted: hsl(195, 37%, 25%);
+  --color-primary: hsl(37, 69%, 64%);
+  --color-secondary: hsl(306, 25%, 68%);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-text: hsl(208, 71%, 98%);
+    --color-text-muted: hsl(208, 71%, 83%);
+    --color-bg: hsl(195, 56%, 16%);
+    --color-bg-muted: hsl(195, 37%, 25%);
+    --color-primary: hsl(37, 69%, 64%);
+    --color-secondary: hsl(306, 25%, 68%);
+  }
 }
 
 @media (prefers-reduced-motion) {
@@ -44,7 +69,7 @@ picture {
 }
 
 ::selection {
-  background-color: var(--color-bg-dark);
+  background-color: var(--color-bg-primary);
 }
 
 :focus {
@@ -62,4 +87,10 @@ picture {
 .full-bleed {
   margin-left: calc(50% - 50vw);
   width: 100vw;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    padding: var(--space-xl);
+  }
 }

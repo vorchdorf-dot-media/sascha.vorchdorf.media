@@ -1,0 +1,22 @@
+.articles {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-l);
+}
+
+@media screen and (min-width: 960px) {
+  .articles {
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: var(--space-xl);
+    max-width: 100%;
+  }
+
+  .articles > article {
+    flex: 0 0 calc(50% - var(--space-xl) * 0.5);
+  }
+
+  .articles > article:first-child {
+    flex: 1 0 100%;
+  }
+}

@@ -1,7 +1,7 @@
 .author {
   display: flex;
   align-items: center;
-  gap: var(--space-m);
+  gap: var(--space-l);
 }
 
 .author picture {
@@ -15,7 +15,10 @@
 
 @media screen and (min-width: 768px) {
   .author {
+    position: sticky;
     flex-direction: column;
+    top: var(--space-xl);
+    max-width: var(--author-width);
     text-align: center;
   }
 
