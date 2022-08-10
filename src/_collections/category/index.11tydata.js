@@ -3,10 +3,9 @@ module.exports = {
     permalink: ({ item }) => {
       return `/category/${item.slug}/`;
     },
-    relatedPosts: ({ item: { id }, posts }) => {
-      return posts.filter(({ categories }) => categories.indexOf(id) >= 0);
-    },
+    plural: 'Kategorien',
     showAll: '/categories',
+    singular: 'Kategorie',
     title: ({ item }) => {
       return `Kategorie: \"${item.name}\"`;
     },

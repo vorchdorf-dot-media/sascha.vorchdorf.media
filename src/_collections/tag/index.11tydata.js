@@ -3,10 +3,9 @@ module.exports = {
     permalink: ({ item }) => {
       return `/tag/${item.slug}/`;
     },
-    relatedPosts: ({ item: { id }, posts }) => {
-      return posts.filter(({ tags }) => tags.indexOf(id) >= 0);
-    },
+    plural: 'Markierungen',
     showAll: '/tags',
+    singular: 'Markierung',
     title: ({ item }) => {
       return `Tag: \"${item.name}\"`;
     },

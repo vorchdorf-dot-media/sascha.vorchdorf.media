@@ -1,4 +1,5 @@
 /.netlify
+/netlify/edge/_generated
 /netlify/functions/stories/*
 !/netlify/functions/stories/index.js
 

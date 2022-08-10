@@ -5,6 +5,14 @@
   padding-bottom: var(--space-xl);
   margin-bottom: var(--space-xxl);
   border-bottom: var(--border-width) solid var(--color-bg-muted);
+  color: var(--color-text-muted);
+}
+
+.description {
+  flex: 1 0 100%;
+  margin-bottom: var(--space-xl);
+  color: var(--color-text);
+  font-size: var(--font-size-h5);
 }
 
 @media screen and (min-width: 768px) {

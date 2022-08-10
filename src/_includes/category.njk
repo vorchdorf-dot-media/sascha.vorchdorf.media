@@ -1,0 +1,17 @@
+<style data-helmet="preview">
+  {% include 'styles/preview.css' %}
+</style>
+
+{% set link = '/category/' + category.slug | absoluteUrl %}
+
+<article class="preview container" data-count="{{ category.count }}">
+  <h2>
+    <a href="{{ link }}">{{ category.name }}</a>
+  </h2>
+
+  {% if category.description.length %}
+    <p>{{ category.description }}</p>
+  {% endif %}
+
+  <a class="read-more" href="{{ link }}" data-forward>Zeige alle Beiträge</a>
+</article>

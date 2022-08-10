@@ -1,0 +1,47 @@
+---
+pagination:
+  data: collections.categories
+  size: 10
+  generatePageOnEmptyData: true
+---
+
+<style data-helmet="articles">
+  {% include 'styles/articles.css' %}
+</style>
+
+<style data-helmet="categories">
+  {% include 'styles/categories.css' %}
+</style>
+
+{% if pagination.items.length %}
+
+  <div class="articles">
+
+    {% for category in pagination.items %}
+
+      {% if loop.index0 %}
+
+        {% set prevCategory = pagination.items[loop.index0 - 1] %}
+
+        {% set previous = prevCategory.modified | parseDate | dateObj %}
+        {% set current = category.modified | parseDate | dateObj %}
+
+        {% if previous.month != current.month or previous.year != current.year %}
+          <time class="separator" datetime="{{ current.year }}-{{ current.month | padStart(2, '0') }}" role="separator">{{ post.date | dateStringFormatted("MMMM YYYY") }}</time>
+        {% endif %}
+
+      {% endif %}
+
+      {% include 'category.njk' %}
+
+    {% endfor %}
+
+  </div>
+
+{% else %}
+
+<p>Keine Kategorien gefunden.</p>
+
+<a href="{{ '/' | absoluteUrl }}" data-back>Zurück zur Startseite</a>
+
+{% endif %}

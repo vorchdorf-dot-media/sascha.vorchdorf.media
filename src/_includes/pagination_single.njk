@@ -4,19 +4,30 @@
 
 <div class="meta container">
   {% if item.description.length %}
-    <p>{{ item.description }}</p>
+    <p class="description">{{ item.description }}</p>
   {% endif %}
-  <span>{% if item.count > 1 %}{{ item.count }} Einträge sind{% else %}Ein Eintrag ist{% endif %} unter dieser Kategorie gelistet.</span>
-  <a href="{{ showAll | absoluteUrl }}">Alle Kategorien anzeigen</a>
+  <small>{% if item.count > 1 %}{{ item.count }} Einträge sind{% else %}Ein Eintrag ist{% endif %} unter dieser {{ singular }} gelistet.</small>
+  <small><a href="{{ showAll | absoluteUrl }}">Alle {{ plural }} anzeigen</a></small>
 </div>
 
-{% if relatedPosts.length %}
+{% if item.posts.length %}
   <style data-helmet="articles">
     {% include 'styles/articles.css' %}
   </style>
 
   <div class="articles">
-    {% asyncEach post in relatedPosts %}
+    {% asyncEach post in item.posts %}
+
+      {% if loop.index0 %}
+        {% set previousPost = item.posts[loop.index0 - 1] %}
+
+        {% set previous = previousPost.date | parseDate | dateObj %}
+        {% set current = post.date | parseDate | dateObj %}
+
+        {% if previous.month != current.month or previous.year != current.year %}
+          <time class="separator" datetime="{{ current.year }}-{{ current.month | padStart(2, '0') }}" role="separator">{{ post.date | dateStringFormatted("MMMM YYYY") }}</time>
+        {% endif %}
+      {% endif %}
 
       {% include 'preview.njk' %}
 

@@ -8,13 +8,13 @@
       <nav>
         <ul class="list-horizontal">
           {% for item in nav %}
-              <li>
-                <a
-                  {% if page.url == item.url %}aria-current="page"{% endif %}
-                  href="{{ item.url | absoluteUrl }}">
-                  {{ item.title }}
-                </a>
-              </li>
+            <li>
+              <a
+                {% if page.url == item.url %}aria-current="page"{% endif %}
+                href="{{ item.url | absoluteUrl }}">
+                {{ item.title }}
+              </a>
+            </li>
           {% endfor %}
         </ul>
       </nav>

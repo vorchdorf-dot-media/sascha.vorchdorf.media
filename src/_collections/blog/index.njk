@@ -1,6 +1,6 @@
 ---
 pagination:
-  data: posts
+  data: collections.posts
   size: 10
   generatePageOnEmptyData: true
 ---
@@ -13,6 +13,17 @@ pagination:
   <div class="articles">
 
     {% asyncEach post in pagination.items %}
+
+      {% if loop.index0 %}
+        {% set previousPost = pagination.items[loop.index0 - 1] %}
+
+        {% set previous = previousPost.date | parseDate | dateObj %}
+        {% set current = post.date | parseDate | dateObj %}
+
+        {% if previous.month != current.month or previous.year != current.year %}
+          <time class="separator" datetime="{{ current.year }}-{{ current.month | padStart(2, '0') }}" role="separator">{{ post.date | dateStringFormatted("MMMM YYYY") }}</time>
+        {% endif %}
+      {% endif %}
 
       {% include 'preview.njk' %}
 

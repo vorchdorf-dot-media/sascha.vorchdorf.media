@@ -1,19 +1,15 @@
-{% macro generateList(name, list, dictionary, link) %}
+{% macro generateList(name, list, link) %}
   {% if list.length %}
     <ul class="list-horizontal {{ name }}">
-      {% for id in list %}
-        {% for item in dictionary %}
-          {% if item.id == id %}
-            <li><a href="{{ link + '/' + item.slug | absoluteUrl }}">{{ item.name }}</a></li>
-          {% endif %}
-        {% endfor %}
+      {% for item in list %}
+        <li><a href="{{ link + '/' + item.slug | absoluteUrl }}">{{ item.name }}</a></li>
       {% endfor %}
     </ul>
   {% endif %}
 {% endmacro %}
 
-{% set categories = generateList('categories', post.categories, categories, '/category') %}
-{% set tags = generateList('tags', post.tags, tags, '/tag') %}
+{% set categories = generateList('categories', post.categories, '/category') %}
+{% set tags = generateList('tags', post.tags, '/tag') %}
 {% set permalink = '/post' + post.permalink | absoluteUrl %}
 
 {% setAsync "featured_image" %}
@@ -54,5 +50,5 @@
     {% if post.date != post.modified %}<small class="muted">&#x2022; zuletzt geändert am <time datetime="{{ post.modified}}">{{ post.modified | dateStringFormatted }}</time></span>{% endif %}
   </span> #}
 
-   <a class="read-more" href="{{ permalink }}">Den gesamten Beitrag lesen</a>
+   <a class="read-more" href="{{ permalink }}" data-forward>Gesamten Beitrag lesen</a>
 </article>

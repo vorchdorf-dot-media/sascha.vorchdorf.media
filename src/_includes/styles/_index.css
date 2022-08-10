@@ -64,6 +64,10 @@ body {
   box-sizing: border-box;
 }
 
+main {
+  width: 100%;
+}
+
 picture {
   display: inline-flex;
 }

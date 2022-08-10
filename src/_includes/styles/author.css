@@ -16,6 +16,7 @@
 @media screen and (min-width: 768px) {
   .author {
     position: sticky;
+    flex: 1 0 var(--author-width);
     flex-direction: column;
     top: var(--space-xl);
     max-width: var(--author-width);

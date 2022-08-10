@@ -1,14 +1,8 @@
----js
-{
-  pagination: {
-    alias: 'item',
-    data: 'tags',
-    size: 1,
-    before(data) {
-      return data.filter(({ count }) => !!count)
-    }
-  }
-}
+---
+pagination: 
+  alias: item
+  data: collections.tags
+  size: 1
 ---
 
 {% include 'pagination_single.njk' %}

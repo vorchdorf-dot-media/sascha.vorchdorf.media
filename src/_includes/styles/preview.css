@@ -57,11 +57,6 @@
   align-self: flex-end;
 }
 
-.preview .read-more::after {
-  content: ' \2192';
-  user-select: none;
-}
-
 @media screen and (min-width: 768px) {
   .preview {
     transition: background-color var(--duration) ease-in;
