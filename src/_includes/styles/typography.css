@@ -75,6 +75,7 @@ h5 {
 
 h1 {
   margin-top: 0;
+  margin-bottom: var(--space-xxl);
   font-size: var(--font-size-h1);
   text-align: center;
 }
@@ -145,6 +146,7 @@ p {
 }
 
 .separator {
+  flex: 1 0 calc(100% - var(--space-xxl));
   position: relative;
   display: block;
   margin: var(--space-l) 0 var(--space-l) var(--space-xxl);
@@ -205,11 +207,6 @@ p {
     --font-size-h4: 1.44rem;
     --font-size-h5: 1.2rem;
     --font-size-s: 0.833rem;
-  }
-
-  .separator {
-    flex: 1 0 auto;
-    width: 100%;
   }
 
   .categories {

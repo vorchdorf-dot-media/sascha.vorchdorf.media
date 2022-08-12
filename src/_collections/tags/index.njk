@@ -1,0 +1,32 @@
+---
+pagination:
+  data: collections.tags
+  size: 100
+  generatePageOnEmptyData: true
+---
+
+<style data-helmet="tags">
+  {% include 'styles/tags.css' %}
+</style>
+
+{% if pagination.items.length %}
+
+  <ul class="list-horizontal tags">
+
+    {% for tag in pagination.items %}
+
+      <li>
+        <a href="{{ 'tag/' + tag.slug | absoluteUrl }}" data-count="{{ tag.count }}">{{ tag.name }}</a>
+      </li>
+
+    {% endfor %}
+
+  </ul>
+
+{% else %}
+
+<p>Keine Markierungen gefunden.</p>
+
+<a href="{{ '/' | absoluteUrl }}" data-back>Zurück zur Startseite</a>
+
+{% endif %}

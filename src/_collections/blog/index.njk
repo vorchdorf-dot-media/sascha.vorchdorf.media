@@ -21,7 +21,7 @@ pagination:
         {% set current = post.date | parseDate | dateObj %}
 
         {% if previous.month != current.month or previous.year != current.year %}
-          <time class="separator" datetime="{{ current.year }}-{{ current.month | padStart(2, '0') }}" role="separator">{{ post.date | dateStringFormatted("MMMM YYYY") }}</time>
+          <time class="separator" datetime="{{ post.date | dateStringFormatted('YYYY-MM') }}" role="separator">{{ post.date | dateStringFormatted("MMMM YYYY") }}</time>
         {% endif %}
       {% endif %}
 
@@ -33,6 +33,6 @@ pagination:
 
 {% else %}
 
-<p>No posts available...</p>
+<p>Keine Beiträge vorhanden...</p>
 
 {% endif %}
