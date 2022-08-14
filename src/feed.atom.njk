@@ -15,9 +15,9 @@ permalink: feed.xml
     <name>{{ pkg.author.name }}</name>
     <email>{{ pkg.author.email }}</email>
   </author>
-  {% if posts %}
-    {%- for post in posts | reverse %}
-      {%- set absolutePostUrl = post.link | url | absoluteUrl(pkg.homepage) %}
+  {% if collections.posts.length %}
+    {%- for post in collections.posts | reverse %}
+      {%- set absolutePostUrl = post.link | url | absoluteUrl(package.homepage) %}
       <entry>
         <title>{{ post.title.rendered }}</title>
         <link href="{{ absolutePostUrl }}"/>

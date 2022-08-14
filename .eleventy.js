@@ -17,9 +17,9 @@ module.exports = (config) => {
     config.addPlugin(plugin, pluginConfig),
   );
 
-  Object.keys(collections).forEach((collection) => {
-    config.addCollection(collection, collections[collection]);
-  });
+  Object.keys(collections).forEach((collection) =>
+    config.addCollection(collection, collections[collection]),
+  );
 
   Object.keys(filters).forEach((filter) =>
     config.addFilter(filter, filters[filter]),

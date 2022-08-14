@@ -1,3 +1,11 @@
+/**
+ * Takes an array of posts and returns that array of posts filtered by the given category/tag id.
+ *
+ * @param {Post[]} posts - the array of posts to filter
+ * @param {number} id - the ID of the category/tag to filter by
+ * @param {string} key - the key to filter by (either 'categories' or 'tags')
+ * @returns the filtered array of posts
+ */
 const filterPosts = (posts, id, key = 'categories') => {
   return posts.filter(({ [key]: values }) =>
     Array.isArray(values)
@@ -6,6 +14,13 @@ const filterPosts = (posts, id, key = 'categories') => {
   );
 };
 
+/**
+ * Takes an array of posts and returns the latest timestamp as Date object.
+ *
+ * @param {Post[]} collection - the array of items to search for the latest date
+ * @param {Date} fallback - the date to use if no items are found
+ * @returns a Date object representing the date of the latest entry
+ */
 const getLatestDate = (collection, fallback) => {
   if (!collection?.length) {
     return fallback || new Date();
@@ -18,6 +33,15 @@ const getLatestDate = (collection, fallback) => {
   );
 };
 
+/**
+ * Takes an array of categories/tags and populates them with the posts that are assigned to them.
+ * Additionally adds a 'modified' property to the category/tag that is the latest date of the posts assigned to it.
+ *
+ * @param {Category[] | Tag[]} collection - the category or tag collection to populate the posts of
+ * @param {Post[]} posts - the array of posts to populate the collection with
+ * @param {string} key - the key to use for the collection (either 'categories' or 'tags')
+ * @returns the input collection with the posts populated and extended with the last modified date
+ */
 const populate = (collection, posts, key) => {
   if (!Array.isArray(collection)) {
     return [];
@@ -42,6 +66,11 @@ const populate = (collection, posts, key) => {
     .sort(({ modified: a }, { modified: b }) => Date.parse(a) - Date.parse(b));
 };
 
+/**
+ * Reads the available data sources from the _data directory and returns a populated array of all available categories, posts and tags.
+ *
+ * @returns an object containing arrays of categories, posts and tags with the posts (or categories & tags vice versa) populated
+ */
 const populatePosts = async () => {
   let categories = [];
   let posts = [];
