@@ -15,8 +15,8 @@ permalink: feed.json
     "url": "{{ package.author.url }}"
   },
   "items": [
-    {% if posts %}
-      {%- for post in posts | reverse %}
+    {% if collections.posts.length %}
+      {%- for post in collections.posts | reverse %}
         {%- set absolutePostUrl = post.link | url | absoluteUrl(package.homepage) %}
         {
           "id": "{{ absolutePostUrl }}",
