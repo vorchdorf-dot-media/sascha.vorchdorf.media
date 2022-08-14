@@ -16,7 +16,7 @@
   </style>
 
   <div class="articles">
-    {% asyncEach post in item.posts %}
+    {% asyncEach post in item.posts | reverse %}
 
       {% if loop.index0 %}
         {% set previousPost = item.posts[loop.index0 - 1] %}
