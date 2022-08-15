@@ -1,0 +1,55 @@
+---
+layout: default.njk
+---
+
+{% macro generateList(name, list, link) %}
+  {% if list.length %}
+    <ul class="list-horizontal {{ name }}">
+      {% for item in list %}
+        <li><a href="{{ link + '/' + item.slug | absoluteUrl }}">{{ item.name }}</a></li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+{% endmacro %}
+
+{% set categories = generateList('categories', post.categories, '/category') %}
+{% set tags = generateList('tags', post.tags, '/tag') %}
+
+<style data-helmet="post">
+  {% include 'styles/post.css' %}
+</style>
+
+<aside class="meta">
+  {% if post.tags.length %}
+    {{ tags }}
+  {% endif %}
+
+  {% if post.categories.length %}
+    {{ categories }}
+  {% endif %}
+
+  <span>
+    <strong><time datetime="{{ post.date }}">{{ post.date | dateStringFormatted }}</time></strong>
+    {% if post.modified and post.date != post.modified %}
+      <small>&#x2022; zuletzt geändert am <time datetime="{{ post.modified }}">{{ post.modified | dateStringFormatted }}</time></small>
+    {% endif %}
+  </span>
+</aside>
+
+<div class="post">
+  <div>
+    {{ content | safe }}
+  </div>
+
+  {% if post.attachments.length %}
+    <section class="attachments">
+      <h2>Bilder</h2>
+      {% asyncEach attachment in post.attachments %}
+        <figure>
+          {% image attachment.source, attachment.alt or attachment.caption, [96, 192, 300, null], '(min-width: 960px) 96px, (min-width: 1280px) 50%, 50%' %}
+          {% if attachment.caption %}<figcaption class="sr-only">{{ attachment.caption }}</figcaption>{% endif %}
+        </figure>
+      {% endeach %}
+    </section>
+  {% endif %}
+</div>

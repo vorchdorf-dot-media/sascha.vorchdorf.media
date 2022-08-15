@@ -21,6 +21,8 @@
   --border-width-s: 1px;
   --border-width: 2px;
 
+  --thumbnail-width: 96px;
+  --album-width: 240px;
   --author-width: 320px;
   --articles-width: 800px;
   --container-width: 1280px;
@@ -91,6 +93,18 @@ picture {
 .full-bleed {
   margin-left: calc(50% - 50vw);
   width: 100vw;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
 }
 
 @media screen and (min-width: 768px) {

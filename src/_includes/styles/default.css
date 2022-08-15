@@ -5,6 +5,16 @@ body {
   min-height: 100vh;
 }
 
+.meta {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-l);
+  padding-bottom: var(--space-xl);
+  margin-bottom: var(--space-xxl);
+  border-bottom: var(--border-width) solid var(--color-bg-muted);
+  color: var(--color-text-muted);
+}
+
 #content {
   flex: 1 0 auto;
   display: flex;
