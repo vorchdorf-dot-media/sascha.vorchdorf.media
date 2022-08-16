@@ -4,8 +4,8 @@ module.exports = [
     title: 'Home',
   },
   {
-    url: '/blog/',
-    title: 'Beiträge',
+    url: '/categories/',
+    title: 'Kategorien',
   },
-  { url: '/stories/', title: 'Stories' },
+  // { url: '/stories/', title: 'Stories' },
 ];

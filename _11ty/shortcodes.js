@@ -40,8 +40,14 @@ const generateImageHTML = async (
 };
 
 module.exports = {
-  async image(src, alt, widths = [null], sizes = '100%') {
-    return generateImageHTML(src, alt, widths, sizes);
+  async image(
+    src,
+    alt,
+    widths = [null],
+    sizes = '100%',
+    customAttributes = {},
+  ) {
+    return generateImageHTML(src, alt, widths, sizes, customAttributes);
   },
 
   async gravatar(email, name, sizes = '100%', fallback = 'robohash') {

@@ -184,6 +184,7 @@ p {
   border: var(--border-width-s) solid var(--color);
   padding: var(--space-s) var(--space-m);
   color: var(--color);
+  text-decoration: none;
 }
 
 .categories a:hover,

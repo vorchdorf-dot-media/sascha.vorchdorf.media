@@ -24,17 +24,32 @@ layout: default.njk
     {{ tags }}
   {% endif %}
 
-  {% if post.categories.length %}
-    {{ categories }}
-  {% endif %}
-
   <span>
     <strong><time datetime="{{ post.date }}">{{ post.date | dateStringFormatted }}</time></strong>
     {% if post.modified and post.date != post.modified %}
       <small>&#x2022; zuletzt geändert am <time datetime="{{ post.modified }}">{{ post.modified | dateStringFormatted }}</time></small>
     {% endif %}
   </span>
+
+  {% if post.categories.length %}
+    {{ categories }}
+  {% endif %}
 </aside>
+
+{% if post.featured_media %}
+  {% set attachment = post.attachments[0] %}
+
+  <figure class="featured-container">
+    {% image 
+              attachment.source, 
+              attachment.alt or attachment.caption, 
+              [375, 640, 960, 1280, 1600, null], 
+              '(min-width: 768px) 50%, (min-width: 960px) 66%, 100%', 
+              { class: 'featured', loading: 'eager', style: 'aspect-ratio: ' + attachment.width + '/' + attachment.height + ';' }
+    %}
+    {% if attachment.caption.length %}<figcaption class="sr-only">{{ attachment.caption }}</figcaption>{% endif %}
+  </figure>
+{% endif %}
 
 <div class="post">
   <div>
@@ -46,7 +61,7 @@ layout: default.njk
       <h2>Bilder</h2>
       {% asyncEach attachment in post.attachments %}
         <figure>
-          {% image attachment.source, attachment.alt or attachment.caption, [96, 192, 300, null], '(min-width: 960px) 96px, (min-width: 1280px) 50%, 50%' %}
+          {% image attachment.source, attachment.alt or attachment.caption, [96, 192, 380, 540, null], '(min-width: 960px) 96px, (min-width: 1280px) 180px, 180px' %}
           {% if attachment.caption %}<figcaption class="sr-only">{{ attachment.caption }}</figcaption>{% endif %}
         </figure>
       {% endeach %}
