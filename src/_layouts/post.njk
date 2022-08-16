@@ -57,14 +57,68 @@ layout: default.njk
   </div>
 
   {% if post.attachments.length %}
-    <section class="attachments">
+
+    <style data-helmet="attachments">
+      {% include 'styles/attachments.css' %}
+    </style>
+
+    <style data-helmet="backdrop">
+      {% include 'styles/backdrop.css' %}
+    </style>
+
+    {% include 'js/alpine.njk' %}
+
+    <section class="attachments" x-data="backdrop">
       <h2>Bilder</h2>
       {% asyncEach attachment in post.attachments %}
-        <figure>
-          {% image attachment.source, attachment.alt or attachment.caption, [96, 192, 380, 540, null], '(min-width: 960px) 96px, (min-width: 1280px) 180px, 180px' %}
-          {% if attachment.caption %}<figcaption class="sr-only">{{ attachment.caption }}</figcaption>{% endif %}
-        </figure>
+        <button type="button" @click="openBackdrop, setIndex({{ loop.index }})">
+          <figure>
+            {% image attachment.source, attachment.alt or attachment.caption, [96, 192, 380, 540, null], '(min-width: 960px) 96px, (min-width: 1280px) 180px, 180px' %}
+            {% if attachment.caption %}<figcaption class="sr-only">{{ attachment.caption }}</figcaption>{% endif %}
+          </figure>
+        </button>
       {% endeach %}
+
+      <template x-if="open">
+        <div class="backdrop" role="dialog" data-theme="dark" @keyup.window.escape="closeBackdrop">
+          <button type="button" @click="closeBackdrop" data-close>Schließen</button>
+          <div class="slider" @click.self="closeBackdrop">
+            {% asyncEach attachment in post.attachments %}
+            <figure>
+              {% image attachment.source, attachment.alt or attachment.caption, [320, 640, 1280, 1920, null] %}
+              {% if attachment.caption %}<figcaption>{{ attachment.caption }}</figcaption>{% endif %}
+            </figure>
+            {% endeach %}
+          </div>
+        </div>
+      </template>
     </section>
+    
+    <script>
+      document.addEventListener('alpine:init', () => {
+        Alpine.data('backdrop', () => ({
+          index: 0,
+          open: false,
+
+          init() {
+            this.$watch('open', (value) => {
+              document.body.style.overflow = value ? 'hidden' : 'initial';
+
+              const el = document.querySelector('.backdrop figure:nth-child(' + this.index + ')');
+              el?.scrollIntoView();
+            });
+          },
+          closeBackdrop() {
+            this.open = false;
+          },
+          openBackdrop() {
+            this.open = true;
+          },
+          setIndex(index) {
+            this.index = index;
+          }
+        }));
+      });
+    </script>
   {% endif %}
 </div>

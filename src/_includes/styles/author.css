@@ -21,6 +21,7 @@
     top: var(--space-xl);
     max-width: var(--author-width);
     text-align: center;
+    z-index: -1;
   }
 
   .author picture {

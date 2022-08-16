@@ -4,6 +4,7 @@
   "color": "#34623F",
   "short_name": "Sascha offline",
   "description": "Sascha ist offline. Ein Blog über Ereignisse, bei denen kein Computer dabei ist.",
+  "lang": "de",
   "repository": "https://github.com/vorchdorf-dot-media/sascha.vorchdorf.media",
   "homepage": "https://sascha.vorchdorf.media",
   "author": {
