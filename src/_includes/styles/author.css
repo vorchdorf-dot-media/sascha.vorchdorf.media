@@ -2,6 +2,8 @@
   display: flex;
   align-items: center;
   gap: var(--space-l);
+  border-top: var(--border-width) solid var(--color-bg-muted);
+  padding: var(--space-xxl) 0;
 }
 
 .author picture {
@@ -18,6 +20,8 @@
     position: sticky;
     flex: 1 0 var(--author-width);
     flex-direction: column;
+    border: none;
+    padding: 0;
     top: var(--space-xl);
     max-width: var(--author-width);
     text-align: center;

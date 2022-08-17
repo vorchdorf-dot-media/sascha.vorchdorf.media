@@ -29,6 +29,7 @@
     "@11ty/eleventy-plugin-rss": "^1.2.0",
     "cheerio": "^1.0.0-rc.12",
     "dayjs": "^1.11.4",
+    "eleventy-plugin-feathericons": "^1.0.1",
     "eleventy-plugin-helmet": "^0.2.2",
     "got": "^11",
     "graphql-tag": "^2.12.6",

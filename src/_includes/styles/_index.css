@@ -29,6 +29,7 @@
   --content-width: 1440px;
 
   --duration: 300ms;
+  --animation-duration: 900ms;
 }
 
 [data-theme='dark'] {
@@ -54,6 +55,8 @@
 @media (prefers-reduced-motion) {
   :root {
     --duration: 0;
+    --animation-duration: 0;
+    --scroll-behavior: initial;
   }
 }
 
@@ -72,6 +75,10 @@ main {
 
 picture {
   display: inline-flex;
+}
+
+button {
+  position: relative;
 }
 
 ::selection {

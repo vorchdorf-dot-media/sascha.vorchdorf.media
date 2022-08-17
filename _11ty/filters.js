@@ -62,4 +62,5 @@ module.exports = {
   padStart: (str, len = 2, fill = ' ') => `${str}`.padStart(len, fill),
   parseDate: (date) => new Date(Date.parse(dateStringToUTC(date))),
   tag: (posts, id) => posts.filter((post) => post.tags.indexOf(id) >= 0),
+  take: (collection, amount, from = 0) => collection.slice(from, amount),
 };

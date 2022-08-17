@@ -16,7 +16,7 @@ module.exports = {
           collapseWhitespace: true,
           minifyCSS: true,
           minifyJS: true,
-          removeEmptyElements: true,
+          // removeEmptyElements: true, // disabled due to SVG icons
           // removeOptionalTags: true,
         }),
       )

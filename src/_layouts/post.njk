@@ -44,7 +44,7 @@ layout: default.njk
               attachment.source, 
               attachment.alt or attachment.caption, 
               [375, 640, 960, 1280, 1600, null], 
-              '(min-width: 768px) 50%, (min-width: 960px) 66%, 100%', 
+              '(min-width: 768px) 50vw, (min-width: 960px) 66vw, 100vw', 
               { class: 'featured', loading: 'eager', style: 'aspect-ratio: ' + attachment.width + '/' + attachment.height + ';' }
     %}
     {% if attachment.caption.length %}<figcaption class="sr-only">{{ attachment.caption }}</figcaption>{% endif %}
@@ -68,57 +68,79 @@ layout: default.njk
 
     {% include 'js/alpine.njk' %}
 
-    <section class="attachments" x-data="backdrop">
+    <section class="attachments" x-data="backdrop({{ post.attachments.length }})">
       <h2>Bilder</h2>
-      {% asyncEach attachment in post.attachments %}
-        <button type="button" @click="openBackdrop, setIndex({{ loop.index }})">
-          <figure>
-            {% image attachment.source, attachment.alt or attachment.caption, [96, 192, 380, 540, null], '(min-width: 960px) 96px, (min-width: 1280px) 180px, 180px' %}
-            {% if attachment.caption %}<figcaption class="sr-only">{{ attachment.caption }}</figcaption>{% endif %}
-          </figure>
+      {% set attachments = post.attachments | take(4) %}
+      {% set hiddenitems = post.attachments.length - attachments.length %}
+      {% asyncEach attachment in attachments %}
+        <button type="button" @click="openBackdrop, setIndex({{ loop.index }})"{% if loop.last and hiddenitems %} data-hidden-items="+{{ hiddenitems + 1 }}"{% endif %}>
+          {% image attachment.source, attachment.alt or attachment.caption, [96, 192, 380, 540, null], '(min-width: 960px) 96px, (min-width: 1280px) 180px, 180px' %}
         </button>
       {% endeach %}
 
       <template x-if="open">
-        <div class="backdrop" role="dialog" data-theme="dark" @keyup.window.escape="closeBackdrop">
-          <button type="button" @click="closeBackdrop" data-close>Schließen</button>
-          <div class="slider" @click.self="closeBackdrop">
+        <div class="backdrop" role="dialog" aria-label="Bildergalerie" data-theme="dark" @keyup.window.escape="closeBackdrop" @keyup.window.arrow-right="next" @keyup.window.arrow-left="previous">
+          <button type="button" @click="closeBackdrop" data-close>Schließen {% feather 'x', { 'aria-hidden': true } %}</button>
+          <div class="slider" @click.self="closeBackdrop" @scroll.debounce="handleScroll">
             {% asyncEach attachment in post.attachments %}
             <figure>
-              {% image attachment.source, attachment.alt or attachment.caption, [320, 640, 1280, 1920, null] %}
+              {% image attachment.source, attachment.alt or attachment.caption, [320, 640, 1280, 1920, null], '75vw' %}
               {% if attachment.caption %}<figcaption>{{ attachment.caption }}</figcaption>{% endif %}
             </figure>
             {% endeach %}
           </div>
+          <button type="button" aria-label="Vorheriges Bild" @click="previous" :disabled="index <= 1" data-previous>{% feather 'arrow-left', { 'aria-hidden': true } %}</button>
+          <button type="button" aria-label="Nächstes Bild" @click="next" :disabled="index == items" data-next>{% feather 'arrow-right', { 'aria-hidden': true } %}</button>
         </div>
       </template>
     </section>
     
     <script>
-      document.addEventListener('alpine:init', () => {
-        Alpine.data('backdrop', () => ({
-          index: 0,
-          open: false,
-
-          init() {
-            this.$watch('open', (value) => {
-              document.body.style.overflow = value ? 'hidden' : 'initial';
-
-              const el = document.querySelector('.backdrop figure:nth-child(' + this.index + ')');
-              el?.scrollIntoView();
-            });
-          },
-          closeBackdrop() {
-            this.open = false;
-          },
-          openBackdrop() {
-            this.open = true;
-          },
-          setIndex(index) {
-            this.index = index;
-          }
-        }));
-      });
+      {% include 'js/backdrop.js' %}
     </script>
   {% endif %}
 </div>
+
+
+{% set post = pagination.page.previous %}
+{% setAsync "previous" %}
+  {% include 'preview.njk' %}
+{% endsetAsync %}
+
+{% set post = pagination.page.next %}
+{% setAsync "next" %}
+  {% include 'preview.njk' %}
+{% endsetAsync %}
+
+{% if pagination.page.previous or pagination.page.next %}
+  <section class="read-on" aria-labelledby="read-on">
+    <span id="read-on">Weitere Beiträge</span>
+      <div data-previous{% if not pagination.page.previous %} data-no-entry{% endif %}>
+    {% if pagination.page.previous %}
+      {{ previous | safe }}
+    {% else %}
+      <section class="preview container" data-no-entry>
+        <h2>Du bist am Anfang.</h2>
+        <p>
+          Das hier war der neueste Beitrag.
+        </p>
+        <a href="/ | absoluteUrl" data-back>Zurück zur Startseite.</a>
+      </section>
+    {% endif %}
+      </div>
+
+      <div data-next{% if not pagination.page.next %} data-no-entry{% endif %}>
+    {% if pagination.page.next %}
+      {{ next | safe }}
+    {% else %}
+      <section class="preview container" data-no-entry>
+        <h2>Du bist am Ziel.</h2>
+        <p>
+          Keine weiteren Beiträge vorhanden.
+        </p>
+        <a href="/ | absoluteUrl" data-back>Zurück zur Startseite.</a>
+      </section>
+    {% endif %}
+      </div>
+  </section>
+{% endif %}

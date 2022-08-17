@@ -1,4 +1,26 @@
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes grow {
+  from {
+    transform: scale(0);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}
+
 .backdrop {
+  animation: appear var(--animation-duration)
+    cubic-bezier(0.075, 0.82, 0.165, 1);
   position: fixed;
   display: flex;
   top: 0;
@@ -18,17 +40,23 @@
   align-items: center;
   justify-content: center;
   gap: var(--space-xxl);
+  width: 100vw;
   max-width: 100%;
+  height: 100%;
   max-height: 75vh;
   scroll-snap-align: center;
 }
 
 .backdrop picture {
+  justify-content: center;
+  width: auto;
   max-width: 75%;
 }
 
 .backdrop picture,
 .backdrop img {
+  max-height: 100%;
+  width: unset;
   aspect-ratio: unset;
 }
 
@@ -36,20 +64,53 @@
   padding: 0 var(--space-xxl);
 }
 
-.backdrop [data-close] {
+.backdrop [data-close],
+.backdrop [data-previous],
+.backdrop [data-next] {
+  --theme-color: var(--color-secondary);
+
   position: absolute;
-  border: var(--border-width) solid var(--color-secondary);
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-m);
+  border: var(--border-width) solid var(--theme-color);
+  background-color: var(--color-dark);
+  color: var(--theme-color);
+  letter-spacing: var(--ls-wide);
+  text-transform: uppercase;
+}
+
+.backdrop [data-close] {
   padding: var(--space-m) var(--space-l);
   right: 50%;
   bottom: var(--space-xl);
-  background-color: var(--color-dark);
-  color: var(--color-secondary);
-  letter-spacing: var(--ls-wide);
-  text-transform: uppercase;
   transform: translateX(50%);
 }
 
+.backdrop [data-previous],
+.backdrop [data-next] {
+  justify-content: center;
+  border-radius: 9999px;
+  top: 50%;
+  height: 44px;
+  width: 44px;
+  transform: translateY(-50%);
+}
+
+.backdrop [data-previous] {
+  left: var(--space-xl);
+}
+
+.backdrop [data-next] {
+  right: var(--space-xl);
+}
+
+.backdrop button:disabled {
+  --theme-color: grey;
+}
+
 .backdrop .slider {
+  animation: grow var(--animation-duration) cubic-bezier(0.075, 0.82, 0.165, 1);
   align-self: center;
   display: flex;
   align-items: center;
@@ -58,7 +119,14 @@
   height: 100%;
   overflow-x: auto;
   overflow-y: hidden;
-  scroll-snap-type: x proximity;
+  scroll-behavior: var(--scroll-behavior, smooth);
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.backdrop .slider::-webkit-scrollbar {
+  display: none;
 }
 
 @media screen and (min-width: 768px) {
@@ -67,5 +135,17 @@
     right: var(--space-xl);
     bottom: auto;
     transform: unset;
+  }
+
+  .backdrop [data-previous] {
+    left: var(--space-xxl);
+  }
+
+  .backdrop [data-next] {
+    right: var(--space-xxl);
+  }
+
+  .backdrop .slider {
+    scroll-snap-type: x proximity;
   }
 }
