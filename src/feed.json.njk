@@ -7,8 +7,8 @@ permalink: feed.json
   "version": "https://jsonfeed.org/version/1.1",
   "title": "{{ manifest.name }}",
   "language": "{{ pkg.language }}",
-  "home_page_url": "{{ pkg.homepage }}",
-  "feed_url": "{{ permalink | url | absoluteUrl(pkg.homepage) }}",
+  "home_page_url": "{{ env.DEPLOY_PRIME_URL or env.URL or pkg.homepage }}",
+  "feed_url": "{{ permalink | url | absoluteUrl(env.DEPLOY_PRIME_URL or env.URL or pkg.homepage) }}",
   "description": "{{ pkg.description }}",
   "author": {
     "name": "{{ pkg.author.name }}",

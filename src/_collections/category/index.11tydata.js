@@ -9,5 +9,8 @@ module.exports = {
     title: ({ item }) => {
       return `Kategorie: \"${item.name}\"`;
     },
+    tldr: ({ item }) => {
+      return item.description?.length ? item.description : undefined;
+    },
   },
 };

@@ -1,10 +1,10 @@
 {
   "name": "sascha.offline",
   "version": "1.0.0",
-  "color": "#34623F",
+  "color": "#123440",
   "short_name": "Sascha offline",
   "description": "Sascha ist offline. Ein Blog über Ereignisse, bei denen kein Computer dabei ist.",
-  "lang": "de",
+  "language": "de_AT",
   "repository": "https://github.com/vorchdorf-dot-media/sascha.vorchdorf.media",
   "homepage": "https://sascha.vorchdorf.media",
   "author": {
@@ -27,6 +27,7 @@
     "@11ty/eleventy": "^2.0.0-canary.13",
     "@11ty/eleventy-img": "^2.0.1",
     "@11ty/eleventy-plugin-rss": "^1.2.0",
+    "@piraces/eleventy-plugin-pwa": "^1.1.2",
     "cheerio": "^1.0.0-rc.12",
     "dayjs": "^1.11.4",
     "eleventy-plugin-feathericons": "^1.0.1",

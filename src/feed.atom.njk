@@ -3,14 +3,13 @@ layout: false
 permalink: feed.xml
 ---
 
-<?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom" xml:base="{{ pkg.homepage }}">
+<feed xmlns="http://www.w3.org/2005/Atom" xml:base="{{ env.DEPLOY_PRIME_URL or env.URL or pkg.homepage }}">
   <title>{{ pkg.name }}</title>
   <subtitle>{{ pkg.description }}</subtitle>
-  <link href="{{ permalink | url | absoluteUrl(pkg.homepage) }}" rel="self"/>
-  <link href="{{ pkg.homepage }}"/>
+  <link href="{{ permalink | url | absoluteUrl(env.DEPLOY_PRIME_URL or env.URL or pkg.homepage) }}" rel="self"/>
+  <link href="{{ env.DEPLOY_PRIME_URL or env.URL or pkg.homepage }}"/>
   <updated>{{ posts | getLatestDate | dateToRfc3339 }}</updated>
-  <id>{{ pkg.homepage }}</id>
+  <id>{{ env.DEPLOY_PRIME_URL or env.URL or pkg.homepage }}</id>
   <author>
     <name>{{ pkg.author.name }}</name>
     <email>{{ pkg.author.email }}</email>
@@ -23,7 +22,18 @@ permalink: feed.xml
         <link href="{{ absolutePostUrl }}"/>
         <updated>{{ post.date | parseDate | dateToRfc3339 }}</updated>
         <id>{{ absolutePostUrl }}</id>
-        <content xml:lang="{{ pkg.language }}" type="html">{{ post.content.rendered | htmlToAbsoluteUrls(absolutePostUrl) | safe }}</content>
+        <summary type="html">{{ post.excerpt.rendered }}</summary>
+        <content xml:lang="{{ pkg.language }}" type="html">
+          <![CDATA[ {{ post.content.rendered | htmlToAbsoluteUrls(absolutePostUrl) | safe }}
+          {% if post.attachments.length %}
+            {% for attachment in post.attachments %}
+              <figure>
+                {% image attachment.source, attachment.alt or attachment.caption, [640, 1280, 1920, null], '100vw' %}
+                {% if attachment.caption %}<figcaption>{{ attachment.caption }}</figcaption>{% endif %}
+              </figure>
+            {% endfor %}
+          {% endif %} ]]>
+        </content>
       </entry>
     {%- endfor %}
   {% endif %}

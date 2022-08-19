@@ -36,8 +36,8 @@ layout: default.njk
   {% endif %}
 </aside>
 
-{% if post.featured_media %}
-  {% set attachment = post.attachments[0] %}
+{% if featured_image %}
+  {% set attachment = featured_image %}
 
   <figure class="featured-container">
     {% image 
@@ -52,7 +52,7 @@ layout: default.njk
 {% endif %}
 
 <div class="post">
-  <div>
+  <div data-content>
     {{ content | safe }}
   </div>
 

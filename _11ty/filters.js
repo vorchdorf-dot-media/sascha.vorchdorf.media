@@ -1,7 +1,9 @@
 const { createHash } = require('crypto');
 const dayjs = require('dayjs');
+const localizedFormat = require('dayjs/plugin/localizedFormat');
 require('dayjs/locale/de');
 
+dayjs.extend(localizedFormat);
 dayjs.locale('de');
 
 const dateStringToUTC = (date) => (date.endsWith('Z') ? date : date + 'Z');

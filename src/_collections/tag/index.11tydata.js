@@ -9,5 +9,8 @@ module.exports = {
     title: ({ item }) => {
       return `Tag: \"${item.name}\"`;
     },
+    tldr: ({ item }) => {
+      return item.description?.length ? item.description : undefined;
+    },
   },
 };

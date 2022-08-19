@@ -66,4 +66,18 @@ module.exports = {
       sizes,
     );
   },
+
+  async og_image(src, widths = [1200], formats = ['jpeg']) {
+    const options = {
+      formats,
+      widths,
+      outputDir: 'dist/img',
+    };
+
+    const {
+      jpeg: [{ url }],
+    } = await Image(src, options);
+
+    return url;
+  },
 };

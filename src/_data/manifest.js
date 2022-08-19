@@ -5,7 +5,7 @@ module.exports = {
   short_name: pkg.short_name,
   start_url: '.',
   display: 'standalone',
-  background_color: '#F2FBE0',
+  background_color: '#F6FAFE',
   theme_color: pkg.color,
   description: pkg.description,
   icons: [
