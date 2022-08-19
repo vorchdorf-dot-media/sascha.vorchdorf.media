@@ -1,9 +1,46 @@
+{% set date = Date.now %}
+{% set year = date | dateStringFormatted('YYYY') %}
+
 <style data-helmet="footer">
   {% include 'styles/footer.css' %}
 </style>
 
 <footer>
   <div class="container">
-    <span>I am a footer</span>
+    <div data-footer>
+      <section>
+        <h2>Copyright</h2>
+        <span>&copy; {{ pkg.author.name }}, 2022{% if year != '2022' %} &ndash; {{ year }}{% endif %}</span><br />
+        <a href="{{ '/impressum' | absoluteUrl }}">Impressum</a>
+      </section>
+      <nav>
+        <h2>Navigation</h2>
+        <ul>
+          {% for item in nav %}
+            <li>
+              <a
+                {% if page.url == item.url %}aria-current="page"{% endif %}
+                href="{{ item.url | absoluteUrl }}">
+                {{ item.title }}
+              </a>
+            </li>
+          {% endfor %}
+        </ul>
+      </nav>
+      <div data-icon-links>
+        <a href="{{ page.inputPath | absoluteUrl(pkg.repository + '/blob/main/') }}" aria-label="Seite auf Github bearbeiten" rel="noindex nofollow noreferer noopener" target="_blank">
+          {% feather 'github', { 'aria-hidden': true } %}
+        </a>
+        <a href="{{ '/feed.xml' | absoluteUrl }}" aria-label="RSS Feed abonnieren">
+          {% feather 'rss', { 'aria-hidden': true } %}
+        </a>
+      </div>
+    </div>
+    <a href="#content" data-up>
+      Nach oben
+    </a>
+    <div data-bottom>
+      <span>Stand der Website: <time datetime="{{ date | dateStringFormatted('YYYY-MM-DDTHH:mm:ssZ[Z]') }}">{{ date | dateStringFormatted('LLL') }}</time></span>
+    </div>
   </div>
 </footer>

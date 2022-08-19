@@ -1,0 +1,26 @@
+{% setAsync 'image' %}
+  {% if featured_image %}
+{% og_image featured_image.source %}
+  {% else %}
+https://placeholder.pics/svg/1200x630/F2FBE0/555555/Kein%20Bild%20vorhanden
+  {% endif %}
+{% endsetAsync %}
+
+<link rel="manifest" href="{{ '/manifest.json' | absoluteUrl }}">
+<meta name="theme-color" content="{{ pkg.color }}" />
+
+<meta property="og:title" content="{{ title or manifest.name }}" />
+<meta property="og:description" content="{{ tldr or manifest.description }}" />
+<meta property="og:site_name" content="{{ pkg.short_name }}" />
+<meta property="og:url" content="{{ page.url | absoluteUrl(env.DEPLOY_PRIME_URL or env.URL or pkg.homepage) }}" />
+<meta property="og:image" content="{{ image | absoluteUrl(env.DEPLOY_PRIME_URL or env.URL or pkg.homepage) }}" />
+<meta property="og:locale" content="{{ pkg.language }}" />
+<meta property="og:type" content="website" />
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="{{ page.url | absoluteUrl(env.DEPLOY_PRIME_URL or env.URL or pkg.homepage) }}">
+<meta name="twitter:title" content="{{ title or manifest.name }}">
+<meta name="twitter:description" content="{{ tldr or manifest.description }}">
+<meta name="twitter:image" content="{{ image | absoluteUrl(env.DEPLOY_PRIME_URL or env.URL or pkg.homepage) }}">
+<meta name="twitter:site" content="{{ twitter.username }}">
+<meta name="twitter:creator" content="{{ twitter.username }}">

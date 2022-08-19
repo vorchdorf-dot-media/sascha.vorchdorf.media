@@ -110,8 +110,10 @@ a,
 a:hover,
 a:focus,
 a:visited {
+  --color: var(--link-color, var(--color-primary));
+
   position: relative;
-  color: var(--link-color, var(--color-primary));
+  color: var(--color);
 }
 
 strong {
@@ -169,7 +171,7 @@ p {
 }
 
 .categories {
-  --color: var(--color-secondary);
+  --link-color: var(--color-secondary);
   font-size: var(--font-size-s);
   text-transform: uppercase;
   letter-spacing: var(--ls-extended);
@@ -177,7 +179,7 @@ p {
 
 .tags {
   --border-radius-s: 9999px;
-  --color: var(--color-text-muted);
+  --link-color: var(--color-text-muted);
   font-size: var(--font-size-s);
 }
 

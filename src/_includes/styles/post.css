@@ -1,3 +1,9 @@
+[data-content] > p:first-child:not(:last-child) {
+  font-size: var(--font-size-h5);
+  font-weight: 400;
+  font-variation-settings: 'wght' 400;
+}
+
 .post {
   display: flex;
   flex-direction: column;

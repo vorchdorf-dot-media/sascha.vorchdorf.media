@@ -28,6 +28,12 @@ body {
 }
 
 @media screen and (min-width: 768px) {
+  .meta {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
   #content {
     flex-direction: row-reverse;
   }
