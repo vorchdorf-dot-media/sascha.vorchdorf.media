@@ -3,13 +3,13 @@ layout: false
 permalink: feed.xml
 ---
 
-<feed xmlns="http://www.w3.org/2005/Atom" xml:base="{{ env.DEPLOY_PRIME_URL or env.URL or pkg.homepage }}">
+<feed xmlns="http://www.w3.org/2005/Atom" xml:base="{{ url }}">
   <title>{{ pkg.name }}</title>
   <subtitle>{{ pkg.description }}</subtitle>
-  <link href="{{ permalink | url | absoluteUrl(env.DEPLOY_PRIME_URL or env.URL or pkg.homepage) }}" rel="self"/>
-  <link href="{{ env.DEPLOY_PRIME_URL or env.URL or pkg.homepage }}"/>
+  <link href="{{ permalink | url | absoluteUrl(url) }}" rel="self"/>
+  <link href="{{ url }}"/>
   <updated>{{ posts | getLatestDate | dateToRfc3339 }}</updated>
-  <id>{{ env.DEPLOY_PRIME_URL or env.URL or pkg.homepage }}</id>
+  <id>{{ url }}</id>
   <author>
     <name>{{ pkg.author.name }}</name>
     <email>{{ pkg.author.email }}</email>

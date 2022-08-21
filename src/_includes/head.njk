@@ -8,7 +8,7 @@
 
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="canonical" href="{{ page.url | absoluteUrl(env.DEPLOY_PRIME_URL or env.URL or pkg.homepage) }}" />
+<link rel="canonical" href="{{ page.url | absoluteUrl(url) }}" />
 <meta name="author" content="{{ pkg.author.name }}" />
 <meta name="description" content="{{ tldr or manifest.description }}" />
 <meta name="generator" content="{{ eleventy.generator }}" />
