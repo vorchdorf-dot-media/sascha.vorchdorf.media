@@ -3,7 +3,7 @@ framework = "#static"
 command = "eleventy --quiet --watch"
 
 [build]
-command = "eleventy"
+command = "yarn build"
 publish = "dist/"
 
 [functions]

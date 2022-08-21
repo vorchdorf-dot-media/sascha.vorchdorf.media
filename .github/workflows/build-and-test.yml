@@ -47,6 +47,7 @@ jobs:
         with:
           devices: iPad, iPad Pro, iPhone 13, Pixel 5, Desktop
           dist: dist
+          url: /blog/
 
       - name: Create website screenshots (dark mode)
         uses: saschazar21/actions/packages/localhost-screenshot@main
@@ -54,6 +55,7 @@ jobs:
           dark: true
           devices: iPad, iPad Pro, iPhone 13, Pixel 5, Desktop
           dist: dist
+          url: /blog/
 
       - name: Upload screenshots
         uses: actions/upload-artifact@v2
