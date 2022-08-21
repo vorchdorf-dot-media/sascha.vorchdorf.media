@@ -20,11 +20,6 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Set NODE_ENV
-        run: |
-          echo "NODE_ENV=production"
-        if: env.PROD == 'true'
-
       - name: Set COMMIT_MESSAGE env
         run: |
           if [[ $PROD == 'false' ]]; then

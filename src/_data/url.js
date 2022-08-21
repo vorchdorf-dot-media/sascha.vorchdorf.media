@@ -1,8 +1,8 @@
 module.exports = () => {
-  if (process.env.NODE_ENV !== 'production') {
+  if (process.env.CONTEXT !== 'production') {
     return (
-      process.env.DEPLOY_PRIME_URL ?? process.env.URL ?? 'http://localhost:8888'
+      process.env.PREVIEW_URL ?? process.env.URL ?? 'http://localhost:8888'
     );
   }
-  return process.env.URL ?? 'http://localhost:8888';
+  return process.env.URL ?? pkg.homepage;
 };
