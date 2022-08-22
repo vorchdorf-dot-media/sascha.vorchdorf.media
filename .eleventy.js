@@ -1,5 +1,5 @@
 const collections = require('./_11ty/collections');
-const filters = require('./_11ty/filters');
+const { async: asyncFilters, sync: syncFilters } = require('./_11ty/filters');
 const plugins = require('./_11ty/plugins');
 const shortcodes = require('./_11ty/shortcodes');
 const transforms = require('./_11ty/transforms');
@@ -21,8 +21,12 @@ module.exports = (config) => {
     config.addCollection(collection, collections[collection]),
   );
 
-  Object.keys(filters).forEach((filter) =>
-    config.addFilter(filter, filters[filter]),
+  Object.keys(asyncFilters).forEach((filter) =>
+    config.addNunjucksAsyncFilter(filter, asyncFilters[filter]),
+  );
+
+  Object.keys(syncFilters).forEach((filter) =>
+    config.addFilter(filter, syncFilters[filter]),
   );
 
   Object.keys(shortcodes).forEach((shortcode) =>

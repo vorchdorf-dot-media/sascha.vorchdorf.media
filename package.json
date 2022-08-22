@@ -38,7 +38,8 @@
     "graphql-tag": "^2.12.6",
     "npm-run-all": "^4.1.5",
     "posthtml": "^0.16.6",
-    "posthtml-minifier": "^0.1.0"
+    "posthtml-minifier": "^0.1.0",
+    "terser": "^5.14.2"
   },
   "devDependencies": {
     "@netlify/functions": "^1.0.0",
