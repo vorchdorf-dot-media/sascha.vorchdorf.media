@@ -20,7 +20,7 @@ const dateStringToUTC = (date) => (date.endsWith('Z') ? date : date + 'Z');
 exports.async = {
   jsmin: async (code, callback) => {
     try {
-      if (process.env.NODE_ENV !== 'production') {
+      if (process.env.CONTEXT !== 'production') {
         return callback(null, code);
       }
 
