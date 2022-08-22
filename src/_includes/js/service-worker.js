@@ -1,3 +1,5 @@
+const TIMEOUT = 5000;
+
 let isRefreshing = false;
 let worker;
 
@@ -46,7 +48,7 @@ if ('serviceWorker' in navigator) {
 
         setTimeout(
           () => renderBanner('Update gefunden. Seite lädt in Kürze neu.'),
-          3000,
+          TIMEOUT,
         );
 
         worker.addEventListener('statechange', () => {

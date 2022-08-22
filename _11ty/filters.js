@@ -1,4 +1,5 @@
 const { createHash } = require('crypto');
+const { minify } = require('terser');
 const dayjs = require('dayjs');
 const localizedFormat = require('dayjs/plugin/localizedFormat');
 const utc = require('dayjs/plugin/utc');
@@ -16,7 +17,24 @@ dayjs.tz.setDefault(TIMEZONE);
 
 const dateStringToUTC = (date) => (date.endsWith('Z') ? date : date + 'Z');
 
-module.exports = {
+exports.async = {
+  jsmin: async (code, callback) => {
+    try {
+      if (process.env.NODE_ENV !== 'production') {
+        return callback(null, code);
+      }
+
+      const minified = await minify(code);
+      return callback(null, minified.code);
+    } catch (e) {
+      console.error(e);
+
+      return callback(null, code);
+    }
+  },
+};
+
+exports.sync = {
   category: (posts, id) =>
     posts.filter((post) => post.categories.indexOf(id) >= 0),
   dateObj: (date) => ({

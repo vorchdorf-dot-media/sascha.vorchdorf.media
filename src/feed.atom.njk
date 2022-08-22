@@ -4,7 +4,7 @@ permalink: feed.xml
 ---
 
 <feed xmlns="http://www.w3.org/2005/Atom" xml:base="{{ url }}">
-  <title>{{ pkg.name }}</title>
+  <title>{{ manifest.name }}</title>
   <subtitle>{{ pkg.description }}</subtitle>
   <link href="{{ permalink | url | absoluteUrl(url) }}" rel="self"/>
   <link href="{{ url }}"/>

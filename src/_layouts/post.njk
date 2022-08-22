@@ -96,7 +96,11 @@ layout: default.njk
     </section>
     
     <script>
-      {% include 'js/backdrop.js' %}
+      {% set backdrop %}
+        {% include 'js/backdrop.js' %}
+      {% endset %}
+
+      {{ backdrop | jsmin | safe }}
     </script>
   {% endif %}
 </div>

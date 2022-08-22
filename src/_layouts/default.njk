@@ -20,5 +20,9 @@ layout: base.njk
 {% include 'footer.njk' %}
 
 <script>
-  {% include 'js/service-worker.js' %}
+  {% set service_worker %}
+    {% include 'js/service-worker.js' %}
+  {% endset %}
+
+  {{ service_worker | jsmin | safe }}
 </script>
