@@ -10,7 +10,9 @@ dayjs.extend(utc);
 dayjs.extend(timezone);
 dayjs.locale('de');
 
-dayjs.tz.setDefault(process.env.TIMEZONE ?? 'Europe/Vienna');
+const TIMEZONE = process.env.TIMEZONE ?? 'Europe/Vienna';
+
+dayjs.tz.setDefault(TIMEZONE);
 
 const dateStringToUTC = (date) => (date.endsWith('Z') ? date : date + 'Z');
 
@@ -24,7 +26,7 @@ module.exports = {
   }),
   dateStringToUTC,
   dateStringFormatted: (date, format = 'D. MMMM YYYY') => {
-    return dayjs(date).format(format);
+    return dayjs(date).tz(TIMEZONE).format(format);
   },
   filterBy: (collection, value, key = 'id') => {
     return collection.filter((item) => {
