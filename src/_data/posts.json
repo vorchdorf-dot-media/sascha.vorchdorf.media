@@ -2,7 +2,7 @@
   {
     "id": 1,
     "date": "2022-08-23T15:05:52Z",
-    "modified": "2022-08-23T15:05:59Z",
+    "modified": "2022-08-23T17:06:23Z",
     "slug": "hallo-welt",
     "status": "publish",
     "type": "post",
@@ -14,12 +14,39 @@
       "protected": false
     },
     "author": 1,
-    "featured_media": 0,
+    "featured_media": 12,
     "categories": [
       1
     ],
     "tags": [],
-    "attachments": [],
+    "attachments": [
+      {
+        "alt": "Eine Biene übersät mit Pollen sitzt auf einer geschlossenen Hibiskuskapsel",
+        "caption": "Zurzeit umschwärmen gerade viele Bienen unsere Hibiskuspflanzen.",
+        "height": 1875,
+        "id": 12,
+        "meta": {
+          "aperture": "0",
+          "credit": "",
+          "camera": "",
+          "caption": "",
+          "created_timestamp": "0",
+          "copyright": "",
+          "focal_length": "0",
+          "iso": "0",
+          "shutter_speed": "0",
+          "title": "",
+          "orientation": "0",
+          "keywords": []
+        },
+        "mimetype": "image/jpeg",
+        "post_date": "2022-08-23 16:59:00",
+        "post_modified": "2022-08-23 17:05:37",
+        "source": "https://res.cloudinary.com/dfykknjue/images/f_auto,q_auto/v1661266781/wp-16612667372644307648286686542767/wp-16612667372644307648286686542767.jpg?_i=AA",
+        "title": "Biene auf Hibiskus",
+        "width": 2500
+      }
+    ],
     "content": {
       "rendered": "<p>Hiermit wird diese Website nun eröffnet. Dieser Beitrag soll der erste von vielen sein.</p><p></p>",
       "plaintext": "Hiermit wird diese Website nun eröffnet. Dieser Beitrag soll der erste von vielen sein."
