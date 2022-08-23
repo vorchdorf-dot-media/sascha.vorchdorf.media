@@ -5,6 +5,7 @@ const renderBanner = (text) => {
   wrapper.style.top = 0;
   wrapper.style.right = 0;
   wrapper.style.left = 0;
+  wrapper.style.animation = 'appear var(--duration)';
   wrapper.style.zIndex = 9999;
 
   const container = document.createElement('div');

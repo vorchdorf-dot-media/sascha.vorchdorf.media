@@ -2,6 +2,10 @@ const renderLoader = () => {
   const svgns = 'http://www.w3.org/2000/svg';
   const style = document.createElement('style');
   style.innerHTML = `
+@keyframes appear {
+  from { opacity: 0; }
+  to { opacity: 1.0; }
+}
 @keyframes loader {
   0% { stroke-dashoffset: 0; }
   50% { stroke-dashoffset: 2.87; }
@@ -22,6 +26,7 @@ const renderLoader = () => {
   loader.style.position = 'fixed';
   loader.style.top = 'var(--space-l)';
   loader.style.right = 'var(--space-l)';
+  loader.style.animation = 'appear var(--duration)';
   loader.style.zIndex = 9999;
 
   const circle = document.createElementNS(svgns, 'circle');
