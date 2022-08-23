@@ -11,12 +11,18 @@
 {% set categories = generateList('categories', post.categories, '/category') %}
 {% set tags = generateList('tags', post.tags, '/tag') %}
 {% set permalink = '/post' + post.permalink | absoluteUrl %}
+{% set loop_index = loop.index0 %}
+{% set max_eager_index = 5 %}
 
 {% setAsync "featured_image" %}
   {% if post.featured_media %}
     {% for attachment in post.attachments %}
       {% if attachment.id == post.featured_media %}
-        {% image attachment.source, attachment.alt or attachment.caption, [160, 320, 640], '(min-width: 1440px) 160px, 320px' %}
+        {% if loop_index < max_eager_index %}
+          {% image attachment.source, attachment.alt or attachment.caption, [160, 320, 640], '(min-width: 1440px) 160px, 320px', { loading: 'eager' } %}
+        {% else %}
+          {% image attachment.source, attachment.alt or attachment.caption, [160, 320, 640], '(min-width: 1440px) 160px, 320px' %}
+        {% endif %}
       {% endif %}
     {% endfor %}
   {% endif %}
