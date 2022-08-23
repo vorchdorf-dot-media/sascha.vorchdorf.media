@@ -63,7 +63,7 @@ export default async (
       authorization: `bearer ${GITHUB_API_TOKEN}`,
       'content-type': 'application/json',
     },
-    body: body.toString(),
+    body: JSON.stringify(body),
     responseType: 'json',
   });
 };

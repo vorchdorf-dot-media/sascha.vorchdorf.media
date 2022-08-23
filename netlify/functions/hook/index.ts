@@ -81,6 +81,8 @@ export const handler: Handler = async (event, _context) => {
     console.error('Failed to update Github repository!');
     console.error(e);
 
+    e.response?.body && console.error(e.response?.body);
+
     return {
       statusCode: 500,
       body: 'Internal Server Error',
