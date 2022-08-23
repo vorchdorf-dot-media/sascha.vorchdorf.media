@@ -35,7 +35,7 @@
     "eleventy-plugin-feathericons": "^1.0.1",
     "eleventy-plugin-helmet": "^0.2.2",
     "got": "^11",
-    "graphql-tag": "^2.12.6",
+    "gql-tag": "^1.0.1",
     "npm-run-all": "^4.1.5",
     "posthtml": "^0.16.6",
     "posthtml-minifier": "^0.1.0",

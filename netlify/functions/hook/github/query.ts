@@ -1,5 +1,5 @@
 import got from 'got';
-import gql from 'graphql-tag';
+import gql from 'gql-tag';
 
 import pkg from '../../../../package.json';
 
@@ -56,6 +56,9 @@ export default async () => {
   });
 
   if (res.body.errors || !res.body.data) {
+    console.error('Fetching last commit ID failed!');
+    console.error(res.body.errors);
+
     throw new Error(
       (res.body.errors as any) ?? 'Request fetching last commit ID failed!',
     );

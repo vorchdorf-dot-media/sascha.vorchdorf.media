@@ -1,4 +1,5 @@
 import type { Handler } from '@netlify/functions';
+import { HTTPError as GotHTTPError } from 'got';
 
 import { createCommitOnBranch, getExpectedHeadOid } from './github';
 import { checkAuth, HTTPError } from './helpers';
@@ -81,7 +82,9 @@ export const handler: Handler = async (event, _context) => {
     console.error('Failed to update Github repository!');
     console.error(e);
 
-    e.response?.body && console.error(e.response?.body);
+    if (e instanceof GotHTTPError && e.response?.body) {
+      console.error(e.response?.body);
+    }
 
     return {
       statusCode: 500,
