@@ -1,0 +1,9 @@
+[
+  {
+    "id": 1,
+    "count": 1,
+    "description": "Hier werden alle Beiträge gelistet, welche nicht zu einer anderen Kategorie zugeordnet sind.",
+    "name": "Allgemein",
+    "slug": "allgemein"
+  }
+]

@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1,
+    "date": "2022-08-23T15:05:52Z",
+    "modified": "2022-08-23T15:05:59Z",
+    "slug": "hallo-welt",
+    "status": "publish",
+    "type": "post",
+    "title": {
+      "rendered": "Hallo Welt!"
+    },
+    "excerpt": {
+      "rendered": "<p>Hiermit wird diese Website nun eröffnet. Dieser Beitrag soll der erste von vielen sein.</p>\n",
+      "protected": false
+    },
+    "author": 1,
+    "featured_media": 0,
+    "categories": [
+      1
+    ],
+    "tags": [],
+    "attachments": [],
+    "content": {
+      "rendered": "<p>Hiermit wird diese Website nun eröffnet. Dieser Beitrag soll der erste von vielen sein.</p><p></p>",
+      "plaintext": "Hiermit wird diese Website nun eröffnet. Dieser Beitrag soll der erste von vielen sein."
+    },
+    "permalink": "/2022/08/hallo-welt"
+  }
+]
