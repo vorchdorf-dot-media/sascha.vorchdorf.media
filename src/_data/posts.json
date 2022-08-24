@@ -52,5 +52,137 @@
       "plaintext": "Hiermit wird diese Website nun eröffnet. Dieser Beitrag soll der erste von vielen sein."
     },
     "permalink": "/2022/08/hallo-welt"
+  },
+  {
+    "id": 13,
+    "date": "2022-08-24T19:38:19Z",
+    "modified": "2022-08-24T19:38:34Z",
+    "slug": "ankunft-in-vrsar",
+    "status": "publish",
+    "type": "post",
+    "title": {
+      "rendered": "Ankunft in Vrsar"
+    },
+    "excerpt": {
+      "rendered": "<p>Nachdem wir heuer bereits Abstecher in Barcelona, London und Assisi gemacht haben, musste gegen Ende des Sommers noch ein Badeurlaub am Meer her. Heute morgens sind wir daher um 04:20 Uhr von zuhause losgefahren, nach ca. 540 km erreichten wir etwa um 10:40 Ihr unser Ziel: Vrsar in Istrien. Das Wetter ist sonnig bei milden [&hellip;]</p>\n",
+      "protected": false
+    },
+    "author": 1,
+    "featured_media": 18,
+    "categories": [
+      3
+    ],
+    "tags": [],
+    "attachments": [
+      {
+        "alt": "",
+        "caption": "Die Aussicht von unserem Hotelzimmer auf den Hafen von Vrsar",
+        "height": 1667,
+        "id": 18,
+        "meta": {
+          "aperture": "0",
+          "credit": "",
+          "camera": "",
+          "caption": "",
+          "created_timestamp": "0",
+          "copyright": "",
+          "focal_length": "0",
+          "iso": "0",
+          "shutter_speed": "0",
+          "title": "",
+          "orientation": "0",
+          "keywords": []
+        },
+        "mimetype": "image/jpeg",
+        "post_date": "2022-08-24 19:27:08",
+        "post_modified": "2022-08-24 19:32:33",
+        "source": "https://res.cloudinary.com/dfykknjue/images/f_auto,q_auto/v1661362526/wp-16613617907708384310928509517291/wp-16613617907708384310928509517291.jpg?_i=AA",
+        "title": "Aufnahme vom Balkon unseres Hotels",
+        "width": 2500
+      },
+      {
+        "alt": "",
+        "caption": "Eine Aufnahme in der Altstadt mit zwei Urlaubern samt Fahrrädern",
+        "height": 2500,
+        "id": 19,
+        "meta": {
+          "aperture": "0",
+          "credit": "",
+          "camera": "",
+          "caption": "",
+          "created_timestamp": "0",
+          "copyright": "",
+          "focal_length": "0",
+          "iso": "0",
+          "shutter_speed": "0",
+          "title": "",
+          "orientation": "0",
+          "keywords": []
+        },
+        "mimetype": "image/jpeg",
+        "post_date": "2022-08-24 19:27:18",
+        "post_modified": "2022-08-24 19:30:44",
+        "source": "https://res.cloudinary.com/dfykknjue/images/f_auto,q_auto/v1661362518/wp-16613617906131585239000844607183/wp-16613617906131585239000844607183.jpg?_i=AA",
+        "title": "Stadtszene in Vrsar",
+        "width": 1665
+      },
+      {
+        "alt": "",
+        "caption": "Block auf den Kirchturm von den Gassen der Altstadt aus",
+        "height": 2500,
+        "id": 16,
+        "meta": {
+          "aperture": "0",
+          "credit": "",
+          "camera": "",
+          "caption": "",
+          "created_timestamp": "0",
+          "copyright": "",
+          "focal_length": "0",
+          "iso": "0",
+          "shutter_speed": "0",
+          "title": "",
+          "orientation": "0",
+          "keywords": []
+        },
+        "mimetype": "image/jpeg",
+        "post_date": "2022-08-24 19:24:10",
+        "post_modified": "2022-08-24 19:35:04",
+        "source": "https://res.cloudinary.com/dfykknjue/images/f_auto,q_auto/v1661362541/wp-16613617904636785079495359329095/wp-16613617904636785079495359329095.jpg?_i=AA",
+        "title": "Blick auf den Kirchturm",
+        "width": 1667
+      },
+      {
+        "alt": "",
+        "caption": "3 Olivenbäume vor einer Hauswand in der Altstadt von Vrsar",
+        "height": 1667,
+        "id": 17,
+        "meta": {
+          "aperture": "0",
+          "credit": "",
+          "camera": "",
+          "caption": "",
+          "created_timestamp": "0",
+          "copyright": "",
+          "focal_length": "0",
+          "iso": "0",
+          "shutter_speed": "0",
+          "title": "",
+          "orientation": "0",
+          "keywords": []
+        },
+        "mimetype": "image/jpeg",
+        "post_date": "2022-08-24 19:26:54",
+        "post_modified": "2022-08-24 19:33:32",
+        "source": "https://res.cloudinary.com/dfykknjue/images/f_auto,q_auto/v1661362533/wp-16613617903222982811956968882629/wp-16613617903222982811956968882629.jpg?_i=AA",
+        "title": "Olivenbäume",
+        "width": 2500
+      }
+    ],
+    "content": {
+      "rendered": "<p>Nachdem wir heuer bereits Abstecher in Barcelona, London und Assisi gemacht haben, musste gegen Ende des Sommers noch ein Badeurlaub am Meer her.</p><p>Heute morgens sind wir daher um 04:20 Uhr von zuhause losgefahren, nach ca. 540 km erreichten wir etwa um 10:40 Ihr unser Ziel: Vrsar in Istrien.</p><p>Das Wetter ist sonnig bei milden 28° C und leichter Brise am Meer.</p>",
+      "plaintext": "Nachdem wir heuer bereits Abstecher in Barcelona, London und Assisi gemacht haben, musste gegen Ende des Sommers noch ein Badeurlaub am Meer her.\n\nHeute morgens sind wir daher um 04:20 Uhr von zuhause losgefahren, nach ca. 540 km erreichten wir etwa um 10:40 Ihr unser Ziel: Vrsar in Istrien.\n\nDas Wetter ist sonnig bei milden 28° C und leichter Brise am Meer."
+    },
+    "permalink": "/2022/08/ankunft-in-vrsar"
   }
 ]
