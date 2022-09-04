@@ -23,7 +23,7 @@
     "@11ty/eleventy": "^2.0.0-canary.13",
     "@11ty/eleventy-plugin-rss": "^1.2.0",
     "got": "^11",
-    "graphql-tag": "^2.12.6"
+    "gql-tag": "^1.0.1"
   },
   "devDependencies": {
     "@netlify/functions": "^1.0.0",

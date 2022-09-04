@@ -1,5 +1,5 @@
 import got from 'got';
-import gql from 'graphql-tag';
+import gql from 'gql-tag';
 
 import pkg from '../../../../package.json';
 
