@@ -51,11 +51,14 @@ export default async () => {
       authorization: `bearer ${GITHUB_API_TOKEN}`,
       'content-type': 'application/json',
     },
-    body: body.toString(),
+    body: JSON.stringify(body),
     responseType: 'json',
   });
 
   if (res.body.errors || !res.body.data) {
+    console.error('Fetching last commit ID failed!');
+    console.error(res.body.errors);
+
     throw new Error(
       (res.body.errors as any) ?? 'Request fetching last commit ID failed!',
     );
