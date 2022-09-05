@@ -98,6 +98,14 @@
 
   .read-on > [data-previous],
   .read-on > [data-next] {
-    flex: 0 0 calc(50% - var(--space-xl) * 0.5);
+    flex: 0 1 calc(50% - var(--space-xl) * 0.5);
+    max-width: calc(50% - var(--space-xl) * 0.5);
+  }
+
+  .read-on [data-cover] {
+    display: block;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
   }
 }
