@@ -6,7 +6,7 @@ const generateImageHTML = async (
   src,
   alt,
   widths = [null],
-  sizes = '100%',
+  sizes = '100vw',
   customAttributes = {},
 ) => {
   const options = {
@@ -39,6 +39,61 @@ const generateImageHTML = async (
   return $.html();
 };
 
+const generateAMPImageHTML = async (
+  src,
+  alt,
+  widths = [null],
+  formats = ['jpeg'],
+  customAttributes = {},
+) => {
+  const options = {
+    formats,
+    widths,
+    outputDir: 'dist/img',
+  };
+
+  const metadata = await Image(src, options);
+
+  const [{ height, width }] = metadata[formats[formats.length - 1]];
+
+  const attributes = {
+    alt,
+    height,
+    width,
+    layout: 'responsive',
+    ...customAttributes,
+  };
+
+  const generateHTML = (i = formats.length - 1, children = '') => {
+    if (i < 0) {
+      return children;
+    }
+
+    const $ = cheerio.load('<amp-img></amp-img>', null, false);
+
+    const srcset = metadata[formats[i]].reduce((prev, curr) => {
+      return prev ? [prev, curr.srcset].join(', ') : curr.srcset;
+    }, null);
+
+    const imgAttributes = {
+      ...attributes,
+      src: metadata[formats[i]][0].url,
+      srcset,
+      ...(i !== 0 ? { fallback: 'fallback' } : {}),
+    };
+
+    Object.keys(imgAttributes).forEach((attribute) =>
+      $('amp-img').attr(attribute, imgAttributes[attribute]),
+    );
+
+    $('amp-img').html(children);
+
+    return generateHTML(i - 1, $.html());
+  };
+
+  return generateHTML();
+};
+
 module.exports = {
   async image(
     src,
@@ -65,6 +120,16 @@ module.exports = {
       [64, 128, null],
       sizes,
     );
+  },
+
+  async amp_image(
+    src,
+    alt,
+    widths = [null],
+    formats = ['jpeg'],
+    customAttributes,
+  ) {
+    return generateAMPImageHTML(src, alt, widths, formats, customAttributes);
   },
 
   async og_image(src, widths = [1200], formats = ['jpeg']) {
