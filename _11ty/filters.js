@@ -91,4 +91,10 @@ exports.sync = {
   parseDate: (date) => new Date(Date.parse(dateStringToUTC(date))),
   tag: (posts, id) => posts.filter((post) => post.tags.indexOf(id) >= 0),
   take: (collection, amount, from = 0) => collection.slice(from, amount),
+  truncate: (str, len = 140, char = '.') => {
+    const summary = str.substring(0, len);
+    const [rest] = str.substring(len).split(char);
+
+    return summary + rest + '.';
+  },
 };

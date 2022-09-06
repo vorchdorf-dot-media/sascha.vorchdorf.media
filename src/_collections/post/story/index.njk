@@ -1,0 +1,103 @@
+---
+layout: base.njk
+
+pagination:
+  alias: post
+  data: collections.posts
+  size: 1
+  reverse: true
+---
+
+{% set header_animations = ["fly-in-left", "fly-in-top", "fly-in-right"] %}
+
+{% setAsync 'cover_src' %}
+{% set poster = featured_media or post.attachments | first %}
+{% og_image poster.source, [1920], ['jpeg'] %}
+{% endsetAsync %}
+
+{% setAsync 'cover' %}
+{% set poster = featured_media or post.attachments | first %}
+{% amp_image poster.source, poster.alt or poster.caption, [720, 1280, 1920], ['avif', 'webp', 'jpeg'] %}
+{% endsetAsync %}
+
+{% setAsync 'avatar' %}
+{% set avatar_src = pkg.author.email | gravatar %}
+{% og_image avatar_src, [null] %}
+{% endsetAsync %}
+
+<style data-helmet="story">
+  {% include 'styles/story.css' %}
+</style>
+
+<amp-story
+  standalone
+  {# supports-landscape #}
+  title="{{ title }}"
+  publisher="{{ pkg.author.name }}"
+  publisher-logo-src="{{ avatar | trim }}"
+  poster-portrait-src="{{ cover_src | trim }}"
+  entity="{{ manifest.name }}"
+  entity-url={{ ('/post' + post.permalink) | absoluteUrl(url) }}
+  data-theme="dark"
+>
+
+  <amp-story-page id="cover">
+    <amp-story-grid-layer template="fill">
+      {{ cover | safe }}
+    </amp-story-grid-layer>
+    <amp-story-grid-layer data-text data-bottom>
+      <h1>
+        {{ title }}
+      </h1>
+      <small>{{ post.content.plaintext | truncate }}</small>
+    </amp-story-grid-layer>
+  </amp-story-page>
+
+  {% asyncEach attachment in post.attachments %}
+    {% setAsync 'image' %}
+      {% amp_image attachment.source, attachment.alt or attachment.caption, [720, 1280, 1920], ['avif', 'webp', 'jpeg'] %}
+    {% endsetAsync %}
+
+    <amp-story-page id="{{ attachment.title | slugify }}">
+      {% if attachment.height > attachment.width %}
+        <amp-story-grid-layer template="fill">
+          {{ image | safe }}
+        </amp-story-grid-layer>
+        <amp-story-grid-layer data-text data-bottom>
+          <h2
+            animate-in="{{ header_animations | random }}"
+          >
+            {{ attachment.title }}
+          </h2>
+          <small
+            animate-in="scale-fade-up"
+            animate-in-delay="0.6s"
+          >
+            {{ attachment.caption }}
+          </small>
+        </amp-story-grid-layer>
+      {% else %}
+        <amp-story-grid-layer layout="vertical">
+          <h2
+            animate-in="{{ header_animations | random }}"
+            animate-in-delay="1s"
+          >
+            {{ attachment.title }}
+          </h2>
+          <div
+            animate-in="fly-in-right"
+          >
+            {{ image | safe }}
+          </div>
+          <small
+            animate-in="scale-fade-up"
+            animate-in-delay="1.6s"
+          >
+          {{ attachment.caption }}
+          </small>
+        </amp-story-grid-layer>
+      {% endif %}
+    </amp-story-page>
+  {% endeach %}
+
+</amp-story>
