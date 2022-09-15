@@ -1,0 +1,42 @@
+---
+pagination:
+  data: collections.stories
+  generatePageOnEmptyData: true
+  size: 10
+  reverse: true
+---
+
+{% if pagination.items.length %}
+
+  <style data-helmet="stories">
+    {% include 'styles/stories.css' %}
+  </style>
+
+  <div class="stories">
+    {% asyncEach story in pagination.items %}
+      {% set featured_image = story.attachments | first %}
+
+      {% set loading = 'eager' if loop.index0 < 4 else 'lazy' %}
+
+      {% setAsync 'poster' %}
+        {% image
+                  featured_image.source, 
+                  featured_image.alt or featured_image.caption,
+                  [375, 720, 1280],
+                  '(min-width: 640px) 33vw, (min-width: 960px) 25vw, 50vw',
+                  { class: 'poster', loading: loading, style: 'aspect-ratio: ' + 720 + '/' + 1280 + ';' }
+        %}
+      {% endsetAsync %}
+
+      <a href="{{ '/post' + story.permalink | absoluteUrl }}">
+        {{ poster | safe }}
+      </a>
+
+    {% endeach %}
+  </stories>
+
+{% else %}
+
+  <p>Keine Stories vorhanden...</p>
+
+{% endif %}

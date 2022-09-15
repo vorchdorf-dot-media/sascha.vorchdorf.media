@@ -1,0 +1,34 @@
+.stories {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: var(--space-xl);
+}
+
+.stories > * {
+  flex: 0 1 calc(50% - var(--space-xl) * 0.5);
+}
+
+.stories a {
+  display: inline-flex;
+  border-radius: var(--border-radius-m);
+  border: var(--border-width) solid var(--border-color, transparent);
+  overflow: hidden;
+}
+
+.stories a:hover {
+  --border-color: var(--color-primary);
+}
+
+.stories img {
+  height: auto;
+  width: auto;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+@media (min-width: 960px) {
+  .stories > * {
+    flex: 0 1 calc(33.333% - var(--space-xl) * 0.6667);
+  }
+}
