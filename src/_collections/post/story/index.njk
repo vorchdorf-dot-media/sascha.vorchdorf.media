@@ -41,7 +41,10 @@ pagination:
   data-theme="dark"
 >
 
-  <amp-story-page id="cover">
+  <amp-story-page
+    id="cover"
+    auto-advance-after="7s"
+  >
     <amp-story-grid-layer template="fill">
       {{ cover | safe }}
     </amp-story-grid-layer>
@@ -58,7 +61,10 @@ pagination:
       {% amp_image attachment.source, attachment.alt or attachment.caption, [720, 1280, 1920], ['avif', 'webp', 'jpeg'] %}
     {% endsetAsync %}
 
-    <amp-story-page id="{{ attachment.title | slugify }}">
+    <amp-story-page
+      id="{{ attachment.title | slugify }}"
+      auto-advance-after="7s"
+    >
       {% if attachment.height > attachment.width %}
         <amp-story-grid-layer template="fill">
           {{ image | safe }}

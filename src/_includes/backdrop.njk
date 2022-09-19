@@ -1,0 +1,28 @@
+
+<style data-helmet="backdrop">
+  {% include 'styles/backdrop.css' %}
+</style>
+
+{% include 'js/alpine.njk' %}
+
+<script data-helmet="backdrop-js">
+  {% set backdrop %}
+    {% include 'js/backdrop.js' %}
+  {% endset %}
+
+  {{ backdrop | jsmin | safe }}
+</script>
+
+<template x-if="open">
+  <div
+    class="backdrop"
+    role="dialog"
+    aria-label="Bildergalerie"
+    data-theme="dark"
+    @keyup.window.escape="closeBackdrop"
+    @click="closeBackdrop"
+  >
+    <button type="button" @click="closeBackdrop" data-close>Schließen {% feather 'x', { 'aria-hidden': true } %}</button>
+    <iframe height="1280" width="720" loading="async" :src="permalink" style="aspect-ratio: 720/1280;" />
+  </div>
+</template>

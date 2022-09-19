@@ -4,6 +4,7 @@
   gap: var(--space-l);
   border-top: var(--border-width) solid var(--color-bg-muted);
   padding: var(--space-xxl) 0;
+  width: 100%;
 }
 
 .author picture {
@@ -18,7 +19,7 @@
 @media screen and (min-width: 768px) {
   .author {
     position: sticky;
-    /* flex: 1 0 var(--author-width); */
+    flex: 0 1 var(--author-width);
     flex-direction: column;
     border: none;
     padding: 0;

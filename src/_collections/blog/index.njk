@@ -15,7 +15,7 @@ pagination:
 
     {% asyncEach post in pagination.items %}
 
-      {% if loop.index0 %}
+      {% if loop.index0 %} {# Targets each post apart the first one, since no previous post is available #}
         {% set previousPost = pagination.items[loop.index0 - 1] %}
 
         {% set previous = previousPost.date | parseDate | dateObj %}

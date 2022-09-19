@@ -62,46 +62,19 @@ layout: default.njk
       {% include 'styles/attachments.css' %}
     </style>
 
-    <style data-helmet="backdrop">
-      {% include 'styles/backdrop.css' %}
-    </style>
+    {% set story = permalink + 'story.html' | absoluteUrl %}
 
-    {% include 'js/alpine.njk' %}
-
-    <section class="attachments" x-data="backdrop({{ post.attachments.length }})">
+    <section class="attachments" x-data="story('{{ story }}')">
       <h2>Bilder</h2>
       {% set attachments = post.attachments | take(4) %}
       {% set hiddenitems = post.attachments.length - attachments.length %}
       {% asyncEach attachment in attachments %}
-        <button type="button" @click="openBackdrop, setIndex({{ loop.index }})"{% if loop.last and hiddenitems %} data-hidden-items="+{{ hiddenitems + 1 }}"{% endif %}>
+        <button type="button" @click="openBackdrop"{% if loop.last and hiddenitems %} data-hidden-items="+{{ hiddenitems + 1 }}"{% endif %}>
           {% image attachment.source, attachment.alt or attachment.caption, [96, 192, 380, 540, null], '(min-width: 960px) 96px, (min-width: 1280px) 180px, 180px' %}
         </button>
       {% endeach %}
 
-      <template x-if="open">
-        <div class="backdrop" role="dialog" aria-label="Bildergalerie" data-theme="dark" @keyup.window.escape="closeBackdrop" @keyup.window.arrow-right="next" @keyup.window.arrow-left="previous">
-          <button type="button" @click="closeBackdrop" data-close>Schließen {% feather 'x', { 'aria-hidden': true } %}</button>
-          <div class="slider" @click.self="closeBackdrop" @scroll.debounce="handleScroll">
-            {% asyncEach attachment in post.attachments %}
-            <figure>
-              {% image attachment.source, attachment.alt or attachment.caption, [320, 640, 1280, 1920, null], '75vw' %}
-              {% if attachment.caption %}<figcaption>{{ attachment.caption }}</figcaption>{% endif %}
-            </figure>
-            {% endeach %}
-          </div>
-          <button type="button" aria-label="Vorheriges Bild" @click="previous" :disabled="index <= 1" data-previous>{% feather 'arrow-left', { 'aria-hidden': true } %}</button>
-          <button type="button" aria-label="Nächstes Bild" @click="next" :disabled="index == items" data-next>{% feather 'arrow-right', { 'aria-hidden': true } %}</button>
-        </div>
-      </template>
-    </section>
-    
-    <script>
-      {% set backdrop %}
-        {% include 'js/backdrop.js' %}
-      {% endset %}
-
-      {{ backdrop | jsmin | safe }}
-    </script>
+      {% include 'backdrop.njk' %}
   {% endif %}
 </div>
 
