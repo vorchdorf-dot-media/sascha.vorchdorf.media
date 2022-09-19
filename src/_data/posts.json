@@ -1,0 +1,496 @@
+[
+  {
+    "id": 1,
+    "date": "2022-08-23T15:05:52Z",
+    "modified": "2022-08-23T17:06:26Z",
+    "slug": "hallo-welt",
+    "status": "publish",
+    "type": "post",
+    "title": {
+      "rendered": "Hallo Welt!"
+    },
+    "excerpt": {
+      "rendered": "<p>Hiermit wird diese Website nun eröffnet. Dieser Beitrag soll der erste von vielen sein.</p>\n",
+      "protected": false
+    },
+    "author": 1,
+    "featured_media": 12,
+    "categories": [1],
+    "tags": [],
+    "attachments": [
+      {
+        "alt": "Eine Biene übersät mit Pollen sitzt auf einer geschlossenen Hibiskuskapsel",
+        "caption": "Zurzeit umschwärmen gerade viele Bienen unsere Hibiskuspflanzen.",
+        "height": 1875,
+        "id": 12,
+        "meta": {
+          "aperture": "0",
+          "credit": "",
+          "camera": "",
+          "caption": "",
+          "created_timestamp": "0",
+          "copyright": "",
+          "focal_length": "0",
+          "iso": "0",
+          "shutter_speed": "0",
+          "title": "",
+          "orientation": "0",
+          "keywords": []
+        },
+        "mimetype": "image/jpeg",
+        "post_date": "2022-08-23 16:59:00",
+        "post_modified": "2022-08-25 07:01:37",
+        "source": "https://res.cloudinary.com/dfykknjue/images/f_auto,q_auto/v1661266781/wp-16612667372644307648286686542767/wp-16612667372644307648286686542767.jpg?_i=AA",
+        "title": "Biene auf Hibiskus",
+        "width": 2500
+      }
+    ],
+    "content": {
+      "rendered": "<p>Hiermit wird diese Website nun eröffnet. Dieser Beitrag soll der erste von vielen sein.</p><p></p>",
+      "plaintext": "Hiermit wird diese Website nun eröffnet. Dieser Beitrag soll der erste von vielen sein."
+    },
+    "permalink": "/2022/08/hallo-welt"
+  },
+  {
+    "id": 13,
+    "date": "2022-08-24T19:38:19Z",
+    "modified": "2022-08-24T19:38:34Z",
+    "slug": "ankunft-in-vrsar",
+    "status": "publish",
+    "type": "post",
+    "title": {
+      "rendered": "Ankunft in Vrsar"
+    },
+    "excerpt": {
+      "rendered": "<p>Nachdem wir heuer bereits Abstecher in Barcelona, London und Assisi gemacht haben, musste gegen Ende des Sommers noch ein Badeurlaub am Meer her. Heute morgens sind wir daher um 04:20 Uhr von zuhause losgefahren, nach ca. 540 km erreichten wir etwa um 10:40 Ihr unser Ziel: Vrsar in Istrien. Das Wetter ist sonnig bei milden [&hellip;]</p>\n",
+      "protected": false
+    },
+    "author": 1,
+    "featured_media": 18,
+    "categories": [3],
+    "tags": [],
+    "attachments": [
+      {
+        "alt": "",
+        "caption": "Die Aussicht von unserem Hotelzimmer auf den Hafen von Vrsar",
+        "height": 1667,
+        "id": 18,
+        "meta": {
+          "aperture": "0",
+          "credit": "",
+          "camera": "",
+          "caption": "",
+          "created_timestamp": "0",
+          "copyright": "",
+          "focal_length": "0",
+          "iso": "0",
+          "shutter_speed": "0",
+          "title": "",
+          "orientation": "0",
+          "keywords": []
+        },
+        "mimetype": "image/jpeg",
+        "post_date": "2022-08-24 19:27:08",
+        "post_modified": "2022-08-25 06:59:22",
+        "source": "https://res.cloudinary.com/dfykknjue/images/f_auto,q_auto/v1661362526/wp-16613617907708384310928509517291/wp-16613617907708384310928509517291.jpg?_i=AA",
+        "title": "Aufnahme vom Balkon unseres Hotels",
+        "width": 2500
+      },
+      {
+        "alt": "",
+        "caption": "Zwei Urlauber in der Altstadt",
+        "height": 2500,
+        "id": 19,
+        "meta": {
+          "aperture": "0",
+          "credit": "",
+          "camera": "",
+          "caption": "",
+          "created_timestamp": "0",
+          "copyright": "",
+          "focal_length": "0",
+          "iso": "0",
+          "shutter_speed": "0",
+          "title": "",
+          "orientation": "0",
+          "keywords": []
+        },
+        "mimetype": "image/jpeg",
+        "post_date": "2022-08-24 19:27:18",
+        "post_modified": "2022-08-25 06:58:31",
+        "source": "https://res.cloudinary.com/dfykknjue/images/f_auto,q_auto/v1661362518/wp-16613617906131585239000844607183/wp-16613617906131585239000844607183.jpg?_i=AA",
+        "title": "Stadtszene in Vrsar",
+        "width": 1665
+      },
+      {
+        "alt": "",
+        "caption": "Blick aus den Gassen der Altstadt auf die Kirche von Vrsar",
+        "height": 2500,
+        "id": 16,
+        "meta": {
+          "aperture": "0",
+          "credit": "",
+          "camera": "",
+          "caption": "",
+          "created_timestamp": "0",
+          "copyright": "",
+          "focal_length": "0",
+          "iso": "0",
+          "shutter_speed": "0",
+          "title": "",
+          "orientation": "0",
+          "keywords": []
+        },
+        "mimetype": "image/jpeg",
+        "post_date": "2022-08-24 19:24:10",
+        "post_modified": "2022-08-25 07:01:31",
+        "source": "https://res.cloudinary.com/dfykknjue/images/f_auto,q_auto/v1661362541/wp-16613617904636785079495359329095/wp-16613617904636785079495359329095.jpg?_i=AA",
+        "title": "Blick auf den Kirchturm",
+        "width": 1667
+      },
+      {
+        "alt": "",
+        "caption": "Olivenbäume in der Altstadt",
+        "height": 1667,
+        "id": 17,
+        "meta": {
+          "aperture": "0",
+          "credit": "",
+          "camera": "",
+          "caption": "",
+          "created_timestamp": "0",
+          "copyright": "",
+          "focal_length": "0",
+          "iso": "0",
+          "shutter_speed": "0",
+          "title": "",
+          "orientation": "0",
+          "keywords": []
+        },
+        "mimetype": "image/jpeg",
+        "post_date": "2022-08-24 19:26:54",
+        "post_modified": "2022-08-25 07:00:03",
+        "source": "https://res.cloudinary.com/dfykknjue/images/f_auto,q_auto/v1661362533/wp-16613617903222982811956968882629/wp-16613617903222982811956968882629.jpg?_i=AA",
+        "title": "Olivenbäume",
+        "width": 2500
+      }
+    ],
+    "content": {
+      "rendered": "<p>Nachdem wir heuer bereits Abstecher in Barcelona, London und Assisi gemacht haben, musste gegen Ende des Sommers noch ein Badeurlaub am Meer her.</p><p>Heute morgens sind wir daher um 04:20 Uhr von zuhause losgefahren, nach ca. 540 km erreichten wir etwa um 10:40 Ihr unser Ziel: Vrsar in Istrien.</p><p>Das Wetter ist sonnig bei milden 28° C und leichter Brise am Meer.</p>",
+      "plaintext": "Nachdem wir heuer bereits Abstecher in Barcelona, London und Assisi gemacht haben, musste gegen Ende des Sommers noch ein Badeurlaub am Meer her.\n\nHeute morgens sind wir daher um 04:20 Uhr von zuhause losgefahren, nach ca. 540 km erreichten wir etwa um 10:40 Ihr unser Ziel: Vrsar in Istrien.\n\nDas Wetter ist sonnig bei milden 28° C und leichter Brise am Meer."
+    },
+    "permalink": "/2022/08/ankunft-in-vrsar"
+  },
+  {
+    "id": 26,
+    "date": "2022-08-27T09:33:41Z",
+    "modified": "2022-08-27T09:46:49Z",
+    "slug": "sonnenuntergaenge",
+    "status": "publish",
+    "type": "post",
+    "title": {
+      "rendered": "Sonnenuntergänge"
+    },
+    "excerpt": {
+      "rendered": "<p>Während der letzten Tage hatten wir großes Glück mit dem Wetter, da sich untertags sehr warme Temperaturen mit konstanten leichten Windbrisen abwechselten. So konnten wir die Tage am Meer bei Wein, Espresso und Blaubeerkuchen genießen. Abends erklommen wir einmal den Felsen des Steinbruchs um die Stadt bei Sonnenuntergang zu fotografieren. Bei klarer Sicht erschien die [&hellip;]</p>\n",
+      "protected": false
+    },
+    "author": 1,
+    "featured_media": 21,
+    "categories": [3],
+    "tags": [],
+    "attachments": [
+      {
+        "alt": "",
+        "caption": "Vrsar zur goldenen Stunde",
+        "height": 1875,
+        "id": 21,
+        "meta": {
+          "aperture": "0",
+          "credit": "",
+          "camera": "",
+          "caption": "",
+          "created_timestamp": "0",
+          "copyright": "",
+          "focal_length": "0",
+          "iso": "0",
+          "shutter_speed": "0",
+          "title": "",
+          "orientation": "0",
+          "keywords": []
+        },
+        "mimetype": "image/jpeg",
+        "post_date": "2022-08-27 09:29:47",
+        "post_modified": "2022-08-27 09:38:52",
+        "source": "https://res.cloudinary.com/dfykknjue/images/f_auto,q_auto/v1661585395/img20220825193502-015151774682607021332/img20220825193502-015151774682607021332.jpeg?_i=AA",
+        "title": "Vrsar zur goldenen Stunde",
+        "width": 2500
+      },
+      {
+        "alt": "",
+        "caption": "Vrsar zur blauen Stunde",
+        "height": 1667,
+        "id": 22,
+        "meta": {
+          "aperture": "0",
+          "credit": "",
+          "camera": "",
+          "caption": "",
+          "created_timestamp": "0",
+          "copyright": "",
+          "focal_length": "0",
+          "iso": "0",
+          "shutter_speed": "0",
+          "title": "",
+          "orientation": "0",
+          "keywords": []
+        },
+        "mimetype": "image/jpeg",
+        "post_date": "2022-08-27 09:30:31",
+        "post_modified": "2022-08-27 09:38:15",
+        "source": "https://res.cloudinary.com/dfykknjue/images/f_auto,q_auto/v1661585436/mg_0481-015249641307234052391/mg_0481-015249641307234052391.jpeg?_i=AA",
+        "title": "Vrsar bei Nacht",
+        "width": 2500
+      },
+      {
+        "alt": "",
+        "caption": "Rovinj am späten Nachmittag bei unserer Ankunft",
+        "height": 1875,
+        "id": 23,
+        "meta": {
+          "aperture": "0",
+          "credit": "",
+          "camera": "",
+          "caption": "",
+          "created_timestamp": "0",
+          "copyright": "",
+          "focal_length": "0",
+          "iso": "0",
+          "shutter_speed": "0",
+          "title": "",
+          "orientation": "0",
+          "keywords": []
+        },
+        "mimetype": "image/jpeg",
+        "post_date": "2022-08-27 09:31:32",
+        "post_modified": "2022-08-27 09:37:31",
+        "source": "https://res.cloudinary.com/dfykknjue/images/f_auto,q_auto/v1661585497/img202208261757183552146398102885042/img202208261757183552146398102885042.jpg?_i=AA",
+        "title": "Rovinj bei Tag",
+        "width": 2500
+      },
+      {
+        "alt": "",
+        "caption": "Ein Sonnenuntergang von der Altstadt von Rovinj aus gesehen",
+        "height": 1875,
+        "id": 25,
+        "meta": {
+          "aperture": "0",
+          "credit": "",
+          "camera": "",
+          "caption": "",
+          "created_timestamp": "0",
+          "copyright": "",
+          "focal_length": "0",
+          "iso": "0",
+          "shutter_speed": "0",
+          "title": "",
+          "orientation": "0",
+          "keywords": []
+        },
+        "mimetype": "image/jpeg",
+        "post_date": "2022-08-27 09:33:23",
+        "post_modified": "2022-08-27 09:35:48",
+        "source": "https://res.cloudinary.com/dfykknjue/images/f_auto,q_auto/v1661585609/img202208261949292972587311615620728/img202208261949292972587311615620728.jpg?_i=AA",
+        "title": "Sonnenuntergang Rovinj",
+        "width": 2500
+      },
+      {
+        "alt": "",
+        "caption": "Nachtansicht von Rovinj bei unserer Rückfahrt",
+        "height": 1875,
+        "id": 24,
+        "meta": {
+          "aperture": "0",
+          "credit": "",
+          "camera": "",
+          "caption": "",
+          "created_timestamp": "0",
+          "copyright": "",
+          "focal_length": "0",
+          "iso": "0",
+          "shutter_speed": "0",
+          "title": "",
+          "orientation": "0",
+          "keywords": []
+        },
+        "mimetype": "image/jpeg",
+        "post_date": "2022-08-27 09:32:45",
+        "post_modified": "2022-08-27 09:44:38",
+        "source": "https://res.cloudinary.com/dfykknjue/images/f_auto,q_auto/v1661585572/img202208262056251265136312355706274/img202208262056251265136312355706274.jpg?_i=AA",
+        "title": "Rovinj bei Nacht",
+        "width": 2500
+      }
+    ],
+    "content": {
+      "rendered": "<p>Während der letzten Tage hatten wir großes Glück mit dem Wetter, da sich untertags sehr warme Temperaturen mit konstanten leichten Windbrisen abwechselten. So konnten wir die Tage am Meer bei Wein, Espresso und Blaubeerkuchen genießen.</p><p>Abends erklommen wir einmal den Felsen des Steinbruchs um die Stadt bei Sonnenuntergang zu fotografieren. Bei klarer Sicht erschien die rote Scheibe am Horizont noch größer als üblich, und so blieben wir, bis auch die letzten Sonnenstrahlen im Meer versanken und die Altstadt in tiefes Blau getaucht war.</p><p>Gestern fuhren wir mit dem Ausflugsboot nach Rovinj, um dort Abendessen zu gehen und im Anschluss auch diesen Ort einmal bei Nacht zu erleben. Uns bot sich eine sehr schöne Stimmung, die jedoch durch die Massen an Menschen etwas getrübt wurde. Umso mehr schätzten wir einmal mehr die Beschaulichkeit von Vrsar nach unserer Rückfahrt.</p>",
+      "plaintext": "Während der letzten Tage hatten wir großes Glück mit dem Wetter, da sich untertags sehr warme Temperaturen mit konstanten leichten Windbrisen abwechselten. So konnten wir die Tage am Meer bei Wein, Espresso und Blaubeerkuchen genießen.\n\nAbends erklommen wir einmal den Felsen des Steinbruchs um die Stadt bei Sonnenuntergang zu fotografieren. Bei klarer Sicht erschien die rote Scheibe am Horizont noch größer als üblich, und so blieben wir, bis auch die letzten Sonnenstrahlen im Meer versanken und die Altstadt in tiefes Blau getaucht war.\n\nGestern fuhren wir mit dem Ausflugsboot nach Rovinj, um dort Abendessen zu gehen und im Anschluss auch diesen Ort einmal bei Nacht zu erleben. Uns bot sich eine sehr schöne Stimmung, die jedoch durch die Massen an Menschen etwas getrübt wurde. Umso mehr schätzten wir einmal mehr die Beschaulichkeit von Vrsar nach unserer Rückfahrt."
+    },
+    "permalink": "/2022/08/sonnenuntergaenge"
+  },
+  {
+    "id": 34,
+    "date": "2022-08-28T14:13:57Z",
+    "modified": "2022-08-28T14:14:25Z",
+    "slug": "porec",
+    "status": "publish",
+    "type": "post",
+    "title": {
+      "rendered": "Porec"
+    },
+    "excerpt": {
+      "rendered": "<p>Heute Vormittag haben wir einen Ausflug nach Porec gemacht. Es war zwar bereits unser insgesamt dritter Besuch in dieser Stadt, aber auch hier war die Zunahme der Besucherzahlen seit dem letzten mal nicht zu übersehen. Nach einem Spaziergang durch die Altstadt, sowie einem Espresso in einer Seitengasse, kamen wir zufällig an einer Banksy-Ausstellung vorbei. Trotz [&hellip;]</p>\n",
+      "protected": false
+    },
+    "author": 1,
+    "featured_media": 0,
+    "categories": [3],
+    "tags": [],
+    "attachments": [
+      {
+        "alt": "",
+        "caption": "Ein blauer Fensterladen in der Altstadt",
+        "height": 2500,
+        "id": 29,
+        "meta": {
+          "aperture": "0",
+          "credit": "",
+          "camera": "",
+          "caption": "",
+          "created_timestamp": "0",
+          "copyright": "",
+          "focal_length": "0",
+          "iso": "0",
+          "shutter_speed": "0",
+          "title": "",
+          "orientation": "0",
+          "keywords": []
+        },
+        "mimetype": "image/jpeg",
+        "post_date": "2022-08-28 14:12:18",
+        "post_modified": "2022-08-28 14:19:31",
+        "source": "https://res.cloudinary.com/dfykknjue/images/f_auto,q_auto/v1661688746/mg_0493-015001028555576186213/mg_0493-015001028555576186213.jpeg?_i=AA",
+        "title": "Blauer Fensterladen",
+        "width": 1667
+      },
+      {
+        "alt": "",
+        "caption": "Blick vorbei an einem Mauerrest auf eine Wiese mit dem Kirchturm von Porec im Hintergrund",
+        "height": 2500,
+        "id": 30,
+        "meta": {
+          "aperture": "0",
+          "credit": "",
+          "camera": "",
+          "caption": "",
+          "created_timestamp": "0",
+          "copyright": "",
+          "focal_length": "0",
+          "iso": "0",
+          "shutter_speed": "0",
+          "title": "",
+          "orientation": "0",
+          "keywords": []
+        },
+        "mimetype": "image/jpeg",
+        "post_date": "2022-08-28 14:12:44",
+        "post_modified": "2022-08-28 14:18:46",
+        "source": "https://res.cloudinary.com/dfykknjue/images/f_auto,q_auto/v1661688769/mg_0492-011940401914960466062/mg_0492-011940401914960466062.jpeg?_i=AA",
+        "title": "Kirchturm in Porec",
+        "width": 1667
+      },
+      {
+        "alt": "",
+        "caption": "Ein Gastgarten mit Stiegenaufgang in der Altstadt",
+        "height": 2500,
+        "id": 31,
+        "meta": {
+          "aperture": "0",
+          "credit": "",
+          "camera": "",
+          "caption": "",
+          "created_timestamp": "0",
+          "copyright": "",
+          "focal_length": "0",
+          "iso": "0",
+          "shutter_speed": "0",
+          "title": "",
+          "orientation": "0",
+          "keywords": []
+        },
+        "mimetype": "image/jpeg",
+        "post_date": "2022-08-28 14:13:08",
+        "post_modified": "2022-08-28 14:17:43",
+        "source": "https://res.cloudinary.com/dfykknjue/images/f_auto,q_auto/v1661688793/mg_0490-015476617040490381343/mg_0490-015476617040490381343.jpeg?_i=AA",
+        "title": "Gastgarten",
+        "width": 1666
+      },
+      {
+        "alt": "",
+        "caption": "Blick in einen Garten in der Altstadt",
+        "height": 2500,
+        "id": 32,
+        "meta": {
+          "aperture": "0",
+          "credit": "",
+          "camera": "",
+          "caption": "",
+          "created_timestamp": "0",
+          "copyright": "",
+          "focal_length": "0",
+          "iso": "0",
+          "shutter_speed": "0",
+          "title": "",
+          "orientation": "0",
+          "keywords": []
+        },
+        "mimetype": "image/jpeg",
+        "post_date": "2022-08-28 14:13:34",
+        "post_modified": "2022-08-28 14:16:28",
+        "source": "https://res.cloudinary.com/dfykknjue/images/f_auto,q_auto/v1661688819/mg_0498-01475855693304631818/mg_0498-01475855693304631818.jpeg?_i=AA",
+        "title": "Blick in den Garten",
+        "width": 1667
+      },
+      {
+        "alt": "",
+        "caption": "Ein Teil der Banksy-Ausstellung",
+        "height": 1875,
+        "id": 33,
+        "meta": {
+          "aperture": "0",
+          "credit": "",
+          "camera": "",
+          "caption": "",
+          "created_timestamp": "0",
+          "copyright": "",
+          "focal_length": "0",
+          "iso": "0",
+          "shutter_speed": "0",
+          "title": "",
+          "orientation": "0",
+          "keywords": []
+        },
+        "mimetype": "image/jpeg",
+        "post_date": "2022-08-28 14:13:55",
+        "post_modified": "2022-08-28 14:15:22",
+        "source": "https://res.cloudinary.com/dfykknjue/images/f_auto,q_auto/v1661688840/img202208281120156361052377563307944/img202208281120156361052377563307944.jpg?_i=AA",
+        "title": "Banksy-Ausstellung",
+        "width": 2500
+      }
+    ],
+    "content": {
+      "rendered": "<p>Heute Vormittag haben wir einen Ausflug nach Porec gemacht. Es war zwar bereits unser insgesamt dritter Besuch in dieser Stadt, aber auch hier war die Zunahme der Besucherzahlen seit dem letzten mal nicht zu übersehen.</p><p>Nach einem Spaziergang durch die Altstadt, sowie einem Espresso in einer Seitengasse, kamen wir zufällig an einer Banksy-Ausstellung vorbei. Trotz der etwas limitierten Auswahl, haben uns die gezeigten Werke sehr beeindruckt.</p><p>Wir hatten anfangs etwas Angst, da lt. Vorhersage mit Regenschauern über den Tag verteilt zu rechnen war, schlussendlich freuten wir uns jedoch über konstanten Sonnenschein.</p>",
+      "plaintext": "Heute Vormittag haben wir einen Ausflug nach Porec gemacht. Es war zwar bereits unser insgesamt dritter Besuch in dieser Stadt, aber auch hier war die Zunahme der Besucherzahlen seit dem letzten mal nicht zu übersehen.\n\nNach einem Spaziergang durch die Altstadt, sowie einem Espresso in einer Seitengasse, kamen wir zufällig an einer Banksy-Ausstellung vorbei. Trotz der etwas limitierten Auswahl, haben uns die gezeigten Werke sehr beeindruckt.\n\nWir hatten anfangs etwas Angst, da lt. Vorhersage mit Regenschauern über den Tag verteilt zu rechnen war, schlussendlich freuten wir uns jedoch über konstanten Sonnenschein."
+    },
+    "permalink": "/2022/08/porec"
+  }
+]
