@@ -1,0 +1,80 @@
+---
+pagination:
+  data: collections.stories
+  generatePageOnEmptyData: true
+  size: 10
+  reverse: true
+
+permalink: /stories{%if pagination.pageNumber%}/page/{{ pagination.pageNumber + 1 }}{% endif %}/
+---
+
+{% if pagination.items.length %}
+
+  <style data-helmet="stories">
+    {% include 'styles/stories.css' %}
+  </style>
+
+  <div class="stories">
+    {% asyncEach story in pagination.items %}
+
+      {% set featured_image = story.attachments | first %}
+
+      {% set loading = 'eager' if loop.index0 < 4 else 'lazy' %}
+
+      {% setAsync 'poster' %}
+        {% image
+                  featured_image.source, 
+                  featured_image.alt or featured_image.caption,
+                  [375, 720, 1280],
+                  '(min-width: 640px) 33vw, (min-width: 960px) 25vw, 50vw',
+                  { class: 'poster', loading: loading, style: 'aspect-ratio: ' + 720 + '/' + 1280 + ';' }
+        %}
+      {% endsetAsync %}
+
+
+      {% if loop.index0 %} {# Targets each post apart the first one, since no previous post is available #}
+        {% set previousPost = pagination.items[loop.index0 - 1] %}
+
+        {% set previous = previousPost.date | parseDate | dateObj %}
+        {% set current = story.date | parseDate | dateObj %}
+
+        {% if previous.month != current.month or previous.year != current.year %}
+          <time class="separator" datetime="{{ story.date | dateStringFormatted('YYYY-MM') }}" role="separator">{{ story.date | dateStringFormatted("MMMM YYYY") }}</time>
+        {% endif %}
+      {% endif %}
+
+      {% set permalink = '/post' + story.permalink + '/story.html' | absoluteUrl %}
+
+      <article 
+        x-data="story('{{ permalink }}')"
+        aria-label="{{ story.title.rendered }} Story"
+        data-story
+      >
+        <a
+          href="{{ permalink }}"
+          title="{{ story.title.rendered}} Story ansehen"
+          @click="openBackdrop"
+          data-theme="dark"
+          data-story-link
+        >
+          {{ poster | safe }}
+
+          <span aria-hidden="true">
+            {% feather 'image', { 'aria-hidden': true } %}
+            <span>{{ story.attachments.length }}</span>
+          </span>
+        </a>
+
+        {% include 'backdrop.njk' %}
+      </article>
+
+    {% endeach %}
+  </div>
+
+  {% include 'page_links.njk' %}
+
+{% else %}
+
+  <p>Keine Stories vorhanden...</p>
+
+{% endif %}

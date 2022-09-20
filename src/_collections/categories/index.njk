@@ -4,6 +4,8 @@ pagination:
   size: 10
   generatePageOnEmptyData: true
   reverse: true
+
+permalink: /categories{%if pagination.pageNumber%}/page/{{ pagination.pageNumber + 1 }}{% endif %}/
 ---
 
 <style data-helmet="articles">
@@ -38,6 +40,8 @@ pagination:
     {% endfor %}
 
   </div>
+
+  {% include 'page_links.njk' %}
 
 {% else %}
 

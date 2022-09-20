@@ -1,5 +1,5 @@
 module.exports = {
   eleventyComputed: {
-    title: 'Neueste Beiträge',
+    title: 'Stories',
   },
 };

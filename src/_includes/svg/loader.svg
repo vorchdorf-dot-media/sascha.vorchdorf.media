@@ -1,0 +1,14 @@
+<svg data-loader aria-hidden="true" viewBox="-1 -1 2 2" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    [data-loader] {
+      --dasharray: 6.597339; /* 2 * 3.14159 * 1.05 */
+    }
+  </style>
+  <defs>
+    <linearGradient id="a" x1="-1" y1="-1" x2="1" y2="1">
+      <stop offset="20%" style="stop-color: var(--color-primary);" />
+      <stop offset="100%" style="stop-color: var(--color-secondary);" />
+    </linearGradient>
+  </defs>
+  <circle r=".95" stroke-width=".1" stroke="url(#a)" stroke-linecap="round" fill="transparent"/>
+</svg>

@@ -105,7 +105,7 @@ module.exports = {
     return generateImageHTML(src, alt, widths, sizes, customAttributes);
   },
 
-  async gravatar(email, name, sizes = '100%', fallback = 'robohash') {
+  async gravatar(email, name, sizes = '100vw', fallback = 'robohash') {
     const hash = createHash('md5').update(email).digest('hex');
     const size = 256;
 
@@ -117,7 +117,7 @@ module.exports = {
     return generateImageHTML(
       src,
       `Profilbild von ${name}`,
-      [64, 128, null],
+      [96, 128, null],
       sizes,
     );
   },

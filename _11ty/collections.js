@@ -153,6 +153,14 @@ module.exports = {
 
     return posts;
   },
+  stories: async () => {
+    const { posts } = await populatePosts();
+
+    return posts.filter(({ attachments }) => attachments.length > 0);
+  },
+  story: (collectionApi) => {
+    return collectionApi.getFilteredByGlob('**/post/story/index.njk');
+  },
   tags: async () => {
     const { tags } = await populatePosts();
 

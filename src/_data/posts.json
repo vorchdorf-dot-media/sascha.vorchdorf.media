@@ -15,9 +15,7 @@
     },
     "author": 1,
     "featured_media": 12,
-    "categories": [
-      1
-    ],
+    "categories": [1],
     "tags": [],
     "attachments": [
       {
@@ -69,9 +67,7 @@
     },
     "author": 1,
     "featured_media": 18,
-    "categories": [
-      3
-    ],
+    "categories": [3],
     "tags": [],
     "attachments": [
       {
@@ -201,9 +197,7 @@
     },
     "author": 1,
     "featured_media": 21,
-    "categories": [
-      3
-    ],
+    "categories": [3],
     "tags": [],
     "attachments": [
       {
@@ -359,9 +353,7 @@
     },
     "author": 1,
     "featured_media": 0,
-    "categories": [
-      3
-    ],
+    "categories": [3],
     "tags": [],
     "attachments": [
       {

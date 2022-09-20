@@ -7,5 +7,5 @@ module.exports = [
     url: '/categories/',
     title: 'Kategorien',
   },
-  // { url: '/stories/', title: 'Stories' },
+  { url: '/stories/', title: 'Stories' },
 ];

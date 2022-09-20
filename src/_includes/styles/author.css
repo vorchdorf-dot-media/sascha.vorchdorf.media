@@ -1,9 +1,43 @@
+@keyframes dash-grow {
+  from {
+    stroke-width: 0;
+    stroke-dashoffset: var(--dasharray);
+  }
+
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes rotate {
+  to {
+    transform: rotate(1080deg);
+  }
+}
+
 .author {
   display: flex;
   align-items: center;
   gap: var(--space-l);
   border-top: var(--border-width) solid var(--color-bg-muted);
   padding: var(--space-xxl) 0;
+  width: 100%;
+}
+
+.author div,
+.author a {
+  align-self: center;
+  display: inline-flex;
+  flex-direction: column;
+}
+
+.author a {
+  --outline-offset: calc(var(--space-m) + var(--border-width));
+
+  border-radius: 9999px;
+  border: none;
+  padding: 0;
+  background-color: transparent;
 }
 
 .author picture {
@@ -15,20 +49,60 @@
   border: var(--border-width, 2px) solid var(--border-color, var(--color-text));
 }
 
+.author [data-featured] {
+  display: var(--display, none);
+  border-radius: var(--border-radius-s);
+  border: none;
+  height: auto;
+  width: 100%;
+  aspect-ratio: 2/1;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.author [data-loader] {
+  display: none;
+}
+
 @media screen and (min-width: 768px) {
   .author {
+    --display: block;
+
     position: sticky;
-    /* flex: 1 0 var(--author-width); */
+    flex: 0 1 var(--author-width);
     flex-direction: column;
     border: none;
     padding: 0;
     top: var(--space-xl);
     max-width: var(--author-width);
     text-align: center;
+  }
+
+  .author [data-avatar] {
+    position: relative;
+    align-items: center;
+    margin-top: calc(var(--space-xxl) * -1);
+  }
+
+  .author [data-loader] {
+    position: absolute;
+    border-radius: 9999px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-bg);
+    transform: scale(1.175);
     z-index: -1;
   }
 
-  .author picture {
-    align-self: center;
+  .author circle {
+    --duration: calc(var(--animation-duration) * 2);
+
+    animation: dash-grow var(--duration) ease-out,
+      rotate calc(var(--duration) * 3) ease var(--duration);
+    stroke-dasharray: var(--dasharray) 0.2 0.35 0.2 0.15;
   }
 }

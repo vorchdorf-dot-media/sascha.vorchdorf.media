@@ -4,7 +4,30 @@
   {% include 'styles/author.css' %}
 </style>
 
+{% set latest_featured_post = collections.posts | selectattr("featured_media") | last %}
+{% set attachment = latest_featured_post.attachments | first %}
+{% set last_created = latest_featured_post.date %}
+{% set story_permalink = '/post' + latest_featured_post.permalink + '/story.html' | absoluteUrl %}
+
+{% setAsync 'featured_image' %}
+  {% image attachment.source, attachment.alt or attachment.caption, [240, 720, 1080], '(min-width: 768px) 240px, 100vw', { loading: 'eager', 'data-featured': true } %}
+{% endsetAsync %}
+
+{% include 'js/alpine.njk' %}
+
+<script data-helmet="latest-story">
+  {% include 'js/latest-story.js' %}
+</script>
+
 <aside class="author">
-  {% gravatar author.email, author.name, '64px' %}
+  <div x-data="latestStory('{{ last_created }}', '{{ story_permalink }}')">
+    {{ featured_image | safe }}
+    <a
+      data-avatar
+    >
+      {% gravatar author.email, author.name, '96px' %}
+      {% include 'svg/loader.svg' %}
+    </button>
+  </div>
   <small>{{ pkg.description }}</small>
 </aside>
