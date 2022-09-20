@@ -1,6 +1,4 @@
 footer {
-  --link-color: var(--color-bg-muted);
-
   background-color: var(--color-primary);
   color: var(--color-bg);
   font-size: var(--font-size-s);
@@ -11,6 +9,10 @@ footer {
   display: flex;
   flex-direction: column;
   gap: var(--space-xl);
+}
+
+[data-footer] a {
+  --link-color: var(--color-bg-muted);
 }
 
 [data-icon-links] {

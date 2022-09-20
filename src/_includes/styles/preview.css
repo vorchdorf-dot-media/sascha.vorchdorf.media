@@ -36,9 +36,9 @@
   text-decoration: underline;
 }
 
-.preview a:not([data-cover]) {
+/* .preview a:not([data-cover]) {
   z-index: 1;
-}
+} */
 
 .preview .categories {
   align-self: flex-end;

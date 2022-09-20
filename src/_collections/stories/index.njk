@@ -4,6 +4,8 @@ pagination:
   generatePageOnEmptyData: true
   size: 10
   reverse: true
+
+permalink: /stories{%if pagination.pageNumber%}/page/{{ pagination.pageNumber + 1 }}{% endif %}/
 ---
 
 {% if pagination.items.length %}
@@ -68,6 +70,8 @@ pagination:
 
     {% endeach %}
   </div>
+
+  {% include 'page_links.njk' %}
 
 {% else %}
 

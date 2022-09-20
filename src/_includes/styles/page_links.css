@@ -1,0 +1,13 @@
+[data-pagination-links] {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  flex-grow: 1;
+  margin-top: var(--space-xxl);
+  font-size: var(--font-size-h5);
+}
+
+[data-pagination-links] ul {
+  justify-content: center;
+  gap: var(--space-l);
+}

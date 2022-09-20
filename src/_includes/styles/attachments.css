@@ -6,7 +6,7 @@
   gap: var(--space-l);
   border-top: var(--border-width) solid var(--color-bg-muted);
   width: 100%;
-  z-index: 999;
+  z-index: 1;
 }
 
 .attachments h2 {
