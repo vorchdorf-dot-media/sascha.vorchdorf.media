@@ -25,8 +25,7 @@
   --album-width: 240px;
   --author-width: 320px;
   --articles-width: 800px;
-  --container-width: 1280px;
-  --content-width: 1440px;
+  --content-width: 1280px;
 
   --duration: 300ms;
   --animation-duration: 900ms;
@@ -98,7 +97,7 @@ button {
   padding: var(--space-l);
   margin-left: auto;
   margin-right: auto;
-  max-width: var(--container-width);
+  max-width: var(--content-width);
 }
 
 .full-bleed {
