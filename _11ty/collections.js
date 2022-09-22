@@ -58,6 +58,7 @@ const populate = (collection, posts, key) => {
 
       return {
         ...item,
+        count: assignedPosts.length, // fix count by also recognizing posts in posts.static
         posts: assignedPosts,
         modified: modified.toISOString(),
       };
@@ -78,11 +79,34 @@ const populatePosts = async () => {
 
   try {
     try {
+      const { default: c } = await import(
+        '../src/_data/categories.static.json',
+        {
+          assert: { type: 'json' },
+        }
+      );
+
+      categories = categories.concat(c);
+    } catch (e) {
+      console.error(e);
+    }
+
+    try {
       const { default: c } = await import('../src/_data/categories.json', {
         assert: { type: 'json' },
       });
 
-      categories = c;
+      categories = categories.concat(c);
+    } catch (e) {
+      console.error(e);
+    }
+
+    try {
+      const { default: p } = await import('../src/_data/posts.static.json', {
+        assert: { type: 'json' },
+      });
+
+      posts = posts.concat(p);
     } catch (e) {
       console.error(e);
     }
@@ -92,7 +116,17 @@ const populatePosts = async () => {
         assert: { type: 'json' },
       });
 
-      posts = p;
+      posts = posts.concat(p);
+    } catch (e) {
+      console.error(e);
+    }
+
+    try {
+      const { default: t } = await import('../src/_data/tags.static.json', {
+        assert: { type: 'json' },
+      });
+
+      tags = tags.concat(t);
     } catch (e) {
       console.error(e);
     }
@@ -102,7 +136,7 @@ const populatePosts = async () => {
         assert: { type: 'json' },
       });
 
-      tags = t;
+      tags = tags.concat(t);
     } catch (e) {
       console.error(e);
     }
