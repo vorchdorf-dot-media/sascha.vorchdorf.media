@@ -5,12 +5,5 @@
     "description": "Hier werden alle Beiträge gelistet, welche keiner anderen Kategorie vorrangig zugeordnet sind.",
     "name": "Allgemein",
     "slug": "allgemein"
-  },
-  {
-    "id": 3,
-    "count": 3,
-    "description": "",
-    "name": "Kroatien 2022",
-    "slug": "kroatien-2022"
   }
 ]
