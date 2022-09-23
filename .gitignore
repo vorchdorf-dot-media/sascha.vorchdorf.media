@@ -1,3 +1,4 @@
+/.vscode
 /.netlify
 /netlify/edge/_generated
 /netlify/functions/stories/*

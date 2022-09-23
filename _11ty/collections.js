@@ -49,12 +49,12 @@ const populate = (collection, posts, key) => {
 
   return collection
     .map((item) => {
-      if (!item?.count) {
-        return null;
-      }
-
       const assignedPosts = filterPosts(posts, item.id, key);
       const modified = getLatestDate(assignedPosts);
+
+      if (!assignedPosts?.length) {
+        return null;
+      }
 
       return {
         ...item,
