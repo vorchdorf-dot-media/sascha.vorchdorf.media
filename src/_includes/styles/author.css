@@ -82,6 +82,7 @@
     position: relative;
     align-items: center;
     margin-top: calc(var(--space-xxl) * -1);
+    background-color: var(--color-bg);
   }
 
   .author [data-loader] {
