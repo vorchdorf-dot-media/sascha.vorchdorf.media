@@ -1,1 +1,134 @@
-[]
+[
+  {
+    "id": 8,
+    "date": "2022-09-29T21:09:03Z",
+    "modified": "2022-09-29T21:09:05Z",
+    "slug": "traubenernte",
+    "status": "publish",
+    "type": "post",
+    "title": {
+      "rendered": "Traubenernte"
+    },
+    "excerpt": {
+      "rendered": "<p>Gestern konnten wir endlich Reben von unseren Weinstock ernten. Ein ehemaliger Nachbar hatte uns angeboten, sie zu Direktsaft zu pressen, um sie nicht selbst mühsam verarbeiten zu müssen. Die Tage vorher hatten wir bereits genutzt, um einen Teil der besseren Reben für unsere Familienmitglieder beiseite zu legen, damit sie sie zu Marmelade verarbeiten konnten. Insgesamt [&hellip;]</p>\n",
+      "protected": false
+    },
+    "author": 1,
+    "featured_media": 0,
+    "categories": [
+      1
+    ],
+    "tags": [],
+    "attachments": [
+      {
+        "alt": "",
+        "caption": "Das Ergebnis der Ernte: 23 Kilogramm blaue Weintrauben.",
+        "height": 2500,
+        "id": 7,
+        "meta": {
+          "aperture": "0",
+          "credit": "",
+          "camera": "",
+          "caption": "",
+          "created_timestamp": "0",
+          "copyright": "",
+          "focal_length": "0",
+          "iso": "0",
+          "shutter_speed": "0",
+          "title": "",
+          "orientation": "0",
+          "keywords": []
+        },
+        "mimetype": "image/jpeg",
+        "post_date": "2022-09-29 20:53:53",
+        "post_modified": "2022-09-29 21:01:10",
+        "source": "https://traunstein.2ix.at/wp-content/uploads/2022/09/img202209281503192083674829151192582.jpg",
+        "title": "Abgeerntete Weintrauben",
+        "width": 1875
+      },
+      {
+        "alt": "",
+        "caption": "So sieht frisch gepresster Traubensaft aus der Hydraulik-Presse aus.",
+        "height": 2500,
+        "id": 11,
+        "meta": {
+          "aperture": "0",
+          "credit": "",
+          "camera": "",
+          "caption": "",
+          "created_timestamp": "0",
+          "copyright": "",
+          "focal_length": "0",
+          "iso": "0",
+          "shutter_speed": "0",
+          "title": "",
+          "orientation": "0",
+          "keywords": []
+        },
+        "mimetype": "image/jpeg",
+        "post_date": "2022-09-29 20:55:13",
+        "post_modified": "2022-09-29 21:04:01",
+        "source": "https://traunstein.2ix.at/wp-content/uploads/2022/09/img202209281552285180311690570340165.jpg",
+        "title": "Frisch gepresster Saft",
+        "width": 1875
+      },
+      {
+        "alt": "",
+        "caption": "Bei der Abfüllung versuchten wir Trüb- und andere Fremdstoffe durch ein Tuch zu filtern.",
+        "height": 2500,
+        "id": 12,
+        "meta": {
+          "aperture": "0",
+          "credit": "",
+          "camera": "",
+          "caption": "",
+          "created_timestamp": "0",
+          "copyright": "",
+          "focal_length": "0",
+          "iso": "0",
+          "shutter_speed": "0",
+          "title": "",
+          "orientation": "0",
+          "keywords": []
+        },
+        "mimetype": "image/jpeg",
+        "post_date": "2022-09-29 20:55:55",
+        "post_modified": "2022-09-29 21:06:26",
+        "source": "https://traunstein.2ix.at/wp-content/uploads/2022/09/img202209281722213806463083465262723.jpg",
+        "title": "Abfüllung",
+        "width": 1875
+      },
+      {
+        "alt": "",
+        "caption": "Zur leichteren Dosierung füllten wir den Saft in Säcke mit Abflussventilen ab.",
+        "height": 2500,
+        "id": 13,
+        "meta": {
+          "aperture": "0",
+          "credit": "",
+          "camera": "",
+          "caption": "",
+          "created_timestamp": "0",
+          "copyright": "",
+          "focal_length": "0",
+          "iso": "0",
+          "shutter_speed": "0",
+          "title": "",
+          "orientation": "0",
+          "keywords": []
+        },
+        "mimetype": "image/jpeg",
+        "post_date": "2022-09-29 20:56:23",
+        "post_modified": "2022-09-29 21:08:31",
+        "source": "https://traunstein.2ix.at/wp-content/uploads/2022/09/img202209281722331829890710320829868.jpg",
+        "title": "Saft im Sack",
+        "width": 1875
+      }
+    ],
+    "content": {
+      "rendered": "<p>Gestern konnten wir endlich Reben von unseren Weinstock ernten. Ein ehemaliger Nachbar hatte uns angeboten, sie zu Direktsaft zu pressen, um sie nicht selbst mühsam verarbeiten zu müssen.</p><p>Die Tage vorher hatten wir bereits genutzt, um einen Teil der besseren Reben für unsere Familienmitglieder beiseite zu legen, damit sie sie zu Marmelade verarbeiten konnten.</p><p>Insgesamt benötigten wir knapp 2 Stunden um 23kg Trauben zu pflücken, nach dem Pressen allerdings nochmals 1 Std. 30 Min., um die daraus entstandenen 10 Liter Direktsaft durch erhitzen haltbarer zu machen.</p>",
+      "plaintext": "Gestern konnten wir endlich Reben von unseren Weinstock ernten. Ein ehemaliger Nachbar hatte uns angeboten, sie zu Direktsaft zu pressen, um sie nicht selbst mühsam verarbeiten zu müssen.\n\nDie Tage vorher hatten wir bereits genutzt, um einen Teil der besseren Reben für unsere Familienmitglieder beiseite zu legen, damit sie sie zu Marmelade verarbeiten konnten.\n\nInsgesamt benötigten wir knapp 2 Stunden um 23kg Trauben zu pflücken, nach dem Pressen allerdings nochmals 1 Std. 30 Min., um die daraus entstandenen 10 Liter Direktsaft durch erhitzen haltbarer zu machen."
+    },
+    "permalink": "/2022/09/traubenernte"
+  }
+]
