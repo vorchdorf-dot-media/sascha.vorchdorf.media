@@ -69,8 +69,7 @@ body {
 }
 
 main {
-  display: flex;
-  flex-direction: column;
+  display: block;
   height: 100%;
   width: 100%;
 }
@@ -118,6 +117,11 @@ button {
 }
 
 @media screen and (min-width: 768px) {
+  main {
+    display: flex;
+    flex-direction: column;
+  }
+
   .container {
     padding: var(--space-xl);
   }
