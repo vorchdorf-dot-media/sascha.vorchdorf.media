@@ -4,14 +4,16 @@
   gap: var(--space-l);
 }
 
-@media screen and (min-width: 960px) {
+@media screen and (min-width: 768px) {
   .articles {
     flex-wrap: wrap;
     flex-direction: row;
     gap: var(--space-xl);
     max-width: 100%;
   }
+}
 
+@media screen and (min-width: 960px) {
   .articles > article {
     flex: 0 0 calc(50% - var(--space-xl) * 0.5);
   }

@@ -38,12 +38,23 @@ jobs:
           node-version-file: '.tool-versions'
 
       - name: Cache node_modules
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         with:
           path: node_modules
           key: yarn-deps-${{ hashFiles('yarn.lock') }}
-          restore-keys: |
-            yarn-deps-${{ hashFiles('yarn.lock') }}
+
+      - name: Cache Eleventy .cache
+        uses: actions/cache@v3
+        with:
+          path: .cache
+          key: eleventy-cache
+
+      - name: Cache generated images
+        uses: actions/cache@v3
+        with:
+          path: dist/img
+          key: eleventy-generated-images
+
       - name: Install dependencies
         run: yarn --frozen-lockfile
 

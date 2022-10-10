@@ -6,7 +6,7 @@ permalink: feed.xml
 <feed xmlns="http://www.w3.org/2005/Atom" xml:base="{{ url }}">
   <title>{{ manifest.name }}</title>
   <subtitle>{{ pkg.description }}</subtitle>
-  <link href="{{ permalink | url | absoluteUrl(url) }}" rel="self"/>
+  <link href="{{ permalink | absoluteUrl(url) }}" rel="self"/>
   <link href="{{ url }}"/>
   <updated>{{ posts | getLatestDate | dateToRfc3339 }}</updated>
   <id>{{ url }}</id>
@@ -15,14 +15,15 @@ permalink: feed.xml
     <email>{{ pkg.author.email }}</email>
   </author>
   {% if collections.posts.length %}
-    {%- for post in collections.posts | reverse %}
-      {%- set absolutePostUrl = post.link | url | absoluteUrl(package.homepage) %}
+    {% for post in collections.posts | reverse %}
+      {% set permalink = '/post' + post.permalink %}
+      {% set absolutePostUrl = permalink | url | absoluteUrl(url) %}
       <entry>
         <title>{{ post.title.rendered }}</title>
         <link href="{{ absolutePostUrl }}"/>
         <updated>{{ post.date | parseDate | dateToRfc3339 }}</updated>
         <id>{{ absolutePostUrl }}</id>
-        <summary type="html">{{ post.excerpt.rendered }}</summary>
+        <summary type="html">{{ post.excerpt.rendered | safe }}</summary>
         <content xml:lang="{{ pkg.language }}" type="html">
           <![CDATA[ {{ post.content.rendered | htmlToAbsoluteUrls(absolutePostUrl) | safe }}
           {% if post.attachments.length %}
@@ -35,6 +36,6 @@ permalink: feed.xml
           {% endif %} ]]>
         </content>
       </entry>
-    {%- endfor %}
+    {% endfor %}
   {% endif %}
 </feed>
