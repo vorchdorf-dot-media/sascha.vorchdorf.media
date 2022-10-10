@@ -18,7 +18,7 @@
     "node": ">=16.16.0"
   },
   "scripts": {
-    "build:clean": "rm -rf dist",
+    "clean": "rm -rf dist",
     "build:compile": "eleventy",
     "build:copy": "cp -v _redirects dist",
     "build": "run-s build:*",

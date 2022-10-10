@@ -2,6 +2,14 @@ const cheerio = require('cheerio');
 const { createHash } = require('crypto');
 const Image = require('@11ty/eleventy-img');
 
+const CACHE_OPTIONS = {
+  cacheOptions: {
+    duration: '1y',
+    directory: '.cache',
+    removeUrlQueryParams: false,
+  },
+};
+
 const generateImageHTML = async (
   src,
   alt,
@@ -10,6 +18,7 @@ const generateImageHTML = async (
   customAttributes = {},
 ) => {
   const options = {
+    ...CACHE_OPTIONS,
     formats: ['avif', 'webp', 'jpeg'],
     widths,
     outputDir: 'dist/img',
@@ -47,6 +56,7 @@ const generateAMPImageHTML = async (
   customAttributes = {},
 ) => {
   const options = {
+    ...CACHE_OPTIONS,
     formats,
     widths,
     outputDir: 'dist/img',
@@ -127,13 +137,14 @@ module.exports = {
     alt,
     widths = [null],
     formats = ['jpeg'],
-    customAttributes,
+    customAttributes = {},
   ) {
     return generateAMPImageHTML(src, alt, widths, formats, customAttributes);
   },
 
   async og_image(src, widths = [1200], formats = ['jpeg']) {
     const options = {
+      ...CACHE_OPTIONS,
       formats,
       widths,
       outputDir: 'dist/img',

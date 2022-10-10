@@ -16,8 +16,9 @@ permalink: feed.json
   },
   "items": [
     {% if collections.posts.length %}
-      {%- for post in collections.posts | reverse %}
-        {%- set absolutePostUrl = post.link | url | absoluteUrl(package.homepage) %}
+      {% for post in collections.posts | reverse %}
+        {% set permalink = '/post' + post.permalink %}
+        {% set absolutePostUrl = permalink | url | absoluteUrl(url) %}
         {
           "id": "{{ absolutePostUrl }}",
           "url": "{{ absolutePostUrl }}",
@@ -26,7 +27,7 @@ permalink: feed.json
           "date_published": "{{ post.date | parseDate | dateToRfc3339 }}"
         }
         {% if not loop.last %},{% endif %}
-      {%- endfor %}
+      {% endfor %}
     {% endif %}
   ]
 }
