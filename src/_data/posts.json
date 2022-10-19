@@ -130,5 +130,59 @@
       "plaintext": "Gestern konnten wir endlich Reben von unseren Weinstock ernten. Ein ehemaliger Nachbar hatte uns angeboten, sie zu Direktsaft zu pressen, um sie nicht selbst mühsam verarbeiten zu müssen.\n\nDie Tage vorher hatten wir bereits genutzt, um einen Teil der besseren Reben für unsere Familienmitglieder beiseite zu legen, damit sie sie zu Marmelade verarbeiten konnten.\n\nInsgesamt benötigten wir knapp 2 Stunden um 23kg Trauben zu pflücken, nach dem Pressen allerdings nochmals 1 Std. 30 Min., um die daraus entstandenen 10 Liter Direktsaft durch erhitzen haltbarer zu machen."
     },
     "permalink": "/2022/09/traubenernte"
+  },
+  {
+    "id": 20,
+    "date": "2022-10-19T10:06:31Z",
+    "modified": "2022-10-19T10:06:31Z",
+    "slug": "herbstwanderungen",
+    "status": "publish",
+    "type": "post",
+    "title": {
+      "rendered": "Herbstwanderungen"
+    },
+    "excerpt": {
+      "rendered": "<p>Der Herbst ist vollständig angekommen. Obwohl es vereinzelte, warme Tage in der ansonsten kalten und nassen Zeit gibt, sind dicke Nebelschwaden ein ständiger Begleiter. Um etwas Abwechslung zu bekommen, fuhren wir in den vergangenen Wochenenden an den Offensee und Almsee. Wir umrundeten beide Seen und waren von der farbenprächtigen Umgebung erstaunt, in der wir uns [&hellip;]</p>\n",
+      "protected": false
+    },
+    "author": 1,
+    "featured_media": 17,
+    "categories": [
+      1
+    ],
+    "tags": [],
+    "attachments": [
+      {
+        "alt": "Weiter Blick über den See auf eine kleine Hütte in der Bildmitte, umgeben von herbstlichen Wäldern und felsigen Bergspitzen",
+        "caption": "Blick über den Offensee auf die Jausenstation Seeau.",
+        "height": 1699,
+        "id": 17,
+        "meta": {
+          "aperture": "0",
+          "credit": "",
+          "camera": "",
+          "caption": "",
+          "created_timestamp": "0",
+          "copyright": "",
+          "focal_length": "0",
+          "iso": "0",
+          "shutter_speed": "0",
+          "title": "",
+          "orientation": "0",
+          "keywords": []
+        },
+        "mimetype": "image/jpeg",
+        "post_date": "2022-10-19 09:05:35",
+        "post_modified": "2022-10-19 10:05:00",
+        "source": "https://res.cloudinary.com/dfykknjue/images/w_2560,h_1699/f_auto,q_auto/v1666163146/IMG_005/IMG_005.jpg?_i=AA",
+        "title": "Offensee",
+        "width": 2560
+      }
+    ],
+    "content": {
+      "rendered": "<p>Der Herbst ist vollständig angekommen. Obwohl es vereinzelte, warme Tage in der ansonsten kalten und nassen Zeit gibt, sind dicke Nebelschwaden ein ständiger Begleiter.</p><p>Um etwas Abwechslung zu bekommen, fuhren wir in den vergangenen Wochenenden an den Offensee und Almsee. Wir umrundeten beide Seen und waren von der farbenprächtigen Umgebung erstaunt, in der wir uns unterhalb der Nebeldecke bewegten.</p>",
+      "plaintext": "Der Herbst ist vollständig angekommen. Obwohl es vereinzelte, warme Tage in der ansonsten kalten und nassen Zeit gibt, sind dicke Nebelschwaden ein ständiger Begleiter.\n\nUm etwas Abwechslung zu bekommen, fuhren wir in den vergangenen Wochenenden an den Offensee und Almsee. Wir umrundeten beide Seen und waren von der farbenprächtigen Umgebung erstaunt, in der wir uns unterhalb der Nebeldecke bewegten."
+    },
+    "permalink": "/2022/10/herbstwanderungen"
   }
 ]
