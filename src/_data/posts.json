@@ -134,7 +134,7 @@
   {
     "id": 20,
     "date": "2022-10-19T10:06:31Z",
-    "modified": "2022-10-19T10:16:02Z",
+    "modified": "2022-10-19T10:16:06Z",
     "slug": "herbstwanderungen",
     "status": "publish",
     "type": "post",
@@ -202,32 +202,6 @@
         "post_modified": "2022-10-19 10:04:54",
         "source": "https://res.cloudinary.com/dfykknjue/images/w_2560,h_1707/f_auto,q_auto/v1666163136/IMG_003/IMG_003.jpg?_i=AA",
         "title": "Ruderboot",
-        "width": 2560
-      },
-      {
-        "alt": "Weiter Blick über den See auf eine kleine Hütte in der Bildmitte, umgeben von herbstlichen Wäldern und felsigen Bergspitzen",
-        "caption": "Blick &uuml;ber den Offensee auf die Jausenstation Seeau.",
-        "height": 1699,
-        "id": 17,
-        "meta": {
-          "aperture": "0",
-          "credit": "",
-          "camera": "",
-          "caption": "",
-          "created_timestamp": "0",
-          "copyright": "",
-          "focal_length": "0",
-          "iso": "0",
-          "shutter_speed": "0",
-          "title": "",
-          "orientation": "0",
-          "keywords": []
-        },
-        "mimetype": "image/jpeg",
-        "post_date": "2022-10-19 09:05:35",
-        "post_modified": "2022-10-19 10:05:00",
-        "source": "https://res.cloudinary.com/dfykknjue/images/w_2560,h_1699/f_auto,q_auto/v1666163146/IMG_005/IMG_005.jpg?_i=AA",
-        "title": "Offensee",
         "width": 2560
       },
       {
