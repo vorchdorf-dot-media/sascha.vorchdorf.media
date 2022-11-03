@@ -5,5 +5,12 @@
     "description": "Hier werden alle Beiträge gelistet, welche keiner anderen Kategorie vorrangig zugeordnet sind.",
     "name": "Allgemein",
     "slug": "allgemein"
+  },
+  {
+    "id": 5,
+    "count": 0,
+    "description": "",
+    "name": "Urlaub",
+    "slug": "urlaub"
   }
 ]
