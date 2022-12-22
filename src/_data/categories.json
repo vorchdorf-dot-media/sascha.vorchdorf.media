@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "count": 2,
+    "count": 3,
     "description": "Hier werden alle Beiträge gelistet, welche keiner anderen Kategorie vorrangig zugeordnet sind.",
     "name": "Allgemein",
     "slug": "allgemein"
