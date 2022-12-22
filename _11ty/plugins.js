@@ -26,6 +26,25 @@ module.exports = [
     {
       swDest: 'dist/sw.js',
       globDirectory: 'dist',
+      cacheId: 'sascha-offline',
+      globPatterns: [
+        '**/*.{css,js,mjs,map,avif,jpg,jpeg,png,gif,webp,ico,svg,woff2,woff,eot,ttf,otf,ttc,json}',
+      ],
+      runtimeCaching: [
+        {
+          urlPattern:
+            /^.*\.(html|css|avif|jpg|jpeg|png|gif|webp|ico|svg|woff2|woff|eot|ttf|otf|ttc|json)$/,
+          handler: 'StaleWhileRevalidate',
+        },
+        {
+          urlPattern: /^https:\/\/cdn.ampproject.org\//,
+          handler: 'CacheFirst',
+        },
+        {
+          urlPattern: /^https:\/\/cdnjs.cloudflare.com\/ajax\/libs\//,
+          handler: 'CacheFirst',
+        },
+      ],
     },
   ],
   [rss],
