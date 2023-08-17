@@ -583,7 +583,7 @@
   {
     "id": 41,
     "date": "2023-08-17T04:08:20Z",
-    "modified": "2023-08-17T04:10:32Z",
+    "modified": "2023-08-17T04:12:28Z",
     "slug": "unsere-hochzeitsreise",
     "status": "publish",
     "type": "post",
@@ -623,35 +623,9 @@
         "mimetype": "image/jpeg",
         "post_date": "2023-08-17 04:09:10",
         "post_modified": "2023-08-17 04:11:43",
-        "source": "https://traunstein.2ix.at/wp-content/uploads/2023/08/IMG20230816181705.jpg",
+        "source": "https://res.cloudinary.com/dfykknjue/images/w_2560,h_1920/f_auto,q_auto/v1692238236/IMG20230816181705/IMG20230816181705.jpg?_i=AA",
         "title": "Zwei leere Cable Cars",
         "width": 2560
-      },
-      {
-        "alt": "",
-        "caption": "Leere Cable Cars die auf Gäste warten",
-        "height": 1875,
-        "id": 44,
-        "meta": {
-          "aperture": "0",
-          "credit": "",
-          "camera": "",
-          "caption": "",
-          "created_timestamp": "0",
-          "copyright": "",
-          "focal_length": "0",
-          "iso": "0",
-          "shutter_speed": "0",
-          "title": "",
-          "orientation": "0",
-          "keywords": []
-        },
-        "mimetype": "image/jpeg",
-        "post_date": "2023-08-17 04:05:52",
-        "post_modified": "2023-08-17 04:11:16",
-        "source": "https://traunstein.2ix.at/wp-content/uploads/2023/08/img2023081618170512569592193156471.jpg",
-        "title": "Zwei leere Cable Cars",
-        "width": 2500
       },
       {
         "alt": "",
@@ -675,7 +649,7 @@
         "mimetype": "image/jpeg",
         "post_date": "2023-08-17 04:05:51",
         "post_modified": "2023-08-17 04:07:05",
-        "source": "https://traunstein.2ix.at/wp-content/uploads/2023/08/img202308161747563545469514327034485.jpg",
+        "source": "https://res.cloudinary.com/dfykknjue/images/f_auto,q_auto/v1692238243/img202308161747563545469514327034485/img202308161747563545469514327034485.jpg?_i=AA",
         "title": "Cable Car vor dem Union Square",
         "width": 2500
       }
