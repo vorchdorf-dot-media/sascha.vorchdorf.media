@@ -659,5 +659,163 @@
       "plaintext": "Heute sind wir in unsere Flitterwochen gestartet. Von Wien ging es bald in der Früh mit dem Flieger nach London, um in einen noch größeren Flieger nach San Francisco einzusteigen.\n\nNach nahezu 23 Stunden Reisezeit sind wir endlich in unserer ersten Unterkunft angekommen. Leider fehlt uns jedoch ein Koffer, da dieser leider falsch etikettiert in Wien zurückgeblieben ist. Wir hoffen daher, dass er uns bis übermorgen nachgeliefert wird, denn dann verlassen wir San Francisco schon wieder in Richtung Monterey.\n\nDie Stadt selbst ist auf den ersten Blick quirlig und bunt &#8211; vor allem die vorbeiratternden Cable Cars bringen viel Charme in den Stadtverkehr &#8211; leider finden sich jedoch an jeder Kreuzung Obdachlose und/oder offensichtlich Drogensüchtige, die Passanten auch durchaus lautstark hinterherschimpfen, und das mitten im Stadtzentrum.\n\nDennoch sind wir bereits sehr gespannt, was uns die nächsten 2 Tage noch so erwartet, bis wir unsere Reise fortsetzen."
     },
     "permalink": "/2023/08/unsere-hochzeitsreise"
+  },
+  {
+    "id": 49,
+    "date": "2023-08-18T05:32:15Z",
+    "modified": "2023-08-18T05:32:28Z",
+    "slug": "san-francisco",
+    "status": "publish",
+    "type": "post",
+    "title": {
+      "rendered": "San Francisco"
+    },
+    "excerpt": {
+      "rendered": "<p>Nach der gestrigen Anreise und ersten Erkundungstouren verbrachten wir heute den ersten (und einzigen) vollständigen Tag in San Francisco. Etwas Jetlag-geplagt verließen wir bereits um 06:00 morgens unser Hotel und fuhren mit einem Taxi über die Golden Gate Bridge, damit wir von einem der zahlreichen Aussichtspunkte auf der anderen Seite ein paar Fotos machen konnten. [&hellip;]</p>\n",
+      "protected": false
+    },
+    "author": 1,
+    "featured_media": 48,
+    "categories": [
+      5
+    ],
+    "tags": [],
+    "attachments": [
+      {
+        "alt": "",
+        "caption": "Die Brücke von der Südseite in Richtung Norden gesehen. Der Nebel klarte nie richtig auf und wurde danach sogar noch dicker.",
+        "height": 1920,
+        "id": 48,
+        "meta": {
+          "aperture": "1.88",
+          "credit": "",
+          "camera": "OnePlus Nord2 5G",
+          "caption": "",
+          "created_timestamp": "1692257351",
+          "copyright": "",
+          "focal_length": "5.59",
+          "iso": "101",
+          "shutter_speed": "0.00322",
+          "title": "",
+          "orientation": "1",
+          "keywords": []
+        },
+        "mimetype": "image/jpeg",
+        "post_date": "2023-08-18 05:20:12",
+        "post_modified": "2023-08-18 05:24:07",
+        "source": "https://traunstein.2ix.at/wp-content/uploads/2023/08/IMG20230817072911.jpg",
+        "title": "Golden Gate Bridge",
+        "width": 2560
+      },
+      {
+        "alt": "",
+        "caption": "Der Blick von der Nordseite in den dichten Nebel. Am rechten Bildrand sollte man eigentlich den ersten Brückenträger sehen.",
+        "height": 1875,
+        "id": 51,
+        "meta": {
+          "aperture": "0",
+          "credit": "",
+          "camera": "",
+          "caption": "",
+          "created_timestamp": "0",
+          "copyright": "",
+          "focal_length": "0",
+          "iso": "0",
+          "shutter_speed": "0",
+          "title": "",
+          "orientation": "0",
+          "keywords": []
+        },
+        "mimetype": "image/jpeg",
+        "post_date": "2023-08-18 05:22:49",
+        "post_modified": "2023-08-18 05:26:35",
+        "source": "https://traunstein.2ix.at/wp-content/uploads/2023/08/img202308170646486200334394039247111.jpg",
+        "title": "Golden Gate Bridge im Nebel",
+        "width": 2500
+      },
+      {
+        "alt": "",
+        "caption": "Die ehemalige Haftanstalt Alcatraz vom Pier 39 aus gesehen. 1 Stunde vorher war sie im Nebel noch gar nicht erkennbar.",
+        "height": 1875,
+        "id": 53,
+        "meta": {
+          "aperture": "0",
+          "credit": "",
+          "camera": "",
+          "caption": "",
+          "created_timestamp": "0",
+          "copyright": "",
+          "focal_length": "0",
+          "iso": "0",
+          "shutter_speed": "0",
+          "title": "",
+          "orientation": "0",
+          "keywords": []
+        },
+        "mimetype": "image/jpeg",
+        "post_date": "2023-08-18 05:22:58",
+        "post_modified": "2023-08-18 05:27:57",
+        "source": "https://traunstein.2ix.at/wp-content/uploads/2023/08/img202308171014347738294616897213193.jpg",
+        "title": "Alcatraz",
+        "width": 2500
+      },
+      {
+        "alt": "",
+        "caption": "Die Seelöwen am Pier 39. Lautes Geschrei und Revierkämpfe sind an der Tagesordnung.",
+        "height": 1875,
+        "id": 54,
+        "meta": {
+          "aperture": "0",
+          "credit": "",
+          "camera": "",
+          "caption": "",
+          "created_timestamp": "0",
+          "copyright": "",
+          "focal_length": "0",
+          "iso": "0",
+          "shutter_speed": "0",
+          "title": "",
+          "orientation": "0",
+          "keywords": []
+        },
+        "mimetype": "image/jpeg",
+        "post_date": "2023-08-18 05:23:00",
+        "post_modified": "2023-08-18 05:29:02",
+        "source": "https://traunstein.2ix.at/wp-content/uploads/2023/08/img202308171021186494076108607057458.jpg",
+        "title": "Seelöwen",
+        "width": 2500
+      },
+      {
+        "alt": "",
+        "caption": "Die bekannte viktorianische Reihenhausgruppe. Im Hintergrund sieht man Downtown San Francisco.",
+        "height": 1875,
+        "id": 52,
+        "meta": {
+          "aperture": "0",
+          "credit": "",
+          "camera": "",
+          "caption": "",
+          "created_timestamp": "0",
+          "copyright": "",
+          "focal_length": "0",
+          "iso": "0",
+          "shutter_speed": "0",
+          "title": "",
+          "orientation": "0",
+          "keywords": []
+        },
+        "mimetype": "image/jpeg",
+        "post_date": "2023-08-18 05:22:57",
+        "post_modified": "2023-08-18 05:31:00",
+        "source": "https://traunstein.2ix.at/wp-content/uploads/2023/08/img202308171444057642273240027046435.jpg",
+        "title": "Painted Ladies",
+        "width": 2500
+      }
+    ],
+    "content": {
+      "rendered": "<p>Nach der gestrigen Anreise und ersten Erkundungstouren verbrachten wir heute den ersten (und einzigen) vollständigen Tag in San Francisco.</p><p>Etwas Jetlag-geplagt verließen wir bereits um 06:00 morgens unser Hotel und fuhren mit einem Taxi über die Golden Gate Bridge, damit wir von einem der zahlreichen Aussichtspunkte auf der anderen Seite ein paar Fotos machen konnten.</p><p>Leider machte uns jedoch dicker Nebel einen gehörigen Strich durch die Rechnung, sodass wir am Ende beschlossen, gleich wieder über die Brücke in die Stadt zurückzumarschieren. Kalter und feuchter Wind waren dabei unsere ständigen Begleiter. Zurück auf der Südseite lockerte es ein wenig auf und wir konnten doch noch etwas fotografieren.</p><p>Im Anschluss fuhren wir per Bus zur Fisherman&#8217;s Wharf, um erstmal gehörig zu frühstücken. Nach einem Besuch am Pier 39 bei den Seelöwen ging es für uns weiter auf den Telegraph Hill zum Coit Tower. Dort erhofften wir uns einen Panoramablick über die Stadt, der uns jedoch ohne  Aufstieg auf die Aussichtsplattform verwehrt blieb.</p><p>Etwas müde beschlossen wir für einen kurzen Abstecher ins Hotel zurückzufahren, bevor wir am Nachmittag noch die liebevoll erhaltenen Painted Ladies und den ehemaligen Nabel der Hippie-Welt, Haight Ashbury, erkundeten.</p><p>Zum Abendessen blieben wir schließlich in der Nachbarschaft unseres Hotels, wo wir herzhafte mexikanische Tacos genossen.</p><p>Morgen werden wir unser Mietauto abholen und San Francisco bis zum Ende unserer Reise hinter uns lassen. Der in Wien zurückgebliebene Koffer wurde heute Vormittag übrigens bereits nachgeliefert.</p>",
+      "plaintext": "Nach der gestrigen Anreise und ersten Erkundungstouren verbrachten wir heute den ersten (und einzigen) vollständigen Tag in San Francisco.\n\nEtwas Jetlag-geplagt verließen wir bereits um 06:00 morgens unser Hotel und fuhren mit einem Taxi über die Golden Gate Bridge, damit wir von einem der zahlreichen Aussichtspunkte auf der anderen Seite ein paar Fotos machen konnten.\n\nLeider machte uns jedoch dicker Nebel einen gehörigen Strich durch die Rechnung, sodass wir am Ende beschlossen, gleich wieder über die Brücke in die Stadt zurückzumarschieren. Kalter und feuchter Wind waren dabei unsere ständigen Begleiter. Zurück auf der Südseite lockerte es ein wenig auf und wir konnten doch noch etwas fotografieren.\n\nIm Anschluss fuhren wir per Bus zur Fisherman&#8217;s Wharf, um erstmal gehörig zu frühstücken. Nach einem Besuch am Pier 39 bei den Seelöwen ging es für uns weiter auf den Telegraph Hill zum Coit Tower. Dort erhofften wir uns einen Panoramablick über die Stadt, der uns jedoch ohne  Aufstieg auf die Aussichtsplattform verwehrt blieb.\n\nEtwas müde beschlossen wir für einen kurzen Abstecher ins Hotel zurückzufahren, bevor wir am Nachmittag noch die liebevoll erhaltenen Painted Ladies und den ehemaligen Nabel der Hippie-Welt, Haight Ashbury, erkundeten.\n\nZum Abendessen blieben wir schließlich in der Nachbarschaft unseres Hotels, wo wir herzhafte mexikanische Tacos genossen.\n\nMorgen werden wir unser Mietauto abholen und San Francisco bis zum Ende unserer Reise hinter uns lassen. Der in Wien zurückgebliebene Koffer wurde heute Vormittag übrigens bereits nachgeliefert."
+    },
+    "permalink": "/2023/08/san-francisco"
   }
 ]
