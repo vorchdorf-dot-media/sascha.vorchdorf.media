@@ -979,7 +979,7 @@
   {
     "id": 66,
     "date": "2023-08-21T02:17:42Z",
-    "modified": "2023-08-21T18:12:08Z",
+    "modified": "2023-08-21T18:13:41Z",
     "slug": "von-wirbelstuermen-und-erdbeben",
     "status": "publish",
     "type": "post",
@@ -993,6 +993,7 @@
     "author": 1,
     "featured_media": 0,
     "categories": [
+      6,
       5
     ],
     "tags": [],
