@@ -583,7 +583,7 @@
   {
     "id": 41,
     "date": "2023-08-17T04:08:20Z",
-    "modified": "2023-08-17T04:24:36Z",
+    "modified": "2023-08-21T18:14:31Z",
     "slug": "unsere-hochzeitsreise",
     "status": "publish",
     "type": "post",
@@ -597,6 +597,7 @@
     "author": 1,
     "featured_media": 45,
     "categories": [
+      6,
       5
     ],
     "tags": [],
