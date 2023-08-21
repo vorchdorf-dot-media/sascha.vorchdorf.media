@@ -861,7 +861,7 @@
         "mimetype": "image/jpeg",
         "post_date": "2023-08-20 06:53:02",
         "post_modified": "2023-08-20 06:58:19",
-        "source": "https://traunstein.2ix.at/wp-content/uploads/2023/08/img20230819182318331917368577777305.jpg",
+        "source": "https://res.cloudinary.com/dfykknjue/images/f_auto,q_auto/v1692507695/img20230819182318331917368577777305/img20230819182318331917368577777305.jpg?_i=AA",
         "title": "Pismo Beach",
         "width": 2500
       },
@@ -887,7 +887,7 @@
         "mimetype": "image/jpeg",
         "post_date": "2023-08-20 06:53:08",
         "post_modified": "2023-08-20 06:56:28",
-        "source": "https://traunstein.2ix.at/wp-content/uploads/2023/08/img202308191107257299213203664619147.jpg",
+        "source": "https://res.cloudinary.com/dfykknjue/images/f_auto,q_auto/v1692507688/img202308191107257299213203664619147/img202308191107257299213203664619147.jpg?_i=AA",
         "title": "Etwas verwachsen",
         "width": 2500
       },
@@ -913,7 +913,7 @@
         "mimetype": "image/jpeg",
         "post_date": "2023-08-20 06:53:04",
         "post_modified": "2023-08-20 06:53:58",
-        "source": "https://traunstein.2ix.at/wp-content/uploads/2023/08/img202308191132181583151187373181260.jpg",
+        "source": "https://res.cloudinary.com/dfykknjue/images/f_auto,q_auto/v1692507691/img202308191132181583151187373181260/img202308191132181583151187373181260.jpg?_i=AA",
         "title": "Feuerwehr",
         "width": 2500
       },
@@ -939,7 +939,7 @@
         "mimetype": "image/jpeg",
         "post_date": "2023-08-20 06:53:03",
         "post_modified": "2023-08-20 06:55:03",
-        "source": "https://traunstein.2ix.at/wp-content/uploads/2023/08/img202308191020576294783509678299208.jpg",
+        "source": "https://res.cloudinary.com/dfykknjue/images/f_auto,q_auto/v1692507693/img202308191020576294783509678299208/img202308191020576294783509678299208.jpg?_i=AA",
         "title": "Bulli",
         "width": 2500
       },
@@ -965,7 +965,7 @@
         "mimetype": "image/jpeg",
         "post_date": "2023-08-20 06:52:56",
         "post_modified": "2023-08-20 06:57:29",
-        "source": "https://traunstein.2ix.at/wp-content/uploads/2023/08/signal-2023-08-19-21-50-04-9968221382546900061277.jpg",
+        "source": "https://res.cloudinary.com/dfykknjue/images/f_auto,q_auto/v1692507697/signal-2023-08-19-21-50-04-9968221382546900061277/signal-2023-08-19-21-50-04-9968221382546900061277.jpg?_i=AA",
         "title": "Nach Süden",
         "width": 1600
       }
@@ -975,5 +975,32 @@
       "plaintext": "Gestern um die Mittagszeit holten wir unser Mietauto vom Flughafen ab. Davor aber nutzten wir noch die Zeit, um die Lombard Street mit ihren engen Haarnadelkurven anzusehen. Weil wir dort aber auch einen Blick auf die Brückenpfeiler der Golden Gate Bridge erhaschen konnten, beschlossen wir ein zweites Mal dorthin zu fahren, damit wir sie beim letzten Versuch einmal ohne Nebel zu Gesicht bekommen.\n\nSchließlich verließen wir die Innenstadt San Franciscos jedoch, um unseren Weg mit unserem Hyundai Venue nach Süden zu beginnen. Wir erreichten Monterey am späteren Nachmittag und checkten in unser Hotel ein. Schon bei der Hinfahrt am Highway waren uns die teuren Sportwagen in größerer Zahl als üblich aufgefallen, nun wussten wir auch warum; dieses Wochenende wird eine große Sportwagenveranstaltung auf der Rennstrecke außerhalb der Stadt veranstaltet, die uns auch heute noch begleiten sollte.\n\nWegen dieser Veranstaltung war heute eine Panoramastraße geschlossen, zusätzlich verfolgten uns die Teilnehmer (oder wir sie?) bis in den malerischen Nachbarort Carmel-by-the-Sea. Ein malerisches Städtchen der High Society, in der sogar Clint Eastwood vor 35 Jahren Bürgermeister war. Die Beschaulichkeit wurde jedoch immer wieder von laut aufheulenden Motoren unterbrochen.\n\nZu allem Überfluss ist jedoch auch der bekannte Highway 1 mit seinem langen Küstenabschnitt wegen eines Hangrutsches noch einige Monate gesperrt, sodass uns nichts anderes übrig blieb, als unseren Weg über eine Alternativroute im Inland fortzusetzen.\n\nLetztendlich gelang es uns doch, die letzten 50 Kilometer größtenteils entlang der Küste zu fahren und so machten wir noch einen kurzen Halt in Pismo Beach. Am Pier konnten wir nicht nur eine Gruppe von Walen in der Ferne bestaunen, denn währenddessen flogen immer wieder einige Pelikane über unsere Köpfe hinweg. Am Vormittag sahen wir sogar einen Seehund in Carmel, der mit den Badegästen am Strand im Wasser spielte. Die Tierwelt beeindruckt uns jeden Tag aufs Neue."
     },
     "permalink": "/2023/08/von-monterey-nach-pismo-beach"
+  },
+  {
+    "id": 66,
+    "date": "2023-08-21T02:17:42Z",
+    "modified": "2023-08-21T02:17:43Z",
+    "slug": "von-wirbelstuermen-und-erdbeben",
+    "status": "publish",
+    "type": "post",
+    "title": {
+      "rendered": "Von Wirbelstürmen und Erdbeben"
+    },
+    "excerpt": {
+      "rendered": "<p>Seit heute Mittag sind wir in Los Angeles. Keine einfache Zeit, da Hurrikan Hilary heute Abend in der Stadt erwartet wird. Hilary selbst ist zwar bereits auf einen tropischen Sturm herabgestuft worden, dennoch mussten wir aufgrund starken Regens einen Ruhetag einlegen. Die Anfahrt war doch eine größere Herausforderung, als vorerst angenommen und das obwohl wir [&hellip;]</p>\n",
+      "protected": false
+    },
+    "author": 1,
+    "featured_media": 0,
+    "categories": [
+      5
+    ],
+    "tags": [],
+    "attachments": [],
+    "content": {
+      "rendered": "<p>Seit heute Mittag sind wir in Los Angeles. Keine einfache Zeit, da Hurrikan Hilary heute Abend in der Stadt erwartet wird. Hilary selbst ist zwar bereits auf einen tropischen Sturm herabgestuft worden, dennoch mussten wir aufgrund starken Regens einen Ruhetag einlegen.</p><p>Die Anfahrt war doch eine größere Herausforderung, als vorerst angenommen und das obwohl wir von einigen Menschen beim Einkaufen eindringlich gewarnt wurden, überhaupt den Weg nach Süden fortzusetzen. Leider fließt das Wasser auf amerikanischen Autobahnen schlecht ab, sodass sich sehr schnell Lacken am Asphalt bilden, welche durch den Verkehr aufgewirbelt werden und so die Sicht zusätzlich beeinträchtigen. Wenig überraschend kam es zu einigen Auffahrunfällen, die uns allerdings nicht wirklich behinderten.</p><p>Im Hotel angekommen hatten wir Glück, das Zimmer sofort beziehen zu können (es war erst 12:30 und einige Gäste mussten noch im Aufenthaltsraum warten). Nach einem kurzen Telefonat nach Hause spürten wir jedoch plötzlich ein Erdbeben und unser Zimmer wurde merklich durchgerüttelt. Unser Verdacht wurde durch schnell eintreffende Warnhinweise auf unseren Smartphones bestätigt. Darin wurde auch explizit von Nachbeben gewarnt, die wir dann auch im weiteren Verlauf des Nachmittags immer wieder spüren konnten.</p><p>Uns geht es soweit gut, wir werden den ersten Tropensturm in der Geschichte Kaliforniens ohnehin aussitzen müssen, genauso wie das Erdbeben. Wir bleiben für 2 Nächte hier und hoffen am Dienstag unser nächstes Ziel, Twentynine Palms, ohne Hindernisse auf den Straßen erreichen zu können.</p>",
+      "plaintext": "Seit heute Mittag sind wir in Los Angeles. Keine einfache Zeit, da Hurrikan Hilary heute Abend in der Stadt erwartet wird. Hilary selbst ist zwar bereits auf einen tropischen Sturm herabgestuft worden, dennoch mussten wir aufgrund starken Regens einen Ruhetag einlegen.\n\nDie Anfahrt war doch eine größere Herausforderung, als vorerst angenommen und das obwohl wir von einigen Menschen beim Einkaufen eindringlich gewarnt wurden, überhaupt den Weg nach Süden fortzusetzen. Leider fließt das Wasser auf amerikanischen Autobahnen schlecht ab, sodass sich sehr schnell Lacken am Asphalt bilden, welche durch den Verkehr aufgewirbelt werden und so die Sicht zusätzlich beeinträchtigen. Wenig überraschend kam es zu einigen Auffahrunfällen, die uns allerdings nicht wirklich behinderten.\n\nIm Hotel angekommen hatten wir Glück, das Zimmer sofort beziehen zu können (es war erst 12:30 und einige Gäste mussten noch im Aufenthaltsraum warten). Nach einem kurzen Telefonat nach Hause spürten wir jedoch plötzlich ein Erdbeben und unser Zimmer wurde merklich durchgerüttelt. Unser Verdacht wurde durch schnell eintreffende Warnhinweise auf unseren Smartphones bestätigt. Darin wurde auch explizit von Nachbeben gewarnt, die wir dann auch im weiteren Verlauf des Nachmittags immer wieder spüren konnten.\n\nUns geht es soweit gut, wir werden den ersten Tropensturm in der Geschichte Kaliforniens ohnehin aussitzen müssen, genauso wie das Erdbeben. Wir bleiben für 2 Nächte hier und hoffen am Dienstag unser nächstes Ziel, Twentynine Palms, ohne Hindernisse auf den Straßen erreichen zu können."
+    },
+    "permalink": "/2023/08/von-wirbelstuermen-und-erdbeben"
   }
 ]
