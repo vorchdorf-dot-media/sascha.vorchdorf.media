@@ -1,21 +1,21 @@
 [
   {
     "id": 1,
-    "count": 4,
+    "count": 5,
     "description": "Hier werden alle Beiträge gelistet, welche keiner anderen Kategorie vorrangig zugeordnet sind.",
     "name": "Allgemein",
     "slug": "allgemein"
   },
   {
     "id": 6,
-    "count": 5,
+    "count": 6,
     "description": "",
     "name": "Hochzeitsreise 2023",
     "slug": "hochzeitsreise-2023"
   },
   {
     "id": 5,
-    "count": 6,
+    "count": 7,
     "description": "Beiträge in welchen wir auf Urlaub sind oder waren, bzw. einen Urlaub vorbereiten.",
     "name": "Urlaub",
     "slug": "urlaub"
